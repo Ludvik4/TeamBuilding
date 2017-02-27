@@ -9,30 +9,83 @@
 
 
 // --------------layout-elements-------------------
+.maincontent
+	position: relative
+//====================== NAV
+
+#phone-form_link
+	position: fixed
+	top: 33px
+	font-family: 'roboto regular'
+	left: 10px
+	z-index: 30
+	color: #c7c7c7
+	font-size: 24px
+	text-decoration: none
+	@media (max-width: 800px)
+		font-size: 30px
+		top: 13px
+
 .nav
 	position: fixed
+	display: none
+
 	z-index: 20
 	top: 40px
-	left: 40px
 	right: 40px
-	.nav__list
-		text-align: right
+	width: 80%
+	@media (max-width: 800px)
+		display: none
+		position: fixed
+		width: 100%
+		background: #FFFFFF
+		top: 66px
+		left: 0
+		right: 0
+		padding: 10px 0
 		.nav__item
-			display: inline-block
-			.nav__link
-				font-family: 'Open Sans ', arial
-				color: #c7c7c7
-				font-size: 16px
-				padding: 0 15px
-				transition: 0.5s
-				&:hover
-					text-decoration: none
-					color: #919191
-		.nav__item_active
-			.nav__link
-				color: #919191
-				opacity: 0.7
-				font-weight: bold
+			display: block
+			padding: 10px
+			text-align: center
+.nav__list
+	text-align: right
+.nav__item
+	display: inline-block
+.nav__link
+	font-family: 'Open Sans ', arial
+	color: #c7c7c7
+	font-size: 16px
+	padding: 0 15px
+	transition: 0.5s
+	&:hover
+		text-decoration: none
+		color: #919191
+.nav__item_active
+	.nav__link
+		color: #919191
+		opacity: 0.7
+		font-weight: bold
+
+.touch-menu
+	//display: none
+	position: fixed
+	top: 0px
+	right: 0px
+	z-index: 10
+	width: 100%
+	min-height: 64px
+	text-align: right
+	background: #000
+	padding: 10px
+	@media (max-width: 800px)
+		display: block
+.touch-menu__img
+	width: 50px
+	height: 50px
+	padding: 5px
+	cursor: pointer
+
+//  конец nav----------------------------------
 
 .section-img
 	min-height: 100vh
@@ -76,6 +129,12 @@
 		text-align: left
 .block-text__content___p
 	margin-bottom: 30px
+.block-text__content___a
+	color: #ff8562
+	&:hover, &:visited
+		color: #ff8562
+		font-weight: bold
+		text-decoration: none
 .no-margin
 	margin-bottom: 0
 
@@ -196,7 +255,7 @@
 			margin-bottom: 60px
 			font-family: 'Open Sans Light'
 		.block-text__content
-			width: 860px
+			//width: 860px
 			margin: 0 auto 20px
 			text-align: center
 			font-size: 18px
@@ -362,19 +421,60 @@
 .section-img__open-pool___mask
 	background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0.8), rgba(0, 0, 0, 0.298039))
 
+//=================== room-standart
+.section-img__room-standart
+	background-image: url('../img/tild3333-3539-4630-b963-366336373439__noroot.jpg')
+	.section__block__container
+		padding-left: 200px
+.section-img__room-standart___mask
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
+
+//===================  Classic Suite
+.section-img__room-classic
+	background-image: url('../img/tild3637-6266-4063-a465-393531663934__3.jpg')
+	.section__block__container
+		padding-left: 200px
+.section-img__room-classic___mask
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
+
+//===================  Classic Suite
+.section-img__room-classicplus
+	background-image: url('../img/tild6263-3063-4339-a464-626162306463__5555.jpg')
+	.section__block__container
+		padding-left: 200px
+.section-img__room-classicplus___mask
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
+
+//===================  Classic Suite
+.section-img__room-panorama
+	background-image: url('../img/tild3663-6664-4263-a537-356434303866__6.jpg')
+	.section__block__container
+		padding-left: 200px
+.section-img__room-panorama___mask
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
+
+//===================  Classic Suite
+.section-img__room-villa
+	background-image: url('../img/tild6132-3734-4339-b866-373664383761__8.jpg')
+	.section__block__container
+		padding-left: 200px
+.section-img__room-villa___mask
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
 
-
-
-
-
-
-
+//===================  Classic Suite
+.section-img__contacts
+	background-image: url('../img/tild3562-3363-4766-a530-646430633066__photo1461773518188b3e86f98242f.jpg')
+	min-height: 550px
+	.section__block__container
+		padding-left: 200px
+.section-img__contacts___mask
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
 
 //=====================FORMS
 .section-form
-	min-height: 300px
+	//min-height: 300px
 	padding-top: 60px
 	background-color: #ededed
 	text-align: center
@@ -387,29 +487,170 @@
 
 .form-spectarif
 	padding: 30px 0 60px
-	.form-spectarif__inp
-		height: 60px
-		font-size: 16px
-		line-height: 1.33
-		color: #919191
-		padding: 0 20px
-		border: 1px solid #ccc8c8
-		background-color: #FFFFFF
-		width: 360px
-		margin-right: 20px
-	.form-spectarif__btn
-		font-family: 'Roboto',sans-serif
-		text-align: center
-		height: 60px
-		border: 0 none
-		font-size: 16px
-		padding-left: 60px
-		padding-right: 60px
-		-webkit-appearance: none
-		font-weight: 700
-		white-space: nowrap
-		color: #ffffff
-		background-color: #8ebe2c
+.form-spectarif__inp
+	height: 60px
+	font-size: 20px
+	line-height: 1.33
+	color: #919191
+	padding: 0 20px
+	border: 1px solid #ccc8c8
+	background-color: #FFFFFF
+	width: 360px
+	margin-right: 20px
+	margin-bottom: 10px
+.form-spectarif__btn
+	font-family: 'Roboto',sans-serif
+	text-align: center
+	height: 60px
+	border: 0 none
+	font-size: 16px
+	padding-left: 60px
+	padding-right: 60px
+	-webkit-appearance: none
+	font-weight: 700
+	white-space: nowrap
+	color: #ffffff
+	background-color: #8ebe2c
+
+	//============phone-form
+
+#overlay
+	z-index: 1003
+	position: fixed
+	background-color: #000
+	opacity: 0.8
+	-moz-opacity: 0.8
+	filter: alpha(opacity=80)
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	cursor: pointer
+	display: none
+#phone-forml_close
+	width: 21px
+	height: 21px
+	position: absolute
+	top: 10px
+	right: 10px
+	cursor: pointer
+	display: block
+
+.phone-form_wrap
+	width: 300px
+	height: 240px
+	width: 560px
+	box-sizing: border-box
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	padding: 40px 45px 47px
+	background: #fff
+	border-radius: 5px
+	border: 3px #000 solid
+	background: #fff
+	position: fixed
+	top: 45%
+	left: 50%
+	margin-top: -120px
+	margin-left: -280px
+	display: none
+	opacity: 0
+	z-index: 1005
+	padding: 20px 10px
+	font-family: 'Roboto', sans-serif
+.phone-form_title
+	color: #000
+	margin-bottom: 11px
+	line-height: 1.23
+	font-size: 31px
+	text-align: center
+.phone-form_text
+	font-size: 16px
+	line-height: 1.55
+	margin-bottom: 24px
+	color: #333
+	text-align: center
+
+#phone-form
+	padding: 10px 20px
+input.phone-form_inp[type=tel]
+	color: #000000
+	border: 0px solid #000000
+	background-color: #e6e6e6
+	border-radius: 5px
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	outline: none
+	height: 58px
+	margin: 0 20px 0 0
+	padding: 0 20px
+	font-size: 16px
+	line-height: 1.33
+	width: 50%
+	border: 0 none
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+.phone-form_btn
+	color: #ffffff
+	border: 1px solid #5a96b8
+	background-color: #5a96b8
+	border-radius: 5px
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	padding: 0 30px
+	-webkit-transition: all ease-in-out 0.2s
+	-moz-transition: all ease-in-out 0.2s
+	-o-transition: all ease-in-out 0.2s
+	transition: all ease-in-out 0.2s
+	height: 58px
+	text-align: center
+	border: 0 none
+	font-size: 16px
+	-webkit-appearance: none
+	font-weight: 700
+	white-space: nowrap
+	cursor: pointer
+	margin: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	outline: none
+
+.phone-form_btn:hover
+	background-color: #42708a
+.phone-form_succes,
+.phone-form_error,
+.beforeSend
+	display: none
+.phone-form_succes
+	font-size: 22px
+	text-align: center
+	color: #2a71b3
+	padding-top: 30px
+label.error
+	color: red
+	position: absolute
+	bottom: 20px
+	left: 36px
+	font-weight: bold
 
 
+.test-svg
+	position: absolute
+	z-index: 21
+	top: 10px
+	right: 10px
+	&:hover
+		.line_2
+			stroke-width: 0
+		.line_1
+			y2: 39
+		.line_3
+			y2: 3
+@keyframes cross
 
+.test-line
+	stroke: #ccc
+	stroke-width: 4px
+	transition: .5s

@@ -19,6 +19,7 @@
     "bootstrap": "^3.3.7",
     "magnific-popup": "^1.1.0",
     "jquery-single-page-nav": "*",
-    "jquery-touchswipe": "^1.6.18"
+    "jquery-touchswipe": "^1.6.18",
+    "js-mask": "^1.0.0"
   }
 }
