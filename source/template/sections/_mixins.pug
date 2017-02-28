@@ -1,6 +1,8 @@
 mixin nav(className, items, hrefs, activeItem)
 	nav(class=`${className}`)
 		ul(class=`${className}__list`)
+			li.nav__item
+				a.nav__link#form-30min__link(href="#", data-where="corp") Рассчитать за 30 минут
 			each item, ndx in items
 				li(class=`${className}__item` + ( (ndx === activeItem ) ? ` ${className}__item_active` : '' ) )
 					a(class=`${className}__link` href=`${hrefs[ndx]}`)= item

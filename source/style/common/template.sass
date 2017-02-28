@@ -1,4 +1,10 @@
-
+//@include add-grid(12)
+//@include add-gutter(1/3)
+//@include add-gutter-style('split')
+//
+//@include sgs-change('debug', true)
+//	.container
+//		@include background-grid($color: blue)
 
 .clearfix:before, .clearfix:after
 	content: ""
@@ -28,8 +34,6 @@
 
 .nav
 	position: fixed
-	display: none
-
 	z-index: 20
 	top: 40px
 	right: 40px
@@ -55,7 +59,7 @@
 	font-family: 'Open Sans ', arial
 	color: #c7c7c7
 	font-size: 16px
-	padding: 0 15px
+	padding: 0 10px
 	transition: 0.5s
 	&:hover
 		text-decoration: none
@@ -67,7 +71,7 @@
 		font-weight: bold
 
 .touch-menu
-	//display: none
+	display: none
 	position: fixed
 	top: 0px
 	right: 0px
@@ -84,6 +88,16 @@
 	height: 50px
 	padding: 5px
 	cursor: pointer
+.test-svg
+	position: absolute
+	z-index: 21
+	top: 10px
+	right: 10px
+	width: 50px
+.test-line
+	stroke: #ccc
+	stroke-width: 6px
+	transition: .5s
 
 //  конец nav----------------------------------
 
@@ -121,12 +135,13 @@
 	z-index: 3
 
 .block-text
-	.block-text__title
-		margin-bottom: 20px
-		font-size: 42px
-		//font-weight: bold
-		font-family: "Open Sans"
-		text-align: left
+
+.block-text__title
+	margin-bottom: 20px
+	font-size: 42px
+	//font-weight: bold
+	font-family: "Open Sans"
+	text-align: left
 .block-text__content___p
 	margin-bottom: 30px
 .block-text__content___a
@@ -158,18 +173,18 @@
 .block-logo
 	padding-top: 150px
 	text-align: center
-	.block-logo__img
-		width:  80%
-		max-width: 520px
-		height: auto
-		margin-bottom: 200px
-	.block-logo__desc
-		background: rgba(255, 255, 255, 0.38)
-		color: #FFFFFF
-		font-size: 32px
-		line-height: 1.55
-		text-transform: uppercase
-		font-family: 'Open Sans'
+.block-logo__img
+	width:  80%
+	max-width: 520px
+	height: auto
+	margin-bottom: 200px
+.block-logo__desc
+	background: rgba(255, 255, 255, 0.38)
+	color: #FFFFFF
+	font-size: 32px
+	line-height: 1.55
+	text-transform: uppercase
+	font-family: 'Open Sans'
 
 //==========================about
 .section-img__about
@@ -190,13 +205,13 @@
 	font-family: "Open Sans"
 	&:nth-child(-n+2)
 		margin-bottom: 100px
-	.block-figures__item__title
-		text-align: center
-		font-size: 100px
-		line-height: 1.1
-	.block-figures__item__paragraph
-		text-align: center
-		font-size: 16px
+.block-figures__item__title
+	text-align: center
+	font-size: 100px
+	line-height: 1.1
+.block-figures__item__paragraph
+	text-align: center
+	font-size: 16px
 
 //=========================== advantages
 .section-img__advant
@@ -208,20 +223,20 @@
 .block-advant
 	width: 76%
 	margin: 0 auto
-	.block-advant__title, .block-adv__item
-		float: left
-	.block-advant__title
-		width: 100%
-		margin-bottom: 40px
-	.block-adv__item
-		width: 25%
-		text-align: center
-		font-size: 18px
-		padding: 0 10px
-		.block-adv__item__img
-			width: 105px
-			height: auto
-			margin-bottom: 30px
+.block-advant__title, .block-adv__item
+	float: left
+.block-advant__title
+	width: 100%
+	margin-bottom: 40px
+.block-adv__item
+	width: 25%
+	text-align: center
+	font-size: 18px
+	padding: 0 10px
+.block-adv__item__img
+	width: 105px
+	height: auto
+	margin-bottom: 30px
 
 //============================= allinclusive
 .section-img__allinc
@@ -263,15 +278,15 @@
 				margin-bottom: 0
 .block-columns
 	text-align: center
-	.block-columns__item
-		float: left
-		width: 33%
-		box-sizing: border-box
-		padding: 0 20px
-		overflow: hidden
-		.block-columns__img
-			//width: 100%
-			height: 360px
+.block-columns__item
+	float: left
+	width: 33%
+	box-sizing: border-box
+	padding: 0 20px
+	overflow: hidden
+.block-columns__img
+	//width: 100%
+	height: 360px
 
 //============================Hall Olimp
 .section-img__halls-olimp
@@ -295,16 +310,16 @@
 		box-sizing: border-box
 	.block-text
 		width: 45%
-	.block-halls__plan___wrapper
-		width: 54%
-		overflow: hidden
-		position: relative
-		padding-top: 30px
-		text-align: center
-		.block-halls__plan___title
-			position: absolute
-			left: 50%
-			transform: translateX(-50%)
+.block-halls__plan___wrapper
+	width: 54%
+	overflow: hidden
+	position: relative
+	padding-top: 30px
+	text-align: center
+.block-halls__plan___title
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
 	padding-left: 25px
 
 //==================== Big halls
@@ -422,42 +437,34 @@
 	background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0.8), rgba(0, 0, 0, 0.298039))
 
 //=================== room-standart
+.section-img__room
+	padding-left: 200px
 .section-img__room-standart
 	background-image: url('../img/tild3333-3539-4630-b963-366336373439__noroot.jpg')
-	.section__block__container
-		padding-left: 200px
 .section-img__room-standart___mask
 	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
 //===================  Classic Suite
 .section-img__room-classic
 	background-image: url('../img/tild3637-6266-4063-a465-393531663934__3.jpg')
-	.section__block__container
-		padding-left: 200px
 .section-img__room-classic___mask
 	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
 //===================  Classic Suite
 .section-img__room-classicplus
 	background-image: url('../img/tild6263-3063-4339-a464-626162306463__5555.jpg')
-	.section__block__container
-		padding-left: 200px
 .section-img__room-classicplus___mask
 	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
 //===================  Classic Suite
 .section-img__room-panorama
 	background-image: url('../img/tild3663-6664-4263-a537-356434303866__6.jpg')
-	.section__block__container
-		padding-left: 200px
 .section-img__room-panorama___mask
 	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
 //===================  Classic Suite
 .section-img__room-villa
 	background-image: url('../img/tild6132-3734-4339-b866-373664383761__8.jpg')
-	.section__block__container
-		padding-left: 200px
 .section-img__room-villa___mask
 	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
@@ -466,8 +473,6 @@
 .section-img__contacts
 	background-image: url('../img/tild3562-3363-4766-a530-646430633066__photo1461773518188b3e86f98242f.jpg')
 	min-height: 550px
-	.section__block__container
-		padding-left: 200px
 .section-img__contacts___mask
 	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
 
@@ -478,12 +483,12 @@
 	padding-top: 60px
 	background-color: #ededed
 	text-align: center
-	.section-form-title
-		font-size: 32px
-		color: #6c6c6c
-		width: 70%
-		margin: 0 auto
-		font-family: 'Open Sans'
+.section-form-title
+	font-size: 32px
+	color: #6c6c6c
+	width: 70%
+	margin: 0 auto
+	font-family: 'Open Sans'
 
 .form-spectarif
 	padding: 30px 0 60px
@@ -527,7 +532,7 @@
 	left: 0
 	cursor: pointer
 	display: none
-#phone-forml_close
+#phone-form_close
 	width: 21px
 	height: 21px
 	position: absolute
@@ -635,22 +640,53 @@ label.error
 	left: 36px
 	font-weight: bold
 
+.form-30min_wrap
+	@extend .phone-form_wrap
+	width: 45%
+	min-width: 290px
+	height: auto
+	border-radius: 0
+	padding: 0
+	margin: 0
+	transform: translateX(-50%)
+	border: 0
+#form-30min_close
+	@extend #phone-form_close
+	font-weight: bold
+	font-size: 20px
+#form-30min_overlay
+	@extend #overlay
+.form-30min_title
+	text-align: center
+	font-size: 33px
+	font-family: 'Roboto light'
+	padding: 7%
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.80), rgba(0,0,0,0.30)), url("../img/form30_bg.jpg") no-repeat
+	background-size: cover
+	color: #fff
 
-.test-svg
-	position: absolute
-	z-index: 21
-	top: 10px
-	right: 10px
+#form-30min
+	padding: 10%
+.form-30min_inp, .form-30min_btn
+	display: block
+	width: 100%
+	margin-bottom: 20px
+	padding: 14px 16px
+	border-radius: 7px
+.form-30min_inp
+	border: 1px solid #c9c9c9
+	color: #000
+	text-align: left
+	&:focus
+		border-radius: 7px
+		border: 2px solid #c9c9c9
+.form-30min_btn
+	font-weight: bold
+	font-size: 16px
+	color: #fff
+	background: #5a96b8
+	text-align: center
+	border: 0
+	transition: 0.4s
 	&:hover
-		.line_2
-			stroke-width: 0
-		.line_1
-			y2: 39
-		.line_3
-			y2: 3
-@keyframes cross
-
-.test-line
-	stroke: #ccc
-	stroke-width: 4px
-	transition: .5s
+		background: #326380

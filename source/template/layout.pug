@@ -11,6 +11,8 @@ html(lang='ru')
 		link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
 		link(href='/assets/libs/magnific-popup.css', rel='stylesheet')
 		link(href='/assets/css/main.css', rel='stylesheet')
+		link(href='/assets/css/mediaHtml.css', rel='stylesheet')
+		link(href='/assets/css/mediaHtml.css', rel='stylesheet')
 		link(href="http://allfont.ru/allfont.css?fonts=open-sans", rel="stylesheet",  type="text/css")
 		link(href="http://allfont.ru/allfont.css?fonts=open-sans-light", rel="stylesheet",  type="text/css")
 
@@ -30,7 +32,8 @@ html(lang='ru')
 					animate (xlink:href="#line_1", attributeName="y2", from="3",						to="39", dur="1s", begin="click",fill="freeze")
 					animate (xlink:href="#line_3", attributeName="y2", from="39",	to="3", dur="1s", begin="click",fill="freeze")
 				//img.touch-menu__img(src='./assets/img/hamburger.svg')
-			+nav('nav', ["Рассчитать за 30 минут", "На главную", "Всё включено", "Номера", "Залы", "Рестораны", "SPA", "Развлечения", "Контакты"], ["/#form30", "/#main", "/#allinclusive", "/#rooms", "/#halls", "/#restourans", "/#spa", "/#entertainment", "/#contacts"], 1)
+			+nav('nav', ["На главную", "Всё включено", "Номера", "Залы", "Рестораны", "SPA", "Развлечения", "Контакты"], ["/#main", "/#allinclusive", "/#rooms", "/#halls", "/#restourans", "/#spa", "/#entertainment", "/#contacts"], 1)
+			include ./sections/form-30min
 
 
 			block content

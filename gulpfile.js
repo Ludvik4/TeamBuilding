@@ -28,9 +28,10 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'js:foundation',
-      'copyBowerFiles',
+     'copyBowerFiles',
     'js:process',
     'copy:image',
+      'copy:css',
     'copy:fonts',
     'copy:js',
     'css:foundation'

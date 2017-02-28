@@ -35,6 +35,8 @@ $(function(){
     });
 });
 
+
+//Форма - обратный звонок по клику на номер телефона
 $(function() {
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
@@ -110,6 +112,33 @@ $(function() {
     });
 
 
+});
+
+//$('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('#form-30min__link').click( function(event){  //открытие модального окна
+        var where = $(this).attr('data-where');
+        event.preventDefault();
+        $('#form-30min_overlay').fadeIn(400,
+            function(){
+                $('.form-30min_wrap')
+                    .css('display', 'block')
+                    .animate({opacity: 1, top: '10%'}, 200);
+                $('#form-30min').find('input[name=where]').val(where);
+            });
+    });
+
+
+
+/* Зaкрытие мoдaльнoгo oкнa */
+$('#form-30min_close, #form-30min_overlay').click( function(){
+    $('.form-30min_wrap')
+        .animate({opacity: 0, top: '45%'}, 200,
+            function(){
+                $(this).css('display', 'none');
+                $('#form-30min_overlay').fadeOut(400);
+            }
+        );
 });
 
 $('.popup-container_img').magnificPopup({
