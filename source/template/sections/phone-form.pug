@@ -1,12 +1,9 @@
 .phone-form_wrap
-	span#phone-form_close X
+	//span#phone-form_close X
 	.phone-form_title Заказ обратного звонка
 	.phone-form_text У нас остались последние номера. Оставьте свой телефон и мы перезвоним
 	form#phone-form(name="phone-form")
 		input.phone-form_inp(type="tel", required="", name="phone", placeholder="Ваш телефон")
 		input(name="where", type="hidden", value="")
-		button.phone-form_btn.ya_reach_goal(type="submit",  data-reach_goal="goal_clickphone_1") Перезвоните мне
-	.beforeSend Отправка ...
-	.phone-form_succes Ваша заявка отправлена.
-	.phone-form_error Пожалуйста, заполните поле
+		button.phone-form_btn.ya_reach_goal(type="submit",  onclick=`yaCounter${yaCount}.reachGoal('goal_clickphone_1'); return true`) Перезвоните мне
 #overlay

@@ -21,7 +21,7 @@ html(lang='ru')
 	body
 		.wrapper
 		.maincontent
-			a#phone-form_link(href="tel:+74996538011", data-reach_goal="goal_clickphone_0", data-where="corp") 7 (499) 653-80-11
+			a#phone-form_link(href="tel:+74996538011", onclick=`yaCounter${yaCount}.reachGoal('goal_clickphone_0'); return true`) 7 (499) 653-80-11
 			include ./sections/phone-form
 			a.touch-menu
 				svg.test-svg(width="70px", height="70px", viewBox="0 0 70 70")

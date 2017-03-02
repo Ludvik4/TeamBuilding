@@ -1,10 +1,10 @@
-//@include add-grid(12)
-//@include add-gutter(1/3)
-//@include add-gutter-style('split')
-//
+@include add-grid(12)
+@include add-gutter(1/3)
+@include add-gutter-style('split')
+
 //@include sgs-change('debug', true)
-//	.container
-//		@include background-grid($color: blue)
+//.maincontent
+	//@include background-grid($color: blue)
 
 .clearfix:before, .clearfix:after
 	content: ""
@@ -578,7 +578,7 @@
 
 #phone-form
 	padding: 10px 20px
-input.phone-form_inp[type=tel]
+.phone-form_inp
 	color: #000000
 	border: 0px solid #000000
 	background-color: #e6e6e6
@@ -624,10 +624,7 @@ input.phone-form_inp[type=tel]
 
 .phone-form_btn:hover
 	background-color: #42708a
-.phone-form_succes,
-.phone-form_error,
-.beforeSend
-	display: none
+
 .phone-form_succes
 	font-size: 22px
 	text-align: center
@@ -642,7 +639,7 @@ label.error
 
 .form-30min_wrap
 	@extend .phone-form_wrap
-	width: 45%
+	width: 40%
 	min-width: 290px
 	height: auto
 	border-radius: 0
@@ -677,6 +674,7 @@ label.error
 	border: 1px solid #c9c9c9
 	color: #000
 	text-align: left
+	font-size: 20px
 	&:focus
 		border-radius: 7px
 		border: 2px solid #c9c9c9

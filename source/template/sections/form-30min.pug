@@ -1,11 +1,11 @@
 .form-30min_wrap
-	span#form-30min_close
+	//span#form-30min_close
 	.form-30min_title В 98% случаев <br>мы рассчитаем стоимость Вашего мероприятия<br> за 30 минут. <br> Согласитесь, это быстро ?!
-	form#form-30min(name="phone-form")
+	form#form-30min(name="phone-form", action='http://maot.ru/podmsk/tilda/les_landing.php', method='POST')
 		input.form-30min_inp(type="email", required="", name="email", placeholder="Ваш email")
 		input.form-30min_inp(type="text", name="name", placeholder="Ваше имя")
-		input.form-30min_inp(type="tel", required="", name="phone", placeholder="Ваш телефон")
+		input.form-30min_inp.form-30min_inp-phone(type="tel", required="", name="phone", placeholder="Ваш телефон")
 		input(name="where", type="hidden", value="")
-		input(name="hotel", type="hidden", value="корп.ленд.#{title}")
-		button.form-30min_btn.ya_reach_goal(type="submit",  data-reach_goal="goal__1") Рассчитать за 30 минут
+		input(name="hotel", type="hidden", value=`корп.ленд.${title}`)
+		button.form-30min_btn.ya_reach_goal(type="submit",  onclick=`yaCounter${yaCount}.reachGoal('goal_30min_1'); return true`) Рассчитать за 30 минут
 #form-30min_overlay
