@@ -1,0 +1,41 @@
+.slider__list-wrap
+	position: relative
+.slider
+	overflow: hidden
+.slider__list
+	position: relative
+	width: 100%
+	display: inline-block
+.slider__item
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 0
+	width: 100%
+	&.active
+		z-index: 1
+		position: relative
+	&.inslide
+		z-index: 2
+.slider__img
+	width: 100%
+	display: block
+.slider-control__btn
+	width: 20px
+	height: 20px
+	cursor: pointer
+	border-top: 3px solid
+	border-right: 3px solid
+	border-color: #542d2d
+	position: absolute
+	z-index: 3
+	top: 47%
+	transition: .3s
+	&:hover
+		border-color: #cecbcb
+.slider-control__btn_next
+	right: 5%
+	transform: rotate(45deg)
+.slider-control__btn_prev
+	left: 5%
+	transform: rotate(225deg)

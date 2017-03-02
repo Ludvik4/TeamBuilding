@@ -1,16 +1,11 @@
-@include add-grid(12)
-@include add-gutter(1/3)
-@include add-gutter-style('split')
+//@include add-grid(12)
+//@include add-gutter(1/3)
+//@include add-gutter-style('split')
 
 //@include sgs-change('debug', true)
 //.maincontent
 	//@include background-grid($color: blue)
 
-.clearfix:before, .clearfix:after
-	content: ""
-	display: table
-.clearfix:after
-	clear: both
 
 
 
@@ -103,11 +98,6 @@
 
 .section-img
 	min-height: 100vh
-.section-grey
-	padding-top: 75px
-	padding-bottom: 45px
-	background-color: #f0f0f0
-.section-img
 	background-size: cover
 	background-repeat: no-repeat
 	position: relative
@@ -115,7 +105,7 @@
 	font-size: 20px
 	font-weight: 300
 	line-height: 1.55
-	padding-left: 12%
+	padding-left: 20%
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -134,7 +124,10 @@
 	max-width: 750px
 	z-index: 3
 
-.block-text
+.section-grey
+	padding-top: 75px
+	padding-bottom: 45px
+	background-color: #f0f0f0
 
 .block-text__title
 	margin-bottom: 20px
@@ -150,9 +143,13 @@
 		color: #ff8562
 		font-weight: bold
 		text-decoration: none
+.block-text__list
+	margin-bottom: 20px
 .no-margin
 	margin-bottom: 0
-
+.big-text
+	font-size: 30px
+	font-family: "Open Sans"
 .block-text__list
 	padding-left: 30px
 .title
@@ -161,12 +158,22 @@
 	margin-bottom: 30px
 	text-align: center
 
+.section-slider__text
+	float: left
+	width: 30%
+	padding: 20px
+.section-slider_block
+	float: left
+	width: 69%
+	max-height: 620px
+	overflow: hidden
+
 // -----------layout-elements end
 
 //============== logo
 .section-img__logo
 	padding-left: 0
-	background-image: url('../img/tild3761-3030-4035-b432-303766316531__les_art_rezort_31.jpg')
+	background-image: url('../img/01/1.jpg')
 	text-align: center
 .section-img__logo___mask
 	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5)) )
@@ -188,59 +195,15 @@
 
 //==========================about
 .section-img__about
-	background-image: url('../img/tild6338-6139-4436-a166-356136663730__4.jpg')
+	background-image: url('../img/02.jpg')
 .section-img__about___mask
 	background-image: -webkit-linear-gradient(top, rgba(2,42,89,0.80), rgba(0,0,0,0.30))
 
-//===========================figures
-.section-img__figures
-	background-color: #646464
-	background-image: url('../img/222cf012272les.jpg')
-	padding-left: 0
-.section-img__figures___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.7)), to(rgba(0,0,0,0.5)) )
-.block-figures__item
-	float: left
-	width: 50%
-	font-family: "Open Sans"
-	&:nth-child(-n+2)
-		margin-bottom: 100px
-.block-figures__item__title
-	text-align: center
-	font-size: 100px
-	line-height: 1.1
-.block-figures__item__paragraph
-	text-align: center
-	font-size: 16px
-
-//=========================== advantages
-.section-img__advant
-	background-image: url('../img/tild3939-6136-4464-b463-363134643361__lesfoto41.jpg')
-	padding-left: 0
-.section-img__advant___mask
-	background-color: #000000
-	opacity: 0.7
-.block-advant
-	width: 76%
-	margin: 0 auto
-.block-advant__title, .block-adv__item
-	float: left
-.block-advant__title
-	width: 100%
-	margin-bottom: 40px
-.block-adv__item
-	width: 25%
-	text-align: center
-	font-size: 18px
-	padding: 0 10px
-.block-adv__item__img
-	width: 105px
-	height: auto
-	margin-bottom: 30px
 
 //============================= allinclusive
 .section-img__allinc
 	padding-right: 3%
+	background-image: url('../img/03.jpg')
 	.block-text__content
 		column-count: 2
 		column-width: 250px
@@ -248,17 +211,14 @@
 		strong
 			font-family: 'Open Sans'
 			font-size: 22px
-
-.section-img__allinc_food
-	background-image: url('../img/tild6465-3061-4239-a239-636663336132__tablewithdifferenttypesoffruitsanddrinks_11531552.jpg')
-.section-img__allinc_food___mask
+	.block-text__list
+		list-style-type: none
+		padding-left: 0
+.section-img__allinc___mask
 	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.6)) )
-.section-img__allinc_spa
-	background-image: url('../img/tild3938-3864-4661-b336-666236333561__slide_2_3.jpg')
-.section-img__allinc_spa___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(1,15,41,0.5)), to(rgba(1,15,41,0.4)) )
 
-//===================== Сonference zone
+
+//===================== .section-grey
 .section-grey
 	color: #000
 	.section-grey_block
@@ -288,39 +248,31 @@
 	//width: 100%
 	height: 360px
 
-//============================Hall Olimp
-.section-img__halls-olimp
-	background-image: url('../img/tild3530-6562-4366-b064-636631303436__1.jpg')
-	.block-halls__plan___title
-		top: 70px
-	.block-halls__plan___img_wrap
-		float: none
-		width: 100%
-		margin-left: 0
-		.block-halls__plan___img
-			width: 500px
+//========================== halls
+.section-img__halls
+	background-image: url('../img/04.jpg')
+.section-img__halls___mask
+	background-image: -webkit-linear-gradient(top, rgba(2,42,89,0.80), rgba(0,0,0,0.6))
 
-.section-img__halls-olimp___mask
+
+
+//============================Hall meetroom1
+.section-img__halls-meetroom1
+	background-image: url('../img/05.jpg')
+.section-img__halls-meetroom1___mask
 	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
 
+//============================Hall meetroom1
+.section-img__halls-meetroom2
+	background-image: url('../img/06.jpg')
+.section-img__halls-meetroom2___mask
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
 
-.block-halls
-	.block-text, .block-halls__plan___wrapper
-		float: left
-		box-sizing: border-box
-	.block-text
-		width: 45%
-.block-halls__plan___wrapper
-	width: 54%
-	overflow: hidden
-	position: relative
-	padding-top: 30px
-	text-align: center
-.block-halls__plan___title
-	position: absolute
-	left: 50%
-	transform: translateX(-50%)
-	padding-left: 25px
+//============================Halls meetrooms on 2nd floor
+.section-grey_block-meetrooms2f
+	.block-text__content
+		margin-left: 300px
+		text-align: left
 
 //==================== Big halls
 .section-img__halls-big

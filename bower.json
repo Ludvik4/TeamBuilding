@@ -6,7 +6,7 @@
     "E/Pustovaya"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/Ludvik4/maot_landinds",
+  "homepage": "https://github.com/Ludvik4",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,6 +21,7 @@
     "jquery-single-page-nav": "*",
     "jquery-touchswipe": "^1.6.18",
     "js-mask": "^1.0.0",
-    "singularity": "^1.7.1"
+    "singularity": "^1.7.1",
+    "slick": "*"
   }
 }

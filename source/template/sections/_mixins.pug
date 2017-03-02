@@ -11,19 +11,20 @@ mixin block-text(title, paragraphs)
 	.block-text.section__block
 		.block-text__title!= title
 		.block-text__content
-			each paragraph, ndx in paragraphs
+			each paragraph in paragraphs
 				p.block-text__content___p!= paragraph
 
-mixin figures-item(title, paragraph)
-	.block-figures__item
-		.block-figures__item__title= title
-		.block-figures__item__paragraph= paragraph
+mixin slider(imgNames, activeItem)
+	.slider
+		.slider__list-wrap
+			ul.slider__list
+				each imgName, ndx in imgNames
+					li(class='slider__item ' + ( (ndx === activeItem ) ? 'active' : '' ))
+						img.slider__img(src=`/assets/img/${imgName}`)
+			.slider-controls
+				.slider-control__btn.slider-control__btn_next
+				.slider-control__btn.slider-control__btn_prev
 
-mixin adv-item( iconName, paragraph)
-	.block-adv__item
-		.block-adv__item__icon
-			img.block-adv__item__img(src=`/assets/img/${iconName}`)
-		.block-adv__item__paragraph= paragraph
 
 mixin block-columns__item(imgName)
 	.block-columns__item
@@ -32,6 +33,6 @@ mixin block-columns__item(imgName)
 
 mixin block-halls__plan(imgNames)
 	.block-halls__plan.clearfix
-		each imgName, ndx in imgNames
+		each imgName in imgNames
 			.block-halls__plan___img_wrap
 				img.block-halls__plan___img(src=`/assets/img/${imgName}`)
