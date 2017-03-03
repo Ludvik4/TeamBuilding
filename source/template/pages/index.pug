@@ -9,447 +9,255 @@ block title
 
 block content
 	section.section-img.section-img__logo#main
-		.section-img__logo___mask.section-img__mask
 		.block-logo.section__block
-			img.block-logo__img(src='assets/img/01/logo.png')
+			img.block-logo__img(src='assets/img/logo.png')
 			.block-logo__desc раздел для корпоративных клиентов
 
 	section.section-img.section-img__about
-		.section-img__about___mask.section-img__mask
 		.section__block__container
-			+block-text('АТЛАС ПАРК ', [
-			"Атлас Парк отель – это загородный отель европейского уровня, который расположен в одном из самых живописных мест отдыха в Подмосковье.",
-			"Большое разнообразие переговорных комнат и конференц-залов позволяет организовать корпоративное мероприятие любого формата и масштаба. Дополнительные развлекательные возможности, которые представляет отель для своих гостей, позволяет разбавить любое деловое мероприятие отличным тимбилдингом на природе. "])
+			+block-text('Cronwell Park Яхонты Таруса ', [
+			"«Cronwell Park Яхонты Таруса» находится на территории Тарусского заповедника, в экологически чистом районе Калужской области и Подмосковья. Комфортные условия размещения, четырехразовое питание по системе «шведский стол», высокий уровень сервиса, обширный выбор дополнительных услуг и вариантов проведения досуга и широкие конференц возможности и банкетные площадки, включая площадки на открытом воздухе, делают гостиницу «Cronwell Park Яхонты Таруса» идеальным местом для проведения деловых и торжественных мероприятий.",
+			"Находясь в 120 км от Москвы, на границе Московской и Калужской областей, отель имеет отличную транспортную доступность и несколько вариантов выезда из Москвы по Киевскому, Варшавскому, Симферопольскому и Калужскому скоростным шоссе."])
 
-	section.section-img.section-img__allinc.section-img__allinc#allinclusive
-		.section-img__mask.section-img__allinc___mask
-		.block-text.section__block
-			.block-text__title Все включено
-			.block-text__content
-				p.block-text__content___p Отель работает по системе «Все включено», поэтому проживание будет комфортным и приятным для каждого гостя.
-				p.block-text__content___p В стоимость входит:
-				ul.block-text__list
-					li.block-text__list__item - расширенный завтрак, обед и ужин по системе «шведский стол.  На обед и ужин: газированные напитки, пиво, водка, красное и белое вино;
-					li.block-text__list__item - свежие продукты собственного производства (творог, кефир, сметана);
-					li.block-text__list__item - вечернее чаепитие с разнообразной выпечкой;
-					li.block-text__list__item -  час игры в боулинг;
-					li.block-text__list__item - рыбалка;
-					li.block-text__list__item - прокат велосипедов, роликов, веломобилей, шезлонгов, лыж, коньков и инвентаря для бадминтона;
-					li.block-text__list__item - спортивные площадки для футбола, баскетбола и волейбола, теннисный корт;
-					li.block-text__list__item -  тренажерный зал, бассейн и сауна (1 раз в сутки);
-					li.block-text__list__item - Wi-Fi;
-					li.block-text__list__item - парковка;
-					li.block-text__list__item - анимация (разнообразные мастер-классы, дискотеки и шоу-программы);
-					li.block-text__list__item - кинофестивали;
-					li.block-text__list__item - вечера живой музыки.
-
-	//Форма - получить специальные тарифы
-	include  ../sections/form-spectarif.pug
-
-	section.section-img.section-img__halls#halls
-		.section__block__container
+	section.section-grey#halls
+		.section-grey_block.container
 			+block-text('Конференц возможности',
-	["В доме отдыха Подмосковья «Атлас Парк Отель» созданы отличные условия для организации деловых корпоративных мероприятий, тимбилдингов, праздников, банкетов.",
-		"Здесь есть 7 универсальных залов, подходящих как для проведения конференций, так и банкетов и 15 конференц-залов. Все помещения оборудованы современной техникой для комфортной работы.",
-		"Для масштабных праздничных мероприятий подойдет огромный шатер, рассчитанный на 1000 человек. На территории отеля расположены беседки для барбекю и шашлыков вместимостью от 20 до 150 человек.",
-		"Вечерняя шоу-программа от команды анимации по пятницам и субботам, анимация (спортивно-развлекательные мероприятия на свежем воздухе и в бассейне)."])
+			["К Вашим услугам 4 конференц зала, площадью от 69 кв.м до 1351кв.м., вместимостью до 1200 человек и 5 переговорных комнат площадью от 29 кв.м до 40 кв.м., вместимостью до 30 человек.",  "Конференц-залы отеля оснащены всем необходимым презентационным оборудованием и идеально подходят для проведения деловых встреч и конференций."])
+			.block-columns.clearfix.popup-container_img
+				+block-columns__item('/2/1.jpg')
+				+block-columns__item('/2/2.jpg')
+				+block-columns__item('/2/3.jpg')
 
-	section.section-img.section-img__halls-meetroom1
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Переговорная комната №1
-				.block-text__content
-					p.block-text__content___p.no-margin В зале:
-					ul.block-text__list
-						li.block-text__list__item система кондиционирования;
-						li.block-text__list__item демонстрационное оборудование;
-						li.block-text__list__item дневное и искусственное освещение.
-					p.block-text__content___p.big-text.no-margin Площадь 35,7 кв.м.
-					p.block-text__content___p.big-text Вместимость до 20 человек.
-
-	section.section-img.section-img__halls-meetroom2
-		.block-halls.section__block.clearfix
-			.block-text
-				.block-text__title Переговорная комната №2
-				.block-text__content
-					p.block-text__content___p.no-margin В зале:
-					ul.block-text__list
-						li.block-text__list__item система кондиционирования;
-						li.block-text__list__item демонстрационное оборудование;
-						li.block-text__list__item дневное и искусственное освещение.
-					p.block-text__content___p.big-text.no-margin Площадь 24,8 кв.м.
-					p.block-text__content___p.big-text Вместимость до 20 человек.
-
-	section.section-slider.section-slider-meetrooms2f.clearfix
-			.section-slider__text
-				.block-text__title Переговорные комнаты на 2,3,4,5 этажах
-				p.block-text__content___p.no-margin В зале:
-					ul.block-text__list
-						li.block-text__list__item система кондиционирования;
-						li.block-text__list__item демонстрационное оборудование;
-						li.block-text__list__item дневное и искусственное освещение.
-				p.block-text__content___p.no-margin
-					strong Площадь 35,4  кв.м.
-				p.block-text__content___p
-					strong Вместимость до 25 человек.
-			.section-slider_block
-				+slider(['07/7.jpg', '07/71.jpg', '07/72.jpg'], 0)
-
-	section.section-img.section-img__halls-conference
+	section.section-img.section-img__halls-tarusa
 		.block-halls.section__block.section__block__container
 			.block-text
-				.block-text__title Конференц-зал
+				.block-text__title Зал «Таруса»
 				.block-text__content
-					p.block-text__content___p Просторный и светлый зал для совещаний и конференций имеет необходимое оборудование, LCD-проектор и доступ в Интернет для проведения деловых встреч на самом высоком уровне.
-					p.block-text__content___p Дополнительно: организация питания Ваших гостей на мероприятии. Соседний банкетный зал или смежный мансардный зал можно использовать для проведения кофе-брейков.
-					p.block-text__content___p.big-text.no-margin Вместимость до 350 человек.
-
-	section.section-img.section-img__halls-moscow
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Зал «Москва»
-				.block-text__content
-					p.block-text__content___p Просторный зал с колоннами и высокими потолками «Москва» позволит провести Вашу деловую встречу на достойном уровне.
-					p.block-text__content___p В зале «Москва» установлен LCD-проектор.
-					p.block-text__content___p.big-text.no-margin Вместимость до 100 человек.
-
-	section.section-img.section-img__halls-banquet1
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Банкетный зал №1
-				.block-text__content
-					p.block-text__content___p Универсальный зал «конференция-банкет»
-					p.block-text__content___p.big-text.no-margin Вместимость до 50 человек.
-
-	section.section-img.section-img__halls-banquet2
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Банкетный зал №2
-				.block-text__content
-					p.block-text__content___p Банкетный зал удобно расположен рядом с залом для конференций, что позволяет использовать его не только для торжеств частных гостей, но и для корпоративных банкетов.
-					p.block-text__content___p Ваши гости оценят атмосферу загородного отдыха, чистый воздух и звуки природы, а также красивый вид на лес из окон третьего этажа.
-					p.block-text__content___p.big-text.no-margin Вместимость до 70 человек.
-
-	section.section-img.section-img__halls-novgorod
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Зал «Новгород»
-				.block-text__content
-					p.block-text__content___p Универсальный зал для проведения деловых встреч. Имеет необходимое оборудование и доступ в сеть Интернет.
-					p.block-text__content___p Находится в Холле именных залов - рядом с залами «Москва», «Владимир», «Суздаль», «Кострома».
-					p.block-text__content___p.big-text.no-margin Вместимость до 80 человек.
-
-	section.section-img.section-img__halls-vladimir
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Зал «Владимир»
-				.block-text__content
-					p.block-text__content___p Универсальный зал для проведения деловых встреч, имеет необходимое оборудование и доступ в сеть Интернет. Находится в Холле именных залов - рядом с залами «Москва», «Суздаль», «Новгород», «Кострома».
-					p.block-text__content___p.big-text.no-margin Вместимость до 40 человек.
-
-	section.section-img.section-img__halls-suzdal
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Зал «Суздаль»
-				.block-text__content
-					p.block-text__content___p Универсальный зал для проведения деловых встреч вместимостью, имеет необходимое оборудование и доступ в сеть Интернет. Находится в Холле именных залов - рядом с залами «Москва», «Владимир», «Новгород», «Кострома».
-					p.block-text__content___p.big-text.no-margin Вместимость до 40 человек.
-
-	section.section-img.section-img__halls-kostroma
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Зал «Кострома»
-				.block-text__content
-					p.block-text__content___p Универсальный зал для проведения деловых встреч вместимостью, имеет необходимое оборудование и доступ в сеть Интернет. Находится в Холле именных залов - рядом с залами «Москва», «Владимир», «Новгород», «Кострома».
-					p.block-text__content___p.big-text.no-margin Вместимость до 30 человек.
+					p.block-text__content___p Самый большой конференц-зал. Панорамные окна зала с открывающимися видами на хвойный лес, наполняют зал дневным светом и дарят ощущение простора.
+					p.block-text__content___p Зал «Таруса» идеально подходит для проведения крупных мероприятий, форумов, конференций, торжеств, тимбилдингов и концертных выступлений.
+					p.block-text__content___p.big-text.no-margin Площадь 1351 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 1200 человек.
 
 	section.section-img.section-img__halls-transformer
 		.block-halls.section__block.section__block__container
 			.block-text
-				.block-text__title Зал мансардный (трансформер)
+				.block-text__title Зал «Трансформер»
 				.block-text__content
-					p.block-text__content___p Мансардный зал - идеальное решение для проведения кофе-брейков при использовании в качестве основной площадки смежного с ним конференц-зала, а также для проведения независимых деловых встреч.
-					p.block-text__content___p Зал-трансформер может быть делим на два раздельных зала, вместимостью 30 и 40 персон.
-					p.block-text__content___p.big-text.no-margin Вместимость до 100 человек.
+					p.block-text__content___p Просторный зал с дневным светом «Трансформер» рассчитан на проведение конференций, деловых совещаний, круглых столов и тренингов.
+					p.block-text__content___p При необходимости зал может быть разделен перегородкой на два отдельных зала площадью 160 кв.м и 126 кв.м.
+					p.block-text__content___p Префанкшн зона для кофе-паузы зала «Трансформер» имеет открытую веранду с видом на смешанный лес заповедника.
+					p.block-text__content___p.big-text.no-margin Площадь 286 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 250 человек
 
-	section.section-img.section-img__halls-mansardny
+	section.section-img.section-img__halls-meeting
 		.block-halls.section__block.section__block__container
 			.block-text
-				.block-text__title Зал мансардный №1,2
+				.block-text__title Зал для совещаний
 				.block-text__content
-					p.block-text__content___p Мансардный зал - идеальное решение для проведения кофе-брейков при использовании в качестве основной площадки смежного с ним конференц-зала, а также для проведения независимых деловых встреч. Зал-трансформер может быть делим на два раздельных зала, вместимостью 30 и 40 персон.
-					p.block-text__content___p.big-text.no-margin Вместимость до 100 человек.
+					p.block-text__content___p Комфортный зал для совещаний расположен в здании ресторанного комплекса отеля.
+					p.block-text__content___p Дневной свет и возможность установки всего необходимого презентационного оборудования позволяет проводить в зале конференции, тренинги и совещания.
+					p.block-text__content___p.big-text.no-margin Площадь 69 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 50 человек.
 
-	section.section-img.section-img__business
-		.section__block__container
-			+block-text('Бизнес-центр ', [
-				"Атлас Парк отель предоставляет для своих гостей полностью оборудованные, автоматизированные рабочие места в собственной бизнес lounge зоне.", " К Вашим услугам: доступ в сеть Интернет, мобильный печатный центр, а также разнообразное программное обеспечение."])
+	section.section-img.section-img__halls-speak
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Переговорные комнаты
+				.block-text__content
+					p.block-text__content___p 5 переговорных комнат отеля - отличный выбор для проведения небольших совещаний и переговоров за круглым столом.
+					p.block-text__content___p.big-text.no-margin Площадь от 29 до 40 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость от 15 до 30 человек.
+
+	section.section-img.section-img__halls-mozayka
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Зал «Мозаика»
+				.block-text__content
+					//p.block-text__content___p 5 переговорных комнат отеля - отличный выбор для проведения небольших совещаний и переговоров за круглым столом.
+					p.block-text__content___p.big-text.no-margin Площадь 360 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 300 человек.
 
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
 	section.section-grey#restourans
 		.section-grey_block.container
-			+block-text('Ресторанная зона',
-			['На базе отеля располагается целая сеть заведений общественного питания с разным меню и тематическим оформлением.', 'Питание гостей осуществляется по системе «шведский стол» в ресторане «Атлас». '])
+			+block-text('Рестораны и бары',
+			['Питание гостей в отеле «Cronwell Park Яхонты Таруса» осуществляется в ресторане шведской линии, где каждый может выбрать блюда по душе.  Большое разнообразие блюд и напитков удовлетворят запросы даже самых взыскательных гурманов. '])
 			.block-columns.clearfix.popup-container_img
-				+block-columns__item('/19/1.jpg')
-				+block-columns__item('/19/2.jpg')
-				+block-columns__item('/19/3.jpg')
+				+block-columns__item('/8/1.jpg')
+				+block-columns__item('/8/2.jpg')
+				+block-columns__item('/8/3.jpg')
 
-	section.section-img.section-img__restouran-atlas
+	section.section-img.section-img__restouran-shved
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Ресторан «Атлас»
+				.block-text__title Ресторан «шведской линии»
 				.block-text__content
-					p.block-text__content___p Ресторан «Атлас» приглашает гостей оценить вкус, качество и разнообразие блюд русской и европейской кухни. К изысканным блюдам предлагается богатая карта вин. Ресторан работает по системе «Шведский стол» (по тарифу «Полупансион» в вечернее время предлагает меню а`Ля карт). В праздничные дни и по вечерам гостей ждут развлекательные шоу-программы и выступления звезд.
-					p.block-text__content___p.big-text.no-margin Вместимость от 80 до 250  человек.
+					p.block-text__content___p В стоимость проживания включено четырехразовое питание по системе «шведский стол».
+					p.block-text__content___p Ежедневно в меню более 100 наименований блюд: салаты и закуски, ароматные супы и горячие блюда, а также десерты собственного приготовления и свежие фрукты.
+					p.block-text__content___p В меню «шведского стола» представлены блюда русской и европейской кухни.
 
-	section.section-img.section-img__scandinavia
+	section.section-img.section-img__panorama
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Павильон «Скандинавия»
+				.block-text__title Панорамный ресторан
 				.block-text__content
-					p.block-text__content___p Павильон «Скандинавия» - великолепная летняя площадка для деловых мероприятий и изысканных торжеств самого высокого уровня сложности. Павильон может быть декорирован композициями из свежих цветов и ночной подсветкой, оснащен комфортной мебелью для самых искушенных гостей.
-					p.block-text__content___p.big-text.no-margin Вместимость до 1500 персон.
+					p.block-text__content___p Классические и авторские блюда от шеф-повара, прекрасный сервис и восхитительный вид на долину реки – отличительные особенности нашего ресторана.
+					p.block-text__content___p В интерьере ресторана использована натуральная древесина, что создает ощущение уюта и тепла. Летом открыта терраса, на которой вдвойне приятнее наслаждаться блюдами и природой.
 
-	section.section-img.section-img__sportivnaya
+	section.section-img.section-img__disco
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Корпоративная беседка «Спортивная»
+				.block-text__title Диско-бар «Стоп-кадр»
 				.block-text__content
-					p.block-text__content___p Беседка «Спортивная» удобно расположилась среди густых деревьев и вблизи с особой инфраструктурой отеля - спортивным комплексом, костровой зоной, главной парковкой.
-					p.block-text__content___p.big-text.no-margin Вместимость при конференции до 120 человек.
+					p.block-text__content___p Бар выполнен в ретро стиле. Уютная атмосфера, европейское меню и широкий ассортимент напитков, шоу-программы с участием приглашенных артистов и зажигательные дискотеки – Ваш вечер обещает быть запоминающимся!
+					p.block-text__content___p  В диско-баре всегда можно отметить небольшое значимое событие или провести корпоративную вечеринку.
 
-	section.section-img.section-img__baltiyskaya
+	section.section-img.section-img__karaoke
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Корпоративная беседка «Балтийская»
+				.block-text__title Караоке-бар
 				.block-text__content
-					p.block-text__content___p Беседка «Балтийская» - это гармоничное сочетание уютного дома и летней веранды на лоне природы. У беседки имеется собственная смотровая площадка с возможностью спуска на набережную реки Рожайка, а также летний бассейн с подогревом. Для создания особой атмосферы Вашего праздника Вы сможете использовать отдельную площадку для фейерверков!
-					p.block-text__content___p.big-text.no-margin Вместимость при конференции до 120 человек.
+					p.block-text__content___p Караоке-бар находится на первом этаже развлекательного центра.
+					p.block-text__content___p Интерьер бара выполнен в теплых тонах, атмосфера располагает к неторопливой и приятной беседе за чашкой ароматного кофе или чая.
 
-	section.section-img.section-img__koliba
+	section.section-img.section-img__coffee
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Беседка «Колыба»
+				.block-text__title Кофейня «Coffee Book»
 				.block-text__content
-					p.block-text__content___p Выполненная в стиле охотничьего домика беседка «Колыба» - идеальное решение для провдения корпоративного мероприятия на природе. Беседка расположена в лесной зоне на берегу реки Рожайка. Подходит для проведения спортивных турниров, тимбилдингов на открытом воздухе.
-					p.block-text__content___p.big-text.no-margin Вместимость до 36 человек.
+					p.block-text__content___p Рядом с ресепшн расположена уютная кофейня «CoffeeBook», оформленная в классическом стиле.
+					p.block-text__content___p К услугам гостей широкий выбор ароматных горячих напитков и десертов, вкуснейших коктейлей и легких закусок.
+					p.block-text__content___p Летом работает открытая терраса.
 
-	section.section-img.section-img__japan
+	section.section-img.section-img__bamboo
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Беседка №1 «Японская»
+				.block-text__title Аквабар «Бамбук»
 				.block-text__content
-					p.block-text__content___p Уютная беседка на берегу реки Рожайки, выполнена в японском стиле: крыша HOGYO с козырьком, который, согласно архитектурной традиции, защищает от дождя. Беседка имеет аутентичную мебель, постоянное освещение и собственную мангальную зону.
-					p.block-text__content___p.big-text.no-margin Вместимость до 18 человек.
-
-	section.section-img.section-img__vostok
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Беседка №2 «Восточная»
-				.block-text__content
-					p.block-text__content___p Беседка «Восточная» расположена в лесной зоне на берегу реки Рожайки, имеет доступ к электричеству и освещению, а также столовую мебель.
-					p.block-text__content___p.big-text.no-margin Вместимость до 6 человек.
-
-	section.section-img.section-img__russian
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Беседка №3 «Русская»
-				.block-text__content
-					p.block-text__content___p Беседка расположена в лесной зоне на берегу реки Рожайки, имеет доступ к электричеству и освещению, а также столовую мебель.
-					p.block-text__content___p.big-text.no-margin Вместимость до 15 человек.
-
-	section.section-img.section-img__doich
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Беседка №4 «Немецкая»
-				.block-text__content
-					p.block-text__content___p Беседка расположена в лесной зоне на берегу реки Рожайки, имеет доступ к электричеству и освещению, а также столовую мебель.
-					p.block-text__content___p.big-text.no-margin Вместимость до 18 человек.
-
-	section.section-img.section-img__kaskad
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Беседка №5 «Каскадная»
-				.block-text__content
-					p.block-text__content___p Двухуровневая беседка имеет свой выход к реке Рожайке и собственную деревянную набережную, мангальную зону, доступ к электричеству и освещению, а также столовую мебель.
-					p.block-text__content___p.big-text.no-margin Вместимость до 40 человек.
-
-	section.section-img.section-img__lesny
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Беседки №6, 7 «Лесные»
-				.block-text__content
-					p.block-text__content___p Беседки «Лесные» расположены в лесной зоне в 100 метрах от главного корпуса отеля, где сосредоточена основная инфраструктура, сервисы и развлечения: номера, бары, рестораны, боулинг и др. Беседки имеют собственную мангальную зону, доступ к электричеству и освещению, а также столовую мебель.
-					p.block-text__content___p.big-text.no-margin Вместимость до 10 человек каждая.
-
-	section.section-img.section-img__corporative
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Беседка №8 «Корпоративная»
-				.block-text__content
-					p.block-text__content___p Просторная корпоративная беседка подходит для проведения кофе-брейков и барбекю. Стены беседки закрыты от ветра и осадков прозрачным пластиком (поликарбонатом). Внутри имеется встроенная столовая мебель, доступ к электричеству, освещение, отопление. Во дворе у беседки расположено костровое место и все удобства.
-					p.block-text__content___p.big-text.no-margin Вместимость от 90 до 120 человек.
-
-	section.section-img.section-img__venice
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Кафе «Венеция»
-				.block-text__content
-					p.block-text__content___p Атмосфера кафе «Венеция» отражает спокойствие чудесного города, невозмутимо качающегося на водах Адриатики. Порадует Вас средиземноморской кухней, отменным итальянским вином и ароматным кофе. Это место, где отдыхает душа, будь это обед с деловыми партнерами или важная бизнес встреча. В летний период работает веранда на свежем воздухе.
-					p.block-text__content___p.big-text.no-margin Вместимость до 150 человек.
+					p.block-text__content___p В аквабаре представлен широкий ассортимент напитков: фреши, горячие напитки, алкогольные и безалкогольные напитки.
+					p.block-text__content___p Также, в наличии, закуски к пиву. Возле бара находится зона отдыха, де гости смогут выпить чай, кофе или другой напиток.
 
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
-	section.section-img.section-img__morskoy
-		.section__block__container
-			+block-text('Морской бар', [
-				"Интерьер бара стилизован под пиратский корабль. Рыбацкие снасти и фрагменты старинных судов создают особый колорит и пропитывают атмосферу духом романтики и приключений. Здесь вам предложат блюда, приготовленные на углях и открытом огне, любое блюдо из меню ресторана «Атлас», спиртные напитки, коктейли, разливное пиво, свежевыжатые соки. Вечером в «Морском баре» - музыка, развлекательные шоу-программы, стриптиз и традиционные дискотеки.", "Бар работает круглосуточно."])
-
-	section.section-img.section-img__lobby
-		.section__block__container
-			+block-text('Лобби-бар', [
-				"Лобби-бар - излюбленное место отдыха гостей загородного отеля. Работает круглосуточно. Дизайн интерьера с его пышной зеленью и ротанговой мебелью выдержан в традициях Индонезии. Бар находится в холле главного корпуса, идеально подходит для приятной беседы и комфортного времяпрепровождения. Здесь можно выпить чашечку кофе или чая, бокал хорошего вина или пива, угоститься тортом или мороженым."])
-
-	section.section-img.section-img__city
-		.section__block__container
-			+block-text('Сити бар (Суши бар)', [
-				"Сити-бар отличается своим модным современным дизайном – бар оформлен в стиле Hi-Tech с приятной мягкой подсветкой и общей расслабляющей атмосферой. Здесь гостям предложат разнообразие блюд японской кухни: суши, роллы, сашими, салаты, спиртные напитки, а также блюда на вынос: сэндвичи, закуски, десерты, чай, кофе, соки. В теплое время года на площадке у 3-го корпуса открывается летняя терраса с чудесным видом на лес и речку.       "])
-
-	section.section-img.section-img__vost-dvor
-		.section__block__container
-			+block-text('«Восточный дворик»', [
-				"Откройте для себя утонченный вкус восточных блюд, приготовленных на тандыре и мангале. Ресторан «Восточный дворик» поможет Вам почувствовать очарование Востока и подарит возможность приблизиться к чужой культуре. Яркие восточные узоры, мебель ручной работы и, конечно традиционные восточные блюда – все, чтобы в нашем «Восточном дворике» Вы почувствовали себя настоящим султаном!"])
-
 	section.section-img.section-img__entertainment#entertainment
 		.block-text.section__block.section__block__container
-			.block-text__title Развлечения
+			.block-text__title Развлечения и спорт
 			.block-text__content
-				p.block-text__content___p В отеле «Атлас парк» созданы все условия для проведения корпоративных игр и тимбилдингов на природе. Для гостей работают волейбольная, баскетбольная площадка, футбольное поле, большой и маленький теннисный корты, беговые и велосипедные дорожки в лесу.
+				p.block-text__content___p В отеле «Cronwell Park Яхонты Таруса» созданы все условия для проведения досуга.
 				p.block-text__content___p.no-margin К услугам гостей:
 				ul.block-text__list.no-style
-					li.block-text__list__item - боулинг;
-					li.block-text__list__item - бильярд;
-					li.block-text__list__item - катание на лошадях;
-					li.block-text__list__item - пейнтбол;
-					li.block-text__list__item - прокат спортинвентаря;
-					li.block-text__list__item - караоке;
-					li.block-text__list__item - веревочный городок;
-					li.block-text__list__item - соколиный двор;
+					li.block-text__list__item - прогулки на лошадях;
 					li.block-text__list__item - рыбалка;
-					li.block-text__list__item - тренажерный зал.
+					li.block-text__list__item - прокат спортинвентаря;
+					li.block-text__list__item - пейнтбол;
+					li.block-text__list__item - беседки для барбекю;
+					li.block-text__list__item - эко-тропа;
+					li.block-text__list__item - полеты на вертолете;
+					li.block-text__list__item - бильярд;
+					li.block-text__list__item - караоке;
+					li.block-text__list__item - анимационные программы;
+					li.block-text__list__item - боулинг.
 
-	section.section-img.section-img__pools
+	section.section-img.section-img__wellness
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Бассейны
+				.block-text__title Wellness-центр
 				.block-text__content
-					p.block-text__content___p Фитнес-центр АТЛАС ПАРК ОТЕЛЯ - это современный центр красоты и здоровья, предлагающий гостям весь комплекс услуг для создания совершенной фигуры и получения истинного наслаждения от отдыха. К Вашим услугам: тренажерный зал, бассейн-лагуна с гейзерами, занятия спортом с фитнес-инструктором.
-					p.block-text__content___p Большой бассейн-лагуна с гейзерами. В бассейне для гостей отеля проводятся уроки аквааэробики.
-					p.block-text__content___p.no-margin
-						strong Параметры:
-					p.block-text__content___p.no-margin Размер бассейна – 14x10 м
-					p.block-text__content___p.no-margin Глубина – 1,3–1,7 м
-						p.block-text__content___p.no-margin Температура воды – 28°C
-
-	section.section-img.section-img__spa#spa
-		.section__block__container
-			+block-text('SPA-центр ', [
-				"В центре «Атлас СПА» Вы получите истинное наслаждение от отдыха после шоколадного или водорослевого обертываний, оздоровительного или расслабляющего массажа. Для максимального расслабления и повышения тонуса организма посетите бани, сауны или хамам, а после пребывания в сауне примите гидромассажную ванну. Или отправьтесь в уникальный бассейн с гейзерами или современный фитнес-центр, чтобы закрепить эффект от процедур для красоты и здоровья. Центр «Атлас СПА» имеет также собственный салон красоты, где каждый гость или гостья смогут подчеркнуть свой стиль."])
+					p.block-text__content___p Просторный центр, на территории которого расположено два бассейна, фитнес-центр, финская сауна, SPA-зона и аквацентр.
+					p.block-text__content___p Гости отеля смогут отдохнуть и снять напряжение после насыщенного дня.
 
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
 	section.section-grey.section-grey-rooms#rooms
 		.section-grey_block.container
-			+block-text('Номерной фонд', ['Все посетители отеля имеют возможность расселиться по комфортабельным номерам разного уровня. Калибровка по категориям и группам зависит от вместительности и уровня обслуживания. Наиболее типичные условия предложены в помещениях класса «Стандарт», больше удобств подразумевает проживание в комнатах категорий «Комфорт» и «Студия».'])
+			+block-text('Номерной фонд', ['Комфортабельные номера, развитая инфраструктура, круглосуточное обслуживание номеров – все это сделает Ваш отдых максимально приятным. '])
 			.block-columns.clearfix.popup-container_img
-				+block-columns__item("/39/1.jpg")
-				+block-columns__item("/39/2.jpg")
-				+block-columns__item("/39/3.jpg")
-
-	section.section-slider.section-slider-meetrooms2f.clearfix
-		.section-slider__text
-			.block-text__title Комфорт
-			p.block-text__content___p 3 номера, площадью <strong> от 34 до 40 </strong> кв.м
-			p.block-text__content___p.no-margin В номере:
-				ul.block-text__list.no-style
-					li.block-text__list__item - бесплатный Wi-Fi;
-					li.block-text__list__item - двуспальная кровать, двуспальный диван;
-					li.block-text__list__item - обеденный гарнитур, журнальный или письменный столик;
-					li.block-text__list__item - шкаф-купе;
-					li.block-text__list__item - телевизор;
-					li.block-text__list__item - мини-бар, кондиционер, сейф;
-					li.block-text__list__item - ванна или джакузи;
-					li.block-text__list__item - банные халаты, тапочки, фен и все удобства для гигиены.
-			p.block-text__content___p
-				strong Размещение до 4 гостей.
-		.section-slider_block
-			+slider(['40/1.jpg', '40/2.jpg', '40/3.jpg'], 0)
-
-	section.section-img.section-img__studio
-		.section__block__container
-			.block-text
-				.block-text__title Студия
-				p.block-text__content___p Номера категории «СТУДИЯ» идеальный вариант для тех, кто особенно ценит высокий уровень сервиса. Номера оборудованы всем необходимым для отдыха и работы.
-				p.block-text__content___p 121 номер, <strong> площадью от 29 до 42 кв.м.</strong>
-				p.block-text__content___p.no-margin В номере:
-					ul.block-text__list.no-style
-						li.block-text__list__item - бесплатный Wi-Fi;
-						li.block-text__list__item - двуспальная или две полуторные кровати, двуспальный диван;
-						li.block-text__list__item - журнальный или письменный столик;
-						li.block-text__list__item - телевизор, мини-бар, кондиционер, сейф;
-						li.block-text__list__item - душевая кабина;
-						li.block-text__list__item - все удобства для гигиены;
-				p.block-text__content___p
-					strong Размещение до 4 гостей.
+				+block-columns__item("/17/1.jpg")
+				+block-columns__item("/17/2.jpg")
+				+block-columns__item("/17/3.jpg")
 
 	section.section-img.section-img__standart
 		.section__block__container
 			.block-text
-				.block-text__title Стандарт
-				p.block-text__content___p 45 номеров, площадью от  <strong> площадью 19 до 24 кв.м.</strong>
+				.block-text__title Стандарт 15 кв.м.
 				p.block-text__content___p.no-margin В номере:
 					ul.block-text__list.no-style
-						li.block-text__list__item - бесплатный Wi-Fi;
-						li.block-text__list__item - двуспальная кровать;
-						li.block-text__list__item - журнальный или письменный столик;
-						li.block-text__list__item - телевизор, мини-бар, кондиционер, сейф;
-						li.block-text__list__item - душевая кабина;
-						li.block-text__list__item - все удобства для гигиены;
-				p.block-text__content___p
-					strong Размещение до 2 гостей.
+						li.block-text__list__item - две раздельные кровати, две прикроватные тумбочки;
+						li.block-text__list__item - два прикроватных светильника, шкаф-купе;
+						li.block-text__list__item - журнальный столик, стол под ТВ;
+						li.block-text__list__item - телевизор, кондиционер, мини-бар;
+						li.block-text__list__item - телефон, Wi-Fi;
+						li.block-text__list__item - зеркало, пуфик;
+						li.block-text__list__item - душевая кабина, банные принадлежности, фен;
+						li.block-text__list__item - балкон.
+
+	section.section-img.section-img__standart2
+		.section__block__container
+			.block-text
+				.block-text__title Стандарт+ 15-18 кв.м.
+				p.block-text__content___p.no-margin В номере:
+				ul.block-text__list.no-style
+					li.block-text__list__item - две раздельные кровати, кресло-кровать;
+					li.block-text__list__item - две прикроватные тумбочки, два прикроватных светильника;
+					li.block-text__list__item - шкаф-купе, журнальный столик, стол под ТВ;
+					li.block-text__list__item - телевизор, кондиционер, мини-бар;
+					li.block-text__list__item - телефон, Wi-Fi;
+					li.block-text__list__item - зеркало, пуфик;
+					li.block-text__list__item - душевая кабина, банные принадлежности, фен;
+					li.block-text__list__item - балкон.
+
+	section.section-img.section-img__super
+		.section__block__container
+			.block-text
+				.block-text__title Супериор 21-27 кв.м.
+				p.block-text__content___p.no-margin В номере:
+				ul.block-text__list.no-style
+					li.block-text__list__item - две раздельные кровати, две прикроватные тумбочки;
+					li.block-text__list__item - два прикроватных светильника, шкаф-купе;
+					li.block-text__list__item - кресло (раскладывается в дополнительное спальное место);
+					li.block-text__list__item - диван (раскладывается в дополнительное спальное место);
+					li.block-text__list__item - рабочий стол, журнальный столик, тумба под ТВ;
+					li.block-text__list__item - телевизор, кондиционер, мини-бар;
+					li.block-text__list__item - телефон, Wi-Fi;
+					li.block-text__list__item - зеркало, пуфик;
+					li.block-text__list__item - душевая кабина, банные принадлежности, фен;
+					li.block-text__list__item - балкон.
 
 	section.section-img.section-img__apartment
 		.section__block__container
 			.block-text
-				.block-text__title Апартаменты (коттеджи)
-				p.block-text__content___p 7 коттеджей  <br>  <strong> Площадь коттеджа - 110 м2.</strong>
-					ul.block-text__list.no-style
-						li.block-text__list__item Количество комнат в коттедже: 4.
-						li.block-text__list__item 1 комната (1 этаж) - прихожая, гостиная + кухня
-						li.block-text__list__item 3 изолированных комнаты (2 этаж) - спальни.
-						li.block-text__list__item Количество основных мест - 5.
-						li.block-text__list__item Количество дополнительных мест - 2.
+				.block-text__title Апартаменты трехкомнатные 80 кв.м.
+				p.block-text__content___p В первой спальне: две раздельные кровати, две прикроватные тумбочки, два прикроватных светильника, телевизор, телефон, Wi-Fi.
+				p.block-text__content___p Во второй спальне: две раздельные кровати, две прикроватные тумбочки, два прикроватных светильника, стеллаж - тумба под ТВ, телевизор, телефон, Wi-Fi.
+				p.block-text__content___p В гостиной с зоной кухни: кухонная мебель, угловой диван, электрическая плита, мини-бар, чайник, набор посуды, обеденный стол на 4 персоны
+				ul.block-text__list.no-style
+					li.block-text__list__item - зеркало, пуфик;
+					li.block-text__list__item - два прикроватных светильника, шкаф-купе;
+					li.block-text__list__item - душевая кабина, банные принадлежности, фен;
+					li.block-text__list__item - балкон.
 
-	section.section-img.section-img__lux
+	section.section-img.section-img__adel
 		.section__block__container
 			.block-text
-				.block-text__title Люкс
-				p.block-text__content___p 15 номеров, площадью от   <strong> 43 кв.м.</strong>
-				p.block-text__content___p.no-margin В номере:
-					ul.block-text__list.no-style
-						li.block-text__list__item - бесплатный Wi-Fi;
-						li.block-text__list__item - двуспальная кровать или двуспальный диван;
-						li.block-text__list__item - шкаф-купе, журнальный или письменный столик;
-						li.block-text__list__item - телевизор, мини-бар, кондиционер, сейф;
-						li.block-text__list__item - ванна или джакузи;
-						li.block-text__list__item - банные халаты, тапочки, фен и все удобства для гигиены.
-				p.block-text__content___p
-					strong Размещение до 2 гостей.
+				.block-text__title Люкс Адель 35 кв.м
+				p.block-text__content___p В номере: двуспальная кровать, универсальная тумба-консоль под ТВ, туалетный столик, диван угловой-раскладной, камод, журнальный столик, прикроватные светильники, торшер, телевизор, кондиционер, чайный набор, мини-бар, телефон, Wi-Fi.
+				p.block-text__content___p В коридоре: шкаф-купе.
+				p.block-text__content___p В ванной комнате: ванна, раковина, банные принадлежности, халаты и тапочки, фен.
+
+	section.section-img.section-img__cottage
+		.section__block__container
+			.block-text
+				.block-text__title Коттедж с сауной 135 кв.м.
+				p.block-text__content___p Площадь террасы 30 кв.
+				p.block-text__content___p В спальне: одна двуспальная кровать, две прикроватные тумбочки, два прикроватных светильника, шкаф-купе, 2 стула, журнальный столик, телевизор, телефон, камин.
+				p.block-text__content___p В гостиной: кухонная мебель, холодильник, микроволновая печь, диван раскладной, чайник, набор посуды, обеденный стол + 6 стульев, мягкая мебель + журнальный стол, камин, телевизор, телефон.
+				p.block-text__content___p В сауне: 2 душевые кабины, бассейн 2х2, парная на 4 чел., ушат с холодной водой.
+				p.block-text__content___p В санузлах (2): душевая кабина, фен, полотенца махровые, халаты, тапочки, банные принадлежности.
+
 
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
@@ -462,5 +270,5 @@ block content
 					p.block-text__content___p КОНТАКТЫ <br>  +7 (499) 653-80-11 корпоративный отдел
 					p.block-text__content___p  РЕЖИМ РАБОТЫ <br> c 9.00 до 21.00 <br> 	в субботу и воскресенье c 11.00 до 20.00
 					.block-text__content___p
-						a.block-text__content___a(href="http://atlaspark-tour.ru", target="_blank") http://atlaspark-tour.ru
-					p.block-text__content___p  АДРЕС <br> г. Домодедово, д. Судаково, 92
+						a.block-text__content___a(href="http://yahontytarusa.ru/", target="_blank") http://yahontytarusa.ru/
+					p.block-text__content___p  АДРЕС <br>Калужская обл., Жуковский район, д. Грибовка
