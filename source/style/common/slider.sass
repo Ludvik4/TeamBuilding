@@ -1,17 +1,23 @@
+
 .slider__list-wrap
 	position: relative
+	max-width: 80%
+	margin: 0 auto
 .slider
 	overflow: hidden
 .slider__list
 	position: relative
 	width: 100%
 	display: inline-block
+	list-style: none
+	overflow: hidden
 .slider__item
 	position: absolute
 	top: 0
 	left: 0
 	z-index: 0
 	width: 100%
+	transition: .4s
 	&.active
 		z-index: 1
 		position: relative
@@ -24,9 +30,9 @@
 	width: 20px
 	height: 20px
 	cursor: pointer
-	border-top: 3px solid
-	border-right: 3px solid
-	border-color: #542d2d
+	border-top: 6px solid
+	border-right: 6px solid
+	border-color: #fff
 	position: absolute
 	z-index: 3
 	top: 47%

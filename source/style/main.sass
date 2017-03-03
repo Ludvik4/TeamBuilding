@@ -5,16 +5,20 @@ body
   font-family: 'Open Sans Light'
   min-width: 320px
   overflow-x: hidden
-
+div
+  box-sizing: border-box
 p, h1, h2, ul, li
   padding: 0
   margin: 0
-
+a:-webkit-any-link
+  text-decoration: none
 .clearfix:before, .clearfix:after
   content: ""
   display: table
 .clearfix:after
   clear: both
+.hidden
+  display: none
 
 //@import '../../bower_components/singularity/stylesheets/singularitygs';
 @import 'common/template';

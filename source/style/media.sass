@@ -1,14 +1,25 @@
-//@media screen and (min-width: 1199px)
-	.container: 1200px
+@media screen and (min-width: 1199px)
+	html
+		font-size: 16px
+	.container
+		width: 1200px
 
-//@media screen and (max-width: 1199px)
-	.container: 1100px
-
+@media screen and (max-width: 1199px)
+	html
+		font-size: 16px
+	.container
+		width: 960px
+	.section-slider__text
+		margin-left: 2%
+		width: 37%
 //@media screen and (max-width: 992px)
 	.container: 960px
 
 @media screen and  (max-width: 991px)
-
+	html
+		font-size: 15px
+	.container
+		width: 750px
 	.section-img
 		padding-left: 7%
 	.block-halls__plan___wrapper
@@ -26,9 +37,18 @@
 				margin-left: -84px
 
 @media screen and (max-width: 767px)
+	html
+		font-size: 14px
+	.container
+		width: 90%
 	.test-svg
 		height: 70px
 		width: 52px
+	.section-slider__text
+		margin-left: 14%
+		width: 100%
+	.section-slider_block
+		width: 100%
 	.section-img
 		min-height: 70vh
 		padding-top: 50px
@@ -72,6 +92,10 @@
 		padding-left: 10%
 
 @media screen and (max-width: 479px)
+	html
+		font-size: 13px
+	.container
+		width: 90%
 	.section-img
 		min-height: 50vh
 		padding: 40px 10px

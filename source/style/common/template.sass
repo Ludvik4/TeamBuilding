@@ -12,6 +12,9 @@
 // --------------layout-elements-------------------
 .maincontent
 	position: relative
+
+.container
+	margin: 0 auto
 //====================== NAV
 
 #phone-form_link
@@ -64,6 +67,7 @@
 		color: #919191
 		opacity: 0.7
 		font-weight: bold
+		text-decoration: none
 
 .touch-menu
 	display: none
@@ -121,13 +125,16 @@
 	position: relative
 	z-index: 3
 .section__block__container
-	max-width: 750px
+	max-width: 800px
 	z-index: 3
 
 .section-grey
 	padding-top: 75px
 	padding-bottom: 45px
 	background-color: #f0f0f0
+	.section__block
+		max-width: 750px
+		margin: 0 auto
 
 .block-text__title
 	margin-bottom: 20px
@@ -150,23 +157,32 @@
 .big-text
 	font-size: 30px
 	font-family: "Open Sans"
+
 .block-text__list
 	padding-left: 30px
+.no-style
+	list-style: none
+	padding-left: 0
 .title
 	font-size: 42px
 	font-family: "Open Sans"
 	margin-bottom: 30px
 	text-align: center
-
+.section-slider
+	padding-top: 50px
+	font-size: 18px
 .section-slider__text
 	float: left
-	width: 30%
+	width: 28%
 	padding: 20px
+	margin-left: 10%
 .section-slider_block
 	float: left
-	width: 69%
-	max-height: 620px
+	width: 60%
+	max-height: 550px
 	overflow: hidden
+	padding: 40px 40px 0 40px
+	margin-bottom: 40px
 
 // -----------layout-elements end
 
@@ -181,8 +197,8 @@
 	padding-top: 150px
 	text-align: center
 .block-logo__img
-	width:  80%
-	max-width: 520px
+	width:  100%
+	max-width: 43%
 	height: auto
 	margin-bottom: 200px
 .block-logo__desc
@@ -228,7 +244,7 @@
 		.block-text__title
 			text-align: center
 			margin-bottom: 60px
-			font-family: 'Open Sans Light'
+			font-family: 'Open Sans'
 		.block-text__content
 			//width: 860px
 			margin: 0 auto 20px
@@ -250,23 +266,20 @@
 
 //========================== halls
 .section-img__halls
-	background-image: url('../img/04.jpg')
-.section-img__halls___mask
-	background-image: -webkit-linear-gradient(top, rgba(2,42,89,0.80), rgba(0,0,0,0.6))
+	background:  -webkit-linear-gradient(top, rgba(2,42,89,0.80), rgba(0,0,0,0.6)),url('../img/04.jpg') no-repeat
+	background-size: cover
 
 
 
 //============================Hall meetroom1
 .section-img__halls-meetroom1
-	background-image: url('../img/05.jpg')
-.section-img__halls-meetroom1___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/05.jpg')  center center no-repeat
+	background-size: cover
 
 //============================Hall meetroom1
 .section-img__halls-meetroom2
-	background-image: url('../img/06.jpg')
-.section-img__halls-meetroom2___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/06.jpg')  center center no-repeat
+	background-size: cover
 
 //============================Halls meetrooms on 2nd floor
 .section-grey_block-meetrooms2f
@@ -274,159 +287,196 @@
 		margin-left: 300px
 		text-align: left
 
-//==================== Big halls
-.section-img__halls-big
-	background-image: url('../img/tild3333-6537-4130-b632-343830643434__noroot.jpg')
-.section-img__halls-big___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
+//==================== conference hall
+.section-img__halls-conference
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/08.jpg')  center center no-repeat
+	background-size: cover
 
-.block-halls__plan___img_wrap
-	float: left
-	width: 33%
-	text-align: center
-	margin-left: -50px
-	&:first-child
-		margin-left: 0
-	.block-halls__plan___img
-		width: 330px
+//====================Moscow hall
+.section-img__halls-moscow
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/09.jpg')  center center no-repeat
+	background-size: cover
+//====================banquet1 hall
+.section-img__halls-banquet1
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/10.jpg')  center center no-repeat
+	background-size: cover
+//====================banquet2 hall
+.section-img__halls-banquet2
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/11.jpg')  center center no-repeat
+	background-size: cover
+//====================novgorod hall
+.section-img__halls-novgorod
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/12.jpg')  center center no-repeat
+	background-size: cover
+//====================banquet2 hall
+.section-img__halls-vladimir
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/13.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__halls-suzdal
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/14.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__halls-kostroma
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/15.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__halls-transformer
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/16.jpg')  center center no-repeat
+	background-size: cover
+//==================== mansardny
+.section-img__halls-mansardny
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/17.jpg')  center center no-repeat
+	background-size: cover
+//==================== business-center
+.section-img__business
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/18.jpg')  center center no-repeat
+	background-size: cover
+//==================== restouran-atlas
+.section-img__restouran-atlas
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/19rest.jpg')  center center no-repeat
+	background-size: cover
+//==================== restouran-atlas
+.section-img__scandinavia
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/20.jpg') center center no-repeat
+	background-size: cover
+//====================
+.section-img__sportivnaya
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.6)) ),url('../img/21.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__baltiyskaya
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.6)) ),url('../img/22.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__koliba
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/23.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__japan
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.35)), to(rgba(0,0,0,0.45)) ),url('../img/24.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__vostok
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/25.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__russian
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.35)), to(rgba(0,0,0,0.45)) ),url('../img/26.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__doich
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.4)) ),url('../img/27.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__kaskad
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/28.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__lesny
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/29.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__corporative
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/30.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__venice
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.7)) ),url('../img/31.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__morskoy
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/32.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__lobby
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.7)) ),url('../img/33.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__city
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/34.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__vost-dvor
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.7)) ),url('../img/35.jpg')  center center no-repeat
+	background-size: cover
+//====================
+.section-img__vost-dvor
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.7)) ),url('../img/35.jpg')  center center no-repeat
+	background-size: cover
 
-//===================	Small halls
-.section-img__halls-small
-	background-image: url('../img/tild3834-3535-4464-a236-646261306538__lesfoto31.jpg')
-.section-img__mask.section-img__halls-small___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
-
-//===================	Winter halls
-.section-img__halls-winter
-	background-image: url('../img/tild3838-3837-4262-b937-313433613166__wintergarden2.jpg')
-.section-img__halls-winter___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.3)) )
-
-//===================	Services
-.section-img__service
-	background-image: url('../img/tild3639-3230-4666-b237-323662626636__001.jpg')
-.section-img__service___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.80), rgba(0,0,0,0.30))
-
-//============================ Banquet hall
-.section-img__halls-banquet
-	background-image: url('../img/tild3561-3239-4637-b632-336235343631__bg1.jpg')
-.section-img__halls-banquet___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.5)) )
-
-	//=================== Belveder hall
-.section-img__belveder
-	background-image: url('../img/tild3430-3433-4932-b837-636638363637__belvedere1.jpg')
-.section-img__belveder___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.80), rgba(0,0,0,0.30))
-
-//=================== Podium hall
-.section-img__podium
-	background-image: url('../img/tild3730-6330-4366-a530-636537613737__noroot.jpeg')
-.section-img__podium___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.80), rgba(0,0,0,0.30))
-
-//=================== Gallery hall
-.section-img__halls-gallery
-	background-image: url('../img/lesfoto17.jpg')
-	.block-halls__plan___img_wrap
-		width: 49%
-		margin-left: -130px
-		&:first-child
-			margin-left: 0
-		.block-halls__plan___img
-			width: 500px
-.section-img__halls-gallery___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0.5)) )
-
-//===================== Coffee-breaks
-.section-img__halls-coffee
-	background-image: url('../img/tild3532-6565-4961-a139-353065393033__124240.jpg')
-	.block-halls__plan___title_coffee
-		font-size: 100px
-		font-family: "Open Sans"
-		.font50
-			font-size: 50px
-	.block-halls__plan___desc
-		font-size: 16px
-.section-img__halls-coffee___mask
-	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.6)) )
-
-//=================== Barbecui zone
-.section-img__barbecui
-	background-image: url('../img/tild6231-3938-4136-a239-373735623938__1920x1200_586003_wwwartfileru.jpg')
-.section-img__barbecui___mask
-	background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0.8), rgba(0, 0, 0, 0.298039))
-.section-barbecui_photos
-	padding: 30px 0 50px
-	width: 90%
-	max-width: 1200px
-	margin: 0 auto
-
-//=================== Football zone
-.section-img__football
-	background-image: url('../img/tild3362-6531-4035-b530-366236653533__golf.jpg')
-	padding: 70px 12%
-.section-img__football___mask
-	background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0.8), rgba(0, 0, 0, 0.298039))
-
+//==================== Развлечения
+.section-img__entertainment
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/36.jpg')  center center no-repeat
+	background-size: cover
+//==================== Развлечения
+.section-img__pools
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/37.jpg')  center center no-repeat
+	background-size: cover
 //=================== SPA zone
 .section-img__spa
-	background-image: url('../img/tild3637-3564-4832-a363-623264663136__lesfoto75.jpg')
-	.block-text__content___p
-		color: #fff
-	.block-text__list__item
-		color: #fff
-.section-img__spa___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.80), rgba(0,0,0,0.30))
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/38.jpg')  center center no-repeat
+	background-size: cover
 
-//=================== Open pool zone
-.section-img__open-pool
-	background-image: url('../img/openpool.jpg')
-	.section__block__container
-		max-width: 450px
-.section-img__open-pool___mask
-	background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0.8), rgba(0, 0, 0, 0.298039))
+//===================
+.section-img__studio
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/41.jpg')  center center no-repeat
+	background-size: cover
+//===================
+.section-img__standart
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/42.jpg')  center center no-repeat
+	background-size: cover
 
-//=================== room-standart
-.section-img__room
-	padding-left: 200px
-.section-img__room-standart
-	background-image: url('../img/tild3333-3539-4630-b963-366336373439__noroot.jpg')
-.section-img__room-standart___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
-
-//===================  Classic Suite
-.section-img__room-classic
-	background-image: url('../img/tild3637-6266-4063-a465-393531663934__3.jpg')
-.section-img__room-classic___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
-
-//===================  Classic Suite
-.section-img__room-classicplus
-	background-image: url('../img/tild6263-3063-4339-a464-626162306463__5555.jpg')
-.section-img__room-classicplus___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
-
-//===================  Classic Suite
-.section-img__room-panorama
-	background-image: url('../img/tild3663-6664-4263-a537-356434303866__6.jpg')
-.section-img__room-panorama___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
-
-//===================  Classic Suite
-.section-img__room-villa
-	background-image: url('../img/tild6132-3734-4339-b866-373664383761__8.jpg')
-.section-img__room-villa___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
+//===================
+.section-img__apartment
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/43.jpg')  center center no-repeat
+	background-size: cover
+//===================
+.section-img__lux
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/44.jpg')  center center no-repeat
+	background-size: cover
 
 
-//===================  Classic Suite
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=================== CONTACTS
 .section-img__contacts
-	background-image: url('../img/tild3562-3363-4766-a530-646430633066__photo1461773518188b3e86f98242f.jpg')
-	min-height: 550px
-.section-img__contacts___mask
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.30))
+	background: -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.6)) ),url('../img/contacts.jpg') no-repeat
+	background-size: cover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //=====================FORMS
@@ -610,7 +660,7 @@ label.error
 	font-size: 33px
 	font-family: 'Roboto light'
 	padding: 7%
-	background: -webkit-linear-gradient(top, rgba(13,13,13,0.80), rgba(0,0,0,0.30)), url("../img/form30_bg.jpg") no-repeat
+	background: -webkit-linear-gradient(top, rgba(13,13,13,0.70), rgba(0,0,0,0.70)), url("../img/30min.jpg") no-repeat
 	background-size: cover
 	color: #fff
 

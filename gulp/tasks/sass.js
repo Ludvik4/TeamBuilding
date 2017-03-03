@@ -8,8 +8,7 @@ module.exports = function() {
       .pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))
       .pipe($.gp.sourcemaps.write())
       .pipe($.gp.cssUnit({
-              type: 'px-to-rem',
-              rootSize: 16
+              type: 'px-to-rem'
           }))
       .pipe($.gulp.dest($.config.root + '/assets/css'))
       .pipe($.browserSync.stream());
