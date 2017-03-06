@@ -47,10 +47,11 @@ var slider = (function(){
                 reqSlideStrafe = - slideWidth;
             }
 
-            slide.css('left', 'reqCssPosition').addClass('inslide');
+            //slide.css('left', 'reqCssPosition').addClass('inslide');
+
             var
                 movableSlide = slides.filter('.inslide');
-            activeSlide.animate({left: reqSlideStrafe}, duration);
+            activeSlide.animate({left: reqSlideStrafe}, duration, function(){slide.css('left', 'reqCssPosition').addClass('inslide')})
             movableSlide.animate({left: 0}, duration, function(){
                 var $this = $(this);
                 slides.css('left', '0').removeClass('active');
@@ -65,6 +66,9 @@ $(document).ready(function(){
     if ($('.slider').length) {
         slider.init();
     }
+    $('#nav-icon').click(function(){
+        $(this).toggleClass('open');
+    });
 });
 
 
