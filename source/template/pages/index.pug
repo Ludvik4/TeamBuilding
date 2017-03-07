@@ -1,8 +1,8 @@
 extends ../layout
 
 block variables
-	-var title ='Парк отель «Дракино» '
-	-var yaCount ='43269724'
+	-var title ='Отель «HELIOPARK Thalasso»'
+	-var yaCount ='43285104'
 
 block title
 	title #{title} || Корпоративная презентация
@@ -10,66 +10,141 @@ block title
 block content
 	section.section-img.section-img__logo#main
 		.block-logo.section__block
-			img.block-logo__img(src='assets/img/logo.svg')
+			img.block-logo__img(src='assets/img/logo.png')
 			.block-logo__desc раздел для корпоративных клиентов
 
 	section.section-img.section-img__about
 		.section__block__container
-			+block-text('Дракино ', [
-			"«Парк отель «Дракино» расположен на территории соснового леса.",
-			"Уникальность отеля в том, что это уникальный кислородный курорт Подмосковья. Парк-отель прекрасно подходит для проведения корпоративного мероприятия любой сложности."])
-			br
+			+block-text('Гелиопарк талассо', [
+			"Отель «HELIOPARK Thalasso» расположен в экологически чистой зоне в 45 км от Москвы по Новорижскому шоссе.",
+			"Отель предлагает гостям отличные возможности и современные площадки для проведения корпоративных мероприятий любого формата и уровня. ",
+				"Дополнить корпоративное или деловое мероприятие можно релаксационными, SPA-программами, которые предлагает отель, а также организовать тимбилдинг, банкет или фуршет. "])
 			p.block-text__content___p К Вашим услугам площадки и конференц-залы разной вместимости, рестораны и банкетные залы для проведения фуршетов и гала-ужинов.
 
-	section.section-img.section-img__halls#halls
-		.section__block.section__block__container
-			+block-text('Конференц возможности',
-			["Парк-отель «Дракино» - одна из самых популярных площадок для проведения корпоративных мероприятий.",
-				"Площадки для конференций, семинаров, форумов и переговоров, рестораны с вкусной и разнообразной кухней, а также большие возможности по организации тимбилдингов или других форматов корпоративных игр. "])
-			p.block-text__content___p.no-margin Мы предлагаем полный спектр услуг:
-				ul.block-text__list.no-style
-					li.block-text__list__item - разработка программы деловых мероприятий;
-					li.block-text__list__item - планирование бюджета;
-					li.block-text__list__item - разработка сценария праздника;
-					li.block-text__list__item - сопровождение мероприятия от оформленного предложения до выезда группы;
-					li.block-text__list__item - предоставление оборудования (от звукового и светового до тентовых конструкций и туалетных групп);
-					li.block-text__list__item - организация корпоративных мероприятий с участием аниматоров, ведущих, артистов любого жанра и DJ;
-					li.block-text__list__item - дизайн-проект, изготовление полиграфической продукции;
-					li.block-text__list__item - кейтеринг — мероприятия на теплоходе, на берегу реки и на поле площадью 47ГА (для больших групп);
-					li.block-text__list__item - организация мероприятий с использованием декорирования помещения и оформление;
-					li.block-text__list__item - транспортная логистика.
 
-	section.section-img.section-img__halls-hight-pilotage
+	section.section-img.section-img__allinclusive#allinclusive
+		.section__block.section__block__container
+			+block-text('Все Включено',
+			["Отель «HELIOPARK Thalasso» работает по системе «все включено»."])
+			p.block-text__content___p.no-margin В стоимость входит:
+				ul.block-text__list.no-style
+					li.block-text__list__item - проживание;
+					li.block-text__list__item - трехразовое питание по системе «шведский стол»;
+					li.block-text__list__item - бильярд;
+					li.block-text__list__item - настольный теннис;
+					li.block-text__list__item - парковка;
+					li.block-text__list__item - спортивные открытые площадки;
+					li.block-text__list__item - услуги оздоровительного Wellness-center;
+					li.block-text__list__item - прокат спортинвентаря и гладильных принадлежностей;
+					li.block-text__list__item - соляная комната.
+
+	section.section-grey#halls
+		.section-grey_block.container
+			+block-text('Конференц возможности',
+			['Отель «HELIOPARK Thalasso» представляет множество вариантов для проведения делового мероприятия или корпоративного выезда. Вы сможете подобрать конференц-зал под ключ, в отеле также есть возможность устроить кое-брейки в перерыве деловой программы.',
+				'Все конференц-залы отеля оборудованы LCD-проектором, экраном, флипчартом, бумагой для флипчарта, маркерами.'])
+			.block-columns.clearfix.popup-container_img
+				+block-columns__item("/3/1.jpg")
+				+block-columns__item("/3/2.jpg")
+				+block-columns__item("/3/3.jpg")
+
+	section.section-img.section-img__halls-zoichy
 		.block-halls.section__block.section__block__container
 			.block-text
-				.block-text__title Многофункциональный зал «Высший пилотаж»
+				.block-text__title Переговорная комната «Сочи»
 				.block-text__content
-					p.block-text__content___p Большое просторное помещение, предназначенное для проведения крупных форумов или конференций.
-					p.block-text__content___p Зал оборудован современной техникой.
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 30 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 35 человек.
+
+	section.section-img.section-img__halls-penza
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Переговорная комната «Пенза»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 30 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 35 человек.
+
+	section.section-img.section-img__halls-zvenigorod
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Конференц-зал «Звенигород»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 220 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 120 человек.
+
+	section.section-img.section-img__halls-zvenigorod1
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Переговорная зона «Звенигород1»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 40 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 40 человек.
+
+	section.section-img.section-img__halls-zvenigorod2
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Переговорная зона «Звенигород2»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 40 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 40 человек.
+
+	section.section-img.section-img__halls-zvenigorod3
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Переговорная зона «Звенигород3»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 40 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 40 человек.
+
+	section.section-img.section-img__halls-kaliningrad
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Конференц-зал «Калининград»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 65 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 60 человек.
+
+	section.section-img.section-img__halls-moscow
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Зал «Москва»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 90 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 70 человек.
+
+	section.section-img.section-img__halls-baden
+		.block-halls.section__block.section__block__container
+			.block-text
+				.block-text__title Зал «Баден-Баден»
+				.block-text__content
+					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 260 кв.м.
 					p.block-text__content___p.big-text.no-margin Вместимость до 300 человек.
 
-	section.section-img.section-img__halls-eanglish
+	section.section-img.section-img__halls-tirol
 		.block-halls.section__block.section__block__container
 			.block-text
-				.block-text__title VIP-зал «Английский клуб»
-				.block-text__content
-					p.block-text__content___p Зал предназначен для проведения переговоров или бизнес встреч.
-					p.block-text__content___p.big-text.no-margin Вместимость до 20 человек
-
-	section.section-img.section-img__halls-navigator
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Конференц-зал «Навигатор»
+				.block-text__title Бар «Тироль»
 				.block-text__content
 					//p.block-text__content___p
-					p.block-text__content___p.big-text.no-margin Вместимость до 20 человек.
+					p.block-text__content___p.big-text Площадь 234 кв.м.
+					p.block-text__content___p.big-text.no-margin Вместимость до 70 человек.
 
-	section.section-img.section-img__halls-spa
+	section.section-img.section-img__halls-summer
 		.block-halls.section__block.section__block__container
 			.block-text
-				.block-text__title Веранда SPA
+				.block-text__title Летняя веранда
 				.block-text__content
 					//p.block-text__content___p
+					p.block-text__content___p.big-text Площадь 70 кв.м.
 					p.block-text__content___p.big-text.no-margin Вместимость до 50 человек.
 
 	//Форма - получить специальные тарифы
@@ -77,245 +152,165 @@ block content
 
 	section.section-grey#restourans
 		.section-grey_block.container
-			+block-text('Ресторанная зона',
-			['В парк-отеле «Дракино» Вы найдете кухню и площадку себе по вкусу. Для гостей и участников конференций, семинаров и форумов есть возможность устроить кофе-брейк в перерыве между деловыми сессиями. Также Вы можете закончить любой деловой день или корпоративное мероприятие роскошным банкетом в одном из ресторанов отеля.'])
+			+block-text('Рестораны и бары',
+			['Основное питание гостей отеля по системе «шведский стол» осуществляется в ресторане «Вдохновение». Помимо основного ресторана а отеле можно провести время в баре «Тироль», фито-баре Wellness-центра, или воспользоваться круглосуточным обслуживанием номеров. '])
 			.block-columns.clearfix.popup-container_img
-				+block-columns__item("/6/1.jpg")
-				+block-columns__item("/6/2.jpg")
-				+block-columns__item("/6/3.jpg")
+				+block-columns__item("/15/1.jpg")
+				+block-columns__item("/15/2.jpg")
+				+block-columns__item("/15/3.jpg")
 
-	section.section-img.section-img__restouran-cranberry
+	section.section-img.section-img__restouran-inspiration
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Банкетный зал «Клюква в Сахаре»
+				.block-text__title Ресторан «Вдохновение»
 				.block-text__content
-					p.block-text__content___p.big-text.no-margin Вместимость до 100 человек.
+					p.block-text__content___p Ресторан «Вдохновение» украшают предметы старинной мебели, антикварный буфет и комод XIX века.
+					p.block-text__content___p На завтрак, обед и ужин ресторан предлагает своим гостям разнообразные блюда «шведского стола».
+					p.block-text__content___p Вечером в ресторане можно поужинать в романтической обстановке, ресторан открывает свои двери в 19.00 и работает до последнего гостя.
+					p.block-text__content___p.big-text.no-margin Вместимость до 300 человек.
 
-	section.section-img.section-img__restouran-corkscrew
+	section.section-img.section-img__restouran-tirol
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Бар «Штопор»
+				.block-text__title Бар «Тироль»
 				.block-text__content
-					p.block-text__content___p.big-text.no-margin Вместимость до 45 человек.
+					p.block-text__content___p Оригинальный интерьер бара, столы из добротного натурального дерева, старинные кованые фонари и приглушённый свет располагают к приятной беседе, после которой можно сыграть в бильярд.
+					p.block-text__content___p Здесь каждый вечер проходит ночная дискотека, а по субботам яркие шоу-программы с участием приглашенных артистов.
+					p.block-text__content___p Бар работает круглосуточно.
+					p.block-text__content___p.big-text.no-margin Вместимость до 70 человек при банкетной рассадке.
 
-	section.section-img.section-img__restouran-right
+	section.section-img.section-img__restouran-wellness
 		.section__block.section__block__container
 			.block-text
-				.block-text__title Ресторан «Братья Райт»
+				.block-text__title Фито-бар Wellness-центра
 				.block-text__content
-					p.block-text__content___p.big-text.no-margin Вместимость до 100 человек.
-
-	section.section-img.section-img__karaoke
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Бар-караоке
-				.block-text__content
-					p.block-text__content___p Сделать вечер особенным и расслабиться в компании коллег или деловых партнеров можно в караоке-баре.
-
-	section.section-img.section-img__cafe
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Кафе «Клюковка»
-				.block-text__content
-					p.block-text__content___p Модный дизайн, стильные детали интерьера зададут тон любой деловой, бизнес встрече или переговорам.
-
-	section.section-img.section-img__fito
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Фито-бар
-				.block-text__content
-					p.block-text__content___p Каждый гость отеля после посещения SPA-центра может выпить полезные для здоровья коктейли.
-
-	section.section-img.section-img__sugar
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Зал «Сахар»
-				.block-text__content
-					p.block-text__content___p В зале «Сахар» гости отеля смогут попробовать фирменные десерты от шеф-повара.
-					p.block-text__content___p В летнее время работает веранда, с которой открывается чудесный вид на окрестности.
+					p.block-text__content___p Удобная мебель и большой ассортиментный ряд целительных напитков позволяет приятно проводить время с пользой для организма.
+					p.block-text__content___p В баре будут предложены травяные настои, соки, фреши, кислородные коктейли и иные оздоровительные напитки.
 
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
 	section.section-img.section-img__entertainment#entertainment
-		.block-text.section__block.section__block__container
+		.block-text
 			.block-text__title Развлечения и спорт
-			.block-text__content
-				p.block-text__content___p В парк-отеле «Дракино» созданы все условия для организации активного отдыха или досуга.
-				p.block-text__content___p Вы можете разбавить свое корпоративное мероприятие любым из представленных видов досуга или организовать интересный тимбилдинг.
-
-	section.section-img.section-img__spa
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Бани на острове «Дракино»
-				.block-text__content
-					p.block-text__content___p Настоящая русская баня на дровах с каменной кладкой подарит истинное удовольствие любителям попариться.
-					p.block-text__content___p Помимо парилке в бане есть душ, комната отдыха, гостиная с кухней, санузел и купель.
-					p.block-text__content___p.big-text.no-margin Баня рассчитана на 15 человек.
-
-	section.section-img.section-img__skating
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Музыкальный каток
-				.block-text__content
-					p.block-text__content___p В зимнее время в парк-отеле «Дракино» работает каток, где каждый желающий может прокатиться под ритмичную музыку.
-					p.block-text__content___p Работает прокат коньков.
-
-	section.section-img.section-img__horses
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Конный клуб
-				.block-text__content
-					p.block-text__content___p В парке «Дракино» создан конно-спортивный клуб, в котором все желающие смогут прокатиться в седле и пообщаться с грациозными скакунами и милыми пони.
-					p.block-text__content___p В клубе можно взять несколько уроков верховой езды.
-
-	section.section-img.section-img__paintball
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Пейнтбол
-				.block-text__content
-					p.block-text__content___p Пейнтбол – игра не только для сильных мужчин и отважных женщин, но и отличный вариант для поднятия корпоративного духа и сплочения команды.
-
-	section.section-img.section-img__quadro
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Квадроциклы
-				.block-text__content
-					p.block-text__content___p Квадроциклы – превосходный выбор для тех, кто желает получить удовольствие от экстремального вождения и насладиться красотой подмосковных окрестностей.
-					p.block-text__content___p Профессиональный инструктор научит всех желающих мастерски водить квадроцикл.
-
-	section.section-img.section-img__carting
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Картинг
-				.block-text__content
-					p.block-text__content___p Картодром в парке «Дракино» построен с учетом всех требований безопасности, а сами карты находятся в безупречном техническом состоянии.
-					p.block-text__content___p Перед тем, как сесть за руль, гости, прослушают подробный инструктаж.
-
-	section.section-img.section-img__snowmobile
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Снегоходы
-				.block-text__content
-					p.block-text__content___p В парке «Дракино» гости смогут покорить заснеженные просторы окрестных лесов и полей на современных снегоходах от ведущих мировых производителей.
-
-	section.section-img.section-img__floating
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Сплав на байдарках
-				.block-text__content
-					p.block-text__content___p В летний период у гостей отеля есть возможность сплавиться на байдарках.
-
-	section.section-img.section-img__excursion
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Экскурсионные программы
-				.block-text__content
-					p.block-text__content___p По желанию могут быть организованы экскурсионные поездки для разного количества человек.
-
-
-	section.section-img.section-img__huskies
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Катание на хаски
-				.block-text__content
-					p.block-text__content___p Круговой заезд на Хаски длинною в 3 км, приведёт в восторг любого.
-					p.block-text__content___p С ними можно сфотографироваться, также зайти в вольер и познакомиться поближе.
-
-	section.section-img.section-img__tennis
-		.section__block.section__block__container
-			.block-text
-				.block-text__title Большой теннис
-				.block-text__content
-					p.block-text__content___p В пешей доступности от Парка Дракино находится прекрасный корт, на котором где гости отеля могут провести турнир.
-
-	//Форма - получить специальные тарифы
-	include  ../sections/form-spectarif.pug
+			p.block-text__content___p.no-margin В отеле «HELIOPARK Thalasso» к Вашим услугам широкий выбор дополнительных услуг, а также развлечений:
+			ul.block-text__list.no-style
+				li.block-text__list__item - прокат спортинвентаря;
+				li.block-text__list__item - пейнтбол;
+				li.block-text__list__item - тир;
+				li.block-text__list__item - лазертаг;
+				li.block-text__list__item - рыбалка;
+				li.block-text__list__item- лиана-парк;
+				li.block-text__list__item - бильярд;
+				li.block-text__list__item - конные прогулки;
+				li.block-text__list__item - настольный теннис;
+				li.block-text__list__item - площадки для BBQ;
+				li.block-text__list__item - развлекательные и анимационные программы.
 
 	section.section-img.section-img__spa#spa
 		.section__block.section__block__container
 			.block-text
-				.block-text__title SPA-центр
-			p.block-text__content___p.no-margin На территории парк-отеля «Дракино» работает SPA-комплекс, который включает в себя:
-				ul.block-text__list.no-style
-					li.block-text__list__item - бассейн;
-					li.block-text__list__item - акватермальная зона;
-					li.block-text__list__item - фито-бар;
-					li.block-text__list__item - комплексные SPA-процедуры;
-					li.block-text__list__item - предоставление оборудования (от звукового и светового до тентовых конструкций и туалетных групп);
-					li.block-text__list__item - косметологические услуги.
+				.block-text__title SPA-комплекс
+				p.block-text__content___p Опытные специалисты SPA-комплекса помогут снять напряжение и провести время с пользой для здоровья.
+				p.block-text__content___p.no-margin К услугам гостей:
+					ul.block-text__list.no-style
+						li.block-text__list__item - все виды массажа;
+						li.block-text__list__item - косметологические программы;
+						li.block-text__list__item - лечебные ванны и обертывания
+						li.block-text__list__item - бассейн с водопадом;
+						li.block-text__list__item - криосауна;
+						li.block-text__list__item - римская парная;
+						li.block-text__list__item - турецкая баня, финская сауна;
+						li.block-text__list__item - банный комплекс (каминный зал, бассейн, финская сауна, римская парная, инфракрасная сауна и бильярдный стол).
 
+	//Форма - получить специальные тарифы
+	include  ../sections/form-spectarif.pug
 
 	section.section-grey.section-grey-rooms#rooms
 		.section-grey_block.container
-			+block-text('Номерной фонд', ['В парк-отеле «Дракино» могут комфортно разместиться 130 человек. На территории отеля расположены два гостиничный комплекса - «Икар» и «Полет», а также коттеджная зона Тирольская деревня.  '])
+			+block-text('Номерной фонд', ['К услугам гостей 162 номера различных категорий, предназначенных для проживания до 5 человек.'])
 			.block-columns.clearfix.popup-container_img
-				+block-columns__item("/27/1.jpg")
-				+block-columns__item("/27/2.jpg")
-				+block-columns__item("/27/3.jpg")
+				+block-columns__item("/21/1.jpg")
+				+block-columns__item("/21/2.jpg")
+				+block-columns__item("/21/3.jpg")
 
 	section.section-img.section-img__standart
 		.section__block__container
 			.block-text
-				.block-text__title Двухместный стандарт DBL 18-20 кв.м.
+				.block-text__title STANDARD SINGLE 11 кв.м.
 				p.block-text__content___p.no-margin В номере:
 					ul.block-text__list.no-style
-						li.block-text__list__item - кровать, шкаф, стол, зеркало, пуфик;
-						li.block-text__list__item - мини-бар, телевизор, телефон;
-						li.block-text__list__item - санузел, душ, фен;
-						li.block-text__list__item - полотенца, туалетные принадлежности;
-						li.block-text__list__item - Wi-Fi.
+						li.block-text__list__item - односпальная кровать;
+						li.block-text__list__item - прикроватная тумбочка, стол-тумба, кресло;
+						li.block-text__list__item - телефон, телевизор, минибар;
+						li.block-text__list__item - полка для багажа и обуви.
 
 	section.section-img.section-img__standart2
 		.section__block__container
 			.block-text
-				.block-text__title Двухместный стандарт TWIN 19-26 кв.м.
+				.block-text__title STANDARD DOUBLE/TWIN 11-14 кв.м.
 				p.block-text__content___p.no-margin В номере:
 				ul.block-text__list.no-style
-					li.block-text__list__item - две раздельные кровати;
-					li.block-text__list__item - шкаф, стол, зеркало, пуфик;
-					li.block-text__list__item - мини-бар, телевизор, телефон;
-					li.block-text__list__item - санузел, душ, фен;
-					li.block-text__list__item - полотенца, туалетные принадлежности;
-					li.block-text__list__item - Wi-Fi.
+					li.block-text__list__item - двуспальная или две односпальные кровати;
+					li.block-text__list__item - прикроватные тумбочки, кресло;
+					li.block-text__list__item - телефон, телевизор, минибар;
+					li.block-text__list__item - полка для багажа и обуви.
 
-	section.section-img.section-img__country
+	section.section-img.section-img__superior
 		.section__block__container
 			.block-text
-				.block-text__title Двухместный полулюкс «Кантри» 22-25 кв.м.
+				.block-text__title SUPERIOR STANDARD 15 кв.м.
 				p.block-text__content___p.no-margin В номере:
 				ul.block-text__list.no-style
-					li.block-text__list__item - двуспальная кровать или две односпальные;
-					li.block-text__list__item - шкаф, вешалка, многофункциональный столик, зеркало, стул;
-					li.block-text__list__item - мини-бар, телевизор, DVD, телефон;
-					li.block-text__list__item - санузел, душ, фен;
-					li.block-text__list__item - комплект полотенец, халаты, тапочки, туалетные принадлежности;
-					li.block-text__list__item - Wi-Fi.
+					li.block-text__list__item - двуспальная или две односпальные кровати, прикроватные тумбочки;
+					li.block-text__list__item - журнальный столик, 2 полукресла;
+					li.block-text__list__item - шкаф, телефон, телевизор;
+					li.block-text__list__item - минибар, раскладной диван.
 
-	section.section-img.section-img__lux2
+	section.section-img.section-img__delux
 		.section__block__container
 			.block-text
-				.block-text__title Двухместный люкс 35-40 кв.м.
+				.block-text__title DELUXE 18 кв.м.
 				p.block-text__content___p.no-margin В номере:
 				ul.block-text__list.no-style
-					li.block-text__list__item - двухместная кровать, трюмо, раскладной диван;
-					li.block-text__list__item - шкаф, вешалка и подчемоданник;
-					li.block-text__list__item - санузел, душ, фен;
-					li.block-text__list__item - полотенца, халаты, туалетные принадлежности
-					li.block-text__list__item - Wi-Fi.
+					li.block-text__list__item - две односпальные кровати, прикроватные тумбочки;
+					li.block-text__list__item - стол, 2 полукресла, шкаф;
+					li.block-text__list__item - раскладной диван, телефон;
+					li.block-text__list__item - телевизор, минибар.
 
-	section.section-img.section-img__cottage
+	section.section-img.section-img__suite
 		.section__block__container
 			.block-text
-				.block-text__title Коттеджи «День-ночь» 69 кв.м.
-				p.block-text__content___p Двухуровневый коттедж с отдельным ввходом.
-				p.block-text__content___p.no-margin В коттедже:
+				.block-text__title SUITE 22 кв.в.
+				p.block-text__content___p.no-margin В номере:
 				ul.block-text__list.no-style
-					li.block-text__list__item - прихожая;
-					li.block-text__list__item - гостиная;
-					li.block-text__list__item - мини-кухня;
-					li.block-text__list__item - спальня;
-					li.block-text__list__item - ванная комната.
+					li.block-text__list__item - двуспальная кровать, прикроватные тумбочки;
+					li.block-text__list__item - журнальный столик, 2 полукресла;
+					li.block-text__list__item - шкаф, телефон, телевизор;
+					li.block-text__list__item - минибар, раскладной диван.
+
+	section.section-img.section-img__suite2
+		.section__block__container
+			.block-text
+				.block-text__title SUITE-2 23 кв.м.
+				p.block-text__content___p.no-margin В номере:
+				ul.block-text__list.no-style
+					li.block-text__list__item - двуспальная кровать, прикроватные тумбочки;
+					li.block-text__list__item - стол, 2 полукресла, шкаф;
+					li.block-text__list__item - раскладной диван, телефон;
+					li.block-text__list__item - телевизор, минибар, журнальный столик, комод.
+
+	section.section-img.section-img__suite3
+		.section__block__container
+			.block-text
+				.block-text__title BIG SUITE-2 44 кв.м.
+				p.block-text__content___p.no-margin В номере:
+				ul.block-text__list.no-style
+					li.block-text__list__item - двуспальная кровать, прикроватные тумбочки;
+					li.block-text__list__item - стол туалетный, стул;
+					li.block-text__list__item - комод, шкаф платяной;
+					li.block-text__list__item - телевизор, телефон, журнальный столик;
+					li.block-text__list__item - 2 кресла, диван, минибар.
 
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
@@ -328,5 +323,6 @@ block content
 					p.block-text__content___p КОНТАКТЫ <br>  +7 (499) 653-80-11 корпоративный отдел
 					p.block-text__content___p  РЕЖИМ РАБОТЫ <br> c 9.00 до 21.00 <br> 	в субботу и воскресенье c 11.00 до 20.00
 					.block-text__content___p
-						a.block-text__content___a(href="http://drakino-hotel.ru/", target="_blank") http://drakino-hotel.ru/
-					p.block-text__content___p  АДРЕС <br>142253,  Московская область, Серпуховский район, Парк Дракино
+						a.block-text__content___a(href="http://heliohotels.ru/", target="_blank") http://heliohotels.ru/
+					p.block-text__content___p  АДРЕС <br>143185, Россия, г. Звенигород, ул. Лермонтова, д.1, <br>  45 км от Москвы по Новорижскому шоссе
+						|
