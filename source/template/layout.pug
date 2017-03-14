@@ -22,9 +22,15 @@ html(lang='ru')
 		.wrapper
 			.maincontent
 
-
 				block content
 
-		include ./sections/footer
-		include ./sections/metrica
+
+		include ./common/metrica
+
+		script(src='assets/libs/jquery.js', type="text/javascript")
+		script(src='assets/libs/bootstrap.min.js', type="text/javascript")
+		script(src='assets/libs/jquery.magnific-popup.js', type="text/javascript")
+
+		script(src='assets/js/app.js', type="text/javascript")
+
 

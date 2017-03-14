@@ -1,10 +1,15 @@
 extends ../layout
 
 block variables
-	-var title ='Отель'
-	-var yaCount ='1'
+	-var title ='Название сайта'
+	-var yaCount ='Счетчик_Яндекс_Метрики'
 
 block title
-	title #{title} || Корпоративная презентация
+	title #{title} || Главная
 
 block content
+	include ../sections/header
+
+	include ../sections/faq
+
+	include ../sections/footer
