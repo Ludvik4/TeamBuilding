@@ -8,31 +8,22 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content="width=device-width, initial-scale=1" )
-		//link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
-		link(rel="shortcut icon", href="/public/favicon/249.ico", type="image/x-icon")
+		link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
+		link(rel="shortcut icon", href="/public/favicon/favicon.ico", type="image/x-icon")
+
+		link(href='assets/css/foundation.css', rel='stylesheet')
+
 		link(href='assets/libs/magnific-popup.css', rel='stylesheet')
 		link(href='assets/css/main.css', rel='stylesheet')
-		//link(href='assets/css/media.css', rel='stylesheet')
-		//link(href="http://allfont.ru/allfont.css?fonts=open-sans", rel="stylesheet",  type="text/css")
-		//link(href="http://allfont.ru/allfont.css?fonts=open-sans-light", rel="stylesheet",  type="text/css")
 
 	block title
 		title Главная Страница
 	body
 		.wrapper
-		.maincontent
-			a#phone-form_link(href="tel:+74996538011", onclick=`yaCounter${yaCount}.reachGoal('goal_clickphone_0'); return true`) +7 (499) 653-80-11
-			include ./sections/phone-form
-			a.touch-menu
-				#nav-icon
-					span
-					span
-					span
-			+nav('nav', ["На главную", "Номера", "Залы", "Рестораны", "SPA", "Развлечения", "Контакты"], ["#main", "#rooms", "#halls", "#restourans", "#spa", "#entertainment", "#contacts"], 1)
-			include ./sections/form-30min
+			.maincontent
 
 
-			block content
+				block content
 
 		include ./sections/footer
 		include ./sections/metrica

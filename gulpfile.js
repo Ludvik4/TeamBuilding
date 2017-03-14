@@ -31,9 +31,8 @@ $.gulp.task('default', $.gulp.series(
      'copyBowerFiles',
     'js:process',
     'copy:image',
-      'copy:css',
+      //'copy:css',
     'copy:fonts',
-    'copy:js',
     'css:foundation'
   ),
   $.gulp.parallel(
