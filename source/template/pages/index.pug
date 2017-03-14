@@ -2,7 +2,7 @@ extends ../layout
 
 block variables
 	-var title ='Отель «Тропикана»'
-	-var yaCount ='1'
+	-var yaCount ='43409149'
 
 block title
 	title #{title} || Корпоративная презентация
@@ -26,9 +26,9 @@ block content
 			+block-text('Конференц возможности',
 			['Отель «Тропикана» предоставляет различные конференц-пакеты для проведения деловых и корпоративных мероприятий. Размещение гостей, оборудование конференц-залов, питание гостей, организация кофе-брейков, банкетов, фуршетов, а также тимбилдинги и активный корпоративный отдых – эти и другие услуги для Вашего мероприятия в отеле «Тропикана».'])
 			.block-columns.clearfix.popup-container_img
-				+block-columns__item("/3/1.jpg")
-				+block-columns__item("/3/2.jpg")
-				+block-columns__item("/3/3.jpg")
+				+block-columns__item("/2/1.jpg")
+				+block-columns__item("/2/2.jpg")
+				+block-columns__item("/2/3.jpg")
 
 	section.section-img.section-img__halls-meridian
 		.block-halls.section__block.section__block__container
@@ -69,12 +69,15 @@ block content
 	//Форма - получить специальные тарифы
 	include  ../sections/form-spectarif.pug
 
-	section.section-img.section-img__rectourans#restourans
-		.block-halls.section__block.section__block__container
-			.block-text
-				.block-text__title Рестораны и бары
-				.block-text__content
-					p.block-text__content___p На территории подмосковного отеля «Тропикана» в Вашем распоряжении: основной ресторан  шведской линией, несколько банкетных залов для ваших торжественных мероприятий, белоснежный летний шатер, открытые веранды и беседки различной вместимости для праздников и барбекю на природе, а также бары с уютной обстановкой.
+	section.section-grey#restourans
+		.section-grey_block.container
+			+block-text('Рестораны и бары',
+			['На территории подмосковного отеля «Тропикана» в Вашем распоряжении: основной ресторан  шведской линией, несколько банкетных залов для ваших торжественных мероприятий, белоснежный летний шатер, открытые веранды и беседки различной вместимости для праздников и барбекю на природе, а также бары с уютной обстановкой.'])
+			.block-columns.clearfix.popup-container_img
+				+block-columns__item("/7/1.jpg")
+				+block-columns__item("/7/2.jpg")
+				+block-columns__item("/7/3.jpg")
+
 
 	section.section-img.section-img__restouran-tropicana
 		.section__block.section__block__container
@@ -99,7 +102,12 @@ block content
 				.block-text__content
 					p.block-text__content___p Интерьер бара отлично подходит для организации тематических вечеринок.
 					p.block-text__content___p Летом работает терраса.
-					p.block-text__content___p Беседка для барбекю
+
+	section.section-img.section-img__restouran-barbeque
+		.section__block.section__block__container
+			.block-text
+				.block-text__title Беседка для барбекю
+				.block-text__content
 					p.block-text__content___p На берегу озера находится деревянная беседка специально оборудованная для приготовления барбекю.
 					p.block-text__content___p.big-text Вместимость до 50 человек.
 
@@ -150,9 +158,9 @@ block content
 		.section-grey_block.container
 			+block-text('Номерной фонд', ['Отель «Тропикана» предлагает своим гостям комфортабельное размещение и круглосуточное обслуживание номеров. '])
 			.block-columns.clearfix.popup-container_img
-				+block-columns__item("/13/1.jpg")
-				+block-columns__item("/13/2.jpg")
-				+block-columns__item("/13/3.jpg")
+				+block-columns__item("/14/1.jpg")
+				+block-columns__item("/14/2.jpg")
+				+block-columns__item("/14/3.jpg")
 
 	section.section-img.section-img__standart
 		.section__block__container
@@ -226,5 +234,5 @@ block content
 					p.block-text__content___p  РЕЖИМ РАБОТЫ <br> c 9.00 до 21.00 <br> 	в субботу и воскресенье c 11.00 до 20.00
 					.block-text__content___p
 						a.block-text__content___a(href="http://tropicana-holiday-hotel.ru/", target="_blank") http://tropicana-holiday-hotel.ru
-					p.block-text__content___p  АДРЕС <br>Следовать по Пятницкому шоссе 20 км до деревни Брехово, br> далее по указателям Отель «Тропикана»
+					p.block-text__content___p  АДРЕС <br>Следовать по Пятницкому шоссе 20 км до деревни Брехово, <br> далее по указателям Отель «Тропикана»
 						|
