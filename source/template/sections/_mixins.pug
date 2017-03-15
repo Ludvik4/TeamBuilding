@@ -1,20 +1,8 @@
 mixin nav(className, items, hrefs)
 	nav(class=`${className}`)
 		ul(class=`${className}__list`)
-			li.nav__item.nav__item_active
-				a.nav__link#form-30min__link(href="#", onclick=`yaCounter${yaCount}.reachGoal('goal_30min_0'); return true`) Рассчитать за 30 минут
 			each item, ndx in items
 				li(class=`${className}__item`)
-					a(class=`${className}__link` href=`${hrefs[ndx]}`)= item
+					a(class=`${className}__link`, href=`${hrefs[ndx]}`)= item
 
-mixin block-text(title, paragraphs)
-	.block-text.section__block
-		.block-text__title!= title
-		.block-text__content
-			each paragraph in paragraphs
-				p.block-text__content___p!= paragraph
 
-mixin block-columns__item(imgName)
-	.block-columns__item
-		a.block-columns__link(href=`assets/img/${imgName}`)
-			img.block-columns__img.pop-up__img(src=`assets/img/${imgName}`)
