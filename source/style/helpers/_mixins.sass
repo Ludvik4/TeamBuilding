@@ -1,6 +1,12 @@
 //media
+=large
+	@media (min-width: 1201px)
+		@content
 =desktop
 	@media (max-width: 1200px)
+		@content
+=laptop
+	@media (max-width: 992px)
 		@content
 =tablet
 	@media (max-width: 768px)
@@ -28,3 +34,36 @@
 		display: block
 		clear: both
 
+=title($size: 'big')
+	text-align: center
+	font-family: $roboto
+	font-weight: bold
+	margin-bottom: $m-title
+	display: block
+	@if $size == 'big'
+		font-size: $f-xl
+	@if $size == 'medium'
+		font-size: $f-l
+	@if $size == 'small'
+		font-size: $f-m
+		text-transform: none
+
+=section-title
+	margin-bottom: 100px
+	font-family: $roboto
+	font-size: $f-l
+	display: block
+	text-align: center
+
+=txt-icon
+	position: relative
+	padding-left: 25px
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		top: 2px
+		left: 0px
+		width: 25px
+		height: 16px
+		background-size: contain

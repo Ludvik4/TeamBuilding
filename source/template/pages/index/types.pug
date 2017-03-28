@@ -1,0 +1,35 @@
+-
+	var types= {
+		type1:{
+		href: '#',
+		img: 'brain',
+		desc: "Корпоративные квесты"
+		},
+		type2: {
+		href: '#',
+		img: 'route',
+		desc: "Интеллектуальные	игры"
+		},
+		type3: {
+		href: '#',
+		img: 'trophy',
+		desc: "Активные	тимбилдинги"
+		},
+		type4: {
+		href: '#',
+		img: 'paper-plane',
+		desc: "Творческие тимбилдинги"
+		}
+	}
+
+section.section.section_types
+	.container
+		.types
+			.types__title А какой тимбилдинг подойдет именно Вам?
+			ul.types__list
+				each type, key in types
+					li.types__item(id=`${key}`)
+						a.types__link(href=`${type.href}`)
+							svg.types__svg
+								use(xlink:href=`assets/img/sprite.svg#${type.img}`)
+							.types__desc= type.desc

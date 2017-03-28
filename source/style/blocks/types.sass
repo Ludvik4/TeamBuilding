@@ -1,0 +1,38 @@
+
+
+.types
+	font-family: $sans-semib
+	margin-bottom: $m-large
+	&__title
+		+section-title
+		+phone
+			margin-bottom: $m-item * 2
+	&__list
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+		align-items: center
+	&__item
+		flex: 1 1 200px
+		margin-bottom: $m-item
+		padding: 15px
+		text-align: center
+		+laptop
+			flex: 1 1 320px
+	&__link
+		display: block
+		&:hover
+			.types__svg
+				fill: $c-dark-or
+			.types__desc
+				color: $c-dark-or
+	&__svg
+		max-width: 170px
+		max-height: 170px
+		margin-bottom: $m-item
+		transition: $transition
+	&__desc
+		font-family: $roboto-l
+		font-size: 24px
+		transition: $transition
+

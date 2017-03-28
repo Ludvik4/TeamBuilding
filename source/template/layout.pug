@@ -1,4 +1,4 @@
-include ./sections/_mixins
+include ./common/_mixins
 
 block variables
 
@@ -8,28 +8,23 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content="width=device-width, initial-scale=1" )
-		link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
 		link(rel="shortcut icon", href="/public/favicon/favicon.ico", type="image/x-icon")
 
-		link(href='assets/css/foundation.css', rel='stylesheet')
+		//link(href='/assets/libs/bootstrap.min.css', rel='stylesheet')
 
-		link(href='assets/libs/magnific-popup.css', rel='stylesheet')
+		link(href='assets/css/foundation.css', rel='stylesheet')
 		link(href='assets/css/main.css', rel='stylesheet')
 
 	block title
 		title Главная Страница
 	body
-		.wrapper
-			.maincontent
-
-				block content
+		block content
 
 
 		include ./common/metrica
 
 		script(src='assets/libs/jquery.js', type="text/javascript")
-		script(src='assets/libs/bootstrap.min.js', type="text/javascript")
-		script(src='assets/libs/jquery.magnific-popup.js', type="text/javascript")
+		//script(src='assets/libs/bootstrap.min.js', type="text/javascript")
 
 		script(src='assets/js/app.js', type="text/javascript")
 

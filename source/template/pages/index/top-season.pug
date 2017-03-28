@@ -1,0 +1,81 @@
+-
+	var topSeason= {
+		item1:{
+		href: "#",
+		imag: "photo2.jpg",
+		title: "Развлекательных программ1",
+		info: {
+			dur: "3 часа1",
+			number: "15-200 чел.",
+			cost: "от 1700 на чел."
+			},
+		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+		},
+		item2:{
+		href: "#",
+		imag: "photo2.jpg",
+		title: "Развлекательных программ2",
+		info: {
+			dur: "3 часа2",
+			number: "15-200 чел.",
+			cost: "от 1700 на чел."
+			},
+		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+		},
+		item3:{
+		href: "#",
+		imag: "photo2.jpg",
+		title: "Развлекательных программ3",
+		info: {
+			dur: "3 часа",
+			number: "15-200 чел.",
+			cost: "от 1700 на чел."
+			},
+		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+		},
+		item4:{
+		href: "#",
+		imag: "photo2.jpg",
+		title: "Развлекательных программ4",
+		info: {
+			dur: "3 часа4",
+			number: "15-200 чел.",
+			cost: "от 1700 на чел."
+			},
+		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+		},
+		item5:{
+		href: "#",
+		imag: "photo2.jpg",
+		title: "Развлекательных программ5",
+		info: {
+			dur: "3 часа5",
+			number: "15-200 чел.",
+			cost: "от 1700 на чел."
+			},
+		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+		}
+	}
+
+
+section.section_top-season
+	.top-season
+		.top-season__title Наш Топ-предложений этого сезона!
+		.carusel.top-season__carusel
+			ul.top-season__list.clearfix.carusel__list
+				each item, key in topSeason
+					li.top-season__item.carusel__item(id=`${key}`)
+						a.top-season__link(href=`${item.href}`)
+							.top-season__img-wrap
+								img.top-season__img(src=`assets/img/${item.imag}`)
+								.top-season__desc
+									.top-season__desc-title= item.title
+									.top-season__desc-text= item.desc
+							.top-season__text
+								.top-season__item-title= item.title
+								.top-season__info
+									.top-season__dur= item.info.dur
+									.top-season__number= item.info.number
+									.top-season__cost= item.info.cost
+
+

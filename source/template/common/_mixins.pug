@@ -1,0 +1,21 @@
+mixin nav(className, items, hrefs)
+	nav(class='nav ' + `${className}`)
+		ul(class='nav__list ' + `${className}__list`)
+			each item, ndx in items
+				li(class='nav__item '  + `${className}__item`)
+					a(class='nav__link ' + `${className}__link`, href=`${hrefs[ndx]}`)= item
+
+
+mixin socials(className,socials, hrefs)
+	ul(class='socials ' + `socials_${className}`)
+		each social, ndx in socials
+			li(class='socials__item ' + `socials__item_${className}`)
+				a(class='socials__link ' + `socials__link_${social}` href=`${hrefs[ndx]}`, target='_blank')
+					svg(class='socials__pic ' + `socials__pic_${className}`)
+						use(xlink:href=`assets/img/sprite.svg#${social}`)
+
+mixin reviews(reviews, activeItem)
+	ul.reviews__list
+		each review, ndx in reviews
+			li(class='reviews__item ' + ( (ndx === activeItem ) ? 'reviews__item_active' : ' '))
+				p= review

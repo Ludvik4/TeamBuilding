@@ -32,7 +32,8 @@ $.gulp.task('default', $.gulp.series(
     'js:process',
     'copy:image',
       //'copy:css',
-    'copy:fonts',
+    'copy:fonts', 
+    'sprite:svg',
     'css:foundation'
   ),
   $.gulp.parallel(

@@ -1,15 +1,26 @@
 extends ../layout
 
 block variables
-	-var title ='Название сайта'
+	-var title ='Магазин отдыха | Тимбилдинг'
 	-var yaCount ='Счетчик_Яндекс_Метрики'
+	-var phone = '+7 (111) 111-11-11'
+	-var phoneLink = '+711111111'
 
 block title
 	title #{title} || Главная
 
 block content
-	include ../sections/header
+	.wrapper
+		.maincontent
+
+			include ../sections/header
+
+			include ./index/main
+			include ./index/adv
+			include ./index/types
+			include ./index/top-season
+			include ./index/reviews
+			include ./index/form-main
 
 
-
-	include ../sections/footer
+		include ../sections/footer

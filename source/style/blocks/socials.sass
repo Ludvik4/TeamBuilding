@@ -1,0 +1,32 @@
+
+.socials
+	display: flex
+	flex-direction: row
+	padding: 18px
+	justify-content: space-around
+	&_main
+		justify-content: flex-start
+		background: $c-or
+
+	&__wrap
+		position: absolute
+		top: 0
+		right: 0
+		background: $c-or
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 100%
+			width: 1000px
+			background: $c-or
+	&__pic
+		width: 50px
+		height: 50px
+		&_main
+			fill: #fff
+	&__item_main
+		padding-right: 20px
+

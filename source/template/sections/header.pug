@@ -1,0 +1,9 @@
+header.header_main
+	.container
+		.header_main__wrap
+			.logo
+				.logo-name maot.ru
+				.logo-desc МАГАЗИН ОТДЫХА
+			+nav('nav-main', ['Главная', ' О нас', 'ПРОГРАММЫ', 'ГАЛЛЕРЕЯ', 'КОНТАКТЫ'], ['#', '#', '#', '#', '#'])
+			.phone.phone_header
+				a.phone__link(href=`tel:${phoneLink }`) #{phone}
