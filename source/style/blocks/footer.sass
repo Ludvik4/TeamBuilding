@@ -1,0 +1,65 @@
+.footer_main
+	padding-top: 50px
+	background: $c-or
+	&__wrap
+		display: flex
+		flex-flow: column wrap
+		justify-content: center
+	&__nav
+		flex: 1
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		align-items: center
+	&__contacts
+		font-size: $f-m
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		align-items: center
+		text-align: center
+		margin-bottom: $m-item
+	&__address
+		margin-right: $m-section
+		margin-bottom: $m-item
+		display: inline-block
+		+txt-icon
+		&:after
+			background-image: url('../img/sprite/location.svg')
+	&__email
+		margin-right: $m-section
+		margin-bottom: $m-item
+		display: inline-block
+		+txt-icon
+		&:after
+			background-image: url('../img/sprite/close-envelope.svg')
+	&__phone
+		margin-bottom: $m-item
+		display: inline-block
+		+txt-icon
+		&:after
+			background-image: url('../img/sprite/old-handphone.svg')
+	&__copyright
+		font-size: $f-m
+		text-align: center
+		margin-bottom: 70px
+
+.footer_main__logo
+	flex: 1
+	&:hover
+		.logo-name, .logo-desc
+			color: #FFFFFF
+	.logo-name
+		font-family: $sans-b
+.nav_footer
+	flex: 3
+.socials_footer
+	justify-content: center
+	flex: 1
+	+phone
+		width: 100%
+.socials__item_footer
+	margin-right: 10px
+	&:last-child
+		margin-right: 0
+

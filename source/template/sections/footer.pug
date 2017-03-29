@@ -1,4 +1,16 @@
-footer.footer
+footer.footer_main
     .container
-        .footer__content
+        .footer_main__wrap
+            .footer_main__nav
+                a.logo.footer_main__logo(href="#")
+                    .logo-name maot.ru
+                    .logo-desc МАГАЗИН ОТДЫХА
+                +nav('nav_footer', ['Главная', ' О нас', 'ПРОГРАММЫ', 'ГАЛЛЕРЕЯ', 'КОНТАКТЫ'], ['#', '#', '#', '#', '#'])
+                +socials('footer', ['facebook-logo-button', 'instagram-logo', 'vk-social-logotype'], ['#', '#', '#'])
+            .footer_main__contacts
+                .footer_main__address г. Москва, ул. Бауманская дом 6, офис 309, 3-й этаж.
+                .footer_main__email info@info.ru
+                a.footer_main__phone(href=`tel:${phoneLink }`) #{phone}
+            .footer_main__copyright © 2005 - 2017. Все права защищены.
+
 

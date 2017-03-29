@@ -31,7 +31,7 @@ $.gulp.task('default', $.gulp.series(
      'copyBowerFiles',
     'js:process',
     'copy:image',
-      //'copy:css',
+    'copy:libs',
     'copy:fonts', 
     'sprite:svg',
     'css:foundation'

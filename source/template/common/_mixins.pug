@@ -15,7 +15,14 @@ mixin socials(className,socials, hrefs)
 						use(xlink:href=`assets/img/sprite.svg#${social}`)
 
 mixin reviews(reviews, activeItem)
-	ul.reviews__list
-		each review, ndx in reviews
-			li(class='reviews__item ' + ( (ndx === activeItem ) ? 'reviews__item_active' : ' '))
-				p= review
+	#reviews__carousel.carousel.slide(data-ride="carousel")
+		ul.reviews__list.carousel-inner(role="listbox")
+			each review, ndx in reviews
+				li(class='item reviews__item ' + ( (ndx === activeItem ) ? 'active' : ' '))
+					p= review
+		a(class="left carousel-control carousel-control_reviews" href="#reviews__carousel" data-slide="prev" role="button")
+			svg.control_reviews__svg
+				use(xlink:href='assets/img/sprite.svg#left-chevron')
+		a(class="right carousel-control carousel-control_reviews" href="#reviews__carousel" data-slide="next" role="button")
+			svg.control_reviews__svg
+				use(xlink:href='assets/img/sprite.svg#right-chevron')

@@ -20,8 +20,10 @@
     "magnific-popup": "^1.1.0",
     "jquery-single-page-nav": "*",
     "jquery-touchswipe": "^1.6.18",
-    "js-mask": "^1.0.0",
     "singularity": "^1.7.1",
-    "slick": "*"
+    "countUp.js": "^1.8.3"
+  },
+  "devDependencies": {
+
   }
 }

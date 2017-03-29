@@ -2,7 +2,7 @@
 	var topSeason= {
 		item1:{
 		href: "#",
-		imag: "photo2.jpg",
+		imag: "photo1.jpg",
 		title: "Развлекательных программ1",
 		info: {
 			dur: "3 часа1",
@@ -24,7 +24,7 @@
 		},
 		item3:{
 		href: "#",
-		imag: "photo2.jpg",
+		imag: "photo3.jpg",
 		title: "Развлекательных программ3",
 		info: {
 			dur: "3 часа",
@@ -46,7 +46,7 @@
 		},
 		item5:{
 		href: "#",
-		imag: "photo2.jpg",
+		imag: "photo3.jpg",
 		title: "Развлекательных программ5",
 		info: {
 			dur: "3 часа5",
@@ -62,9 +62,10 @@ section.section_top-season
 	.top-season
 		.top-season__title Наш Топ-предложений этого сезона!
 		.carusel.top-season__carusel
-			ul.top-season__list.clearfix.carusel__list
+			.arrows
+			.top-season__list.clearfix.carusel__list
 				each item, key in topSeason
-					li.top-season__item.carusel__item(id=`${key}`)
+					.top-season__item.carusel__item(id=`${key}`)
 						a.top-season__link(href=`${item.href}`)
 							.top-season__img-wrap
 								img.top-season__img(src=`assets/img/${item.imag}`)

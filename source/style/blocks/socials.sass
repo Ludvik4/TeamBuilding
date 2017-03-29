@@ -3,7 +3,6 @@
 	display: flex
 	flex-direction: row
 	padding: 18px
-	justify-content: space-around
 	&_main
 		justify-content: flex-start
 		background: $c-or
@@ -22,11 +21,24 @@
 			left: 100%
 			width: 1000px
 			background: $c-or
+	&__link
+		border-radius: 50%
+		display: block
+		&:hover
 	&__pic
 		width: 50px
 		height: 50px
 		&_main
 			fill: #fff
+			&:hover
+				fill: #000
+		&_footer
+			fill: #000
+			width: 30px
+			height: 30px
+			transition: $transition
+			&:hover
+				fill: #fff
 	&__item_main
 		padding-right: 20px
 
