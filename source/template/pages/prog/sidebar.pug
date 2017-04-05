@@ -1,0 +1,44 @@
+//контентная часть статей
+include ./_articles
+
+aside(class='sidebar ' + `sidebar_${pageName}`)
+	.sidebar_prog__wrap
+		each prog, key in progs
+			-
+				var sidebarListClassName = ''
+				if (key == 'creatives')
+				sidebarListClassName='sidebar__list active'
+				else
+				sidebarListClassName='sidebar__list'
+
+			ul(class=sidebarListClassName)
+				each item, key in prog
+					-
+						var sidebarItemClassName = ''
+						if (key == 'instaq')
+						sidebarItemClassName='sidebar__item active'
+						else
+						sidebarItemClassName='sidebar__item'
+
+					li(class = sidebarItemClassName)
+						a.sidebar__link(href=`#${key}`)= item.title
+
+
+		ul.sidebar_prog__main-list
+			li.sidebar_prog__main-item.active
+				svg.sidebar_prog__main-icon
+					use(xlink:href="assets/img/sprite.svg#paper-plane")
+				a.sidebar_prog__main-link(href="#") Творческий тимбилдинг
+			li.sidebar_prog__main-item
+				svg.sidebar_prog__main-icon
+					use(xlink:href="assets/img/sprite.svg#brain")
+				a.sidebar_prog__main-link(href="#") Интеллектуальный тимбилдинг
+			//li.sidebar_prog__main-item
+				svg.sidebar_prog__main-icon
+					use(xlink:href="assets/img/sprite.svg#trophy")
+				a.sidebar_prog__main-link(href="#") Спортивный тимбилдинг
+			//li.sidebar_prog__main-item
+				svg.sidebar_prog__main-icon
+					use(xlink:href="assets/img/sprite.svg#route")
+				a.sidebar_prog__main-link(href="#") Другой тимбилдинг
+

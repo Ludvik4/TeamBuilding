@@ -1,3 +1,25 @@
+
+// Мобильное меню (гамбургер)
+
+$(function () {
+    var touch = $('.touch-menu');
+    var menu = $('.nav');
+    var navIcon = $('#nav-icon');
+
+    $(touch).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+        navIcon.toggleClass('open');
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 992 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+});
+
+
 //пролистывание на мобильных устройствах====================
 $(function () {
 
@@ -15,7 +37,7 @@ $(function () {
 
 });
 
-//слайдер=======================================
+//слайдер для главной страницы=================================
 $(function () {
     $(".top-season__list").slick({
         // normal options...
@@ -29,19 +51,27 @@ $(function () {
         //nextArrow: '<button type="button" class="arrow my-prev"><svg class="arrow__svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/sprite.svg#left-chevron"></use></svg></button>',
 
         // the magic
-        responsive: [{
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    infinite: true
+                }
 
+            },
+        {
             breakpoint: 1024,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
                 infinite: true
             }
 
         }, {
 
-            breakpoint: 500,
+            breakpoint: 560,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
             }
 
         }, {
@@ -64,13 +94,94 @@ $(function () {
         prefix : '',
         suffix : ''
     };
-    window.onscroll = function () {
-        var winScroll = window.pageYOffset;
-        if (winScroll > innerHeight / 3) {
+    if ($('.section_advs').length) {
+        var blockTop = $('.section_advs').offset().top;
+        var CountUpFlag = 0;
+        var $window = $(window);
+        var scrollOffset = 200;
 
-            var demo = new CountUp("myTargetElement", 0, 2602, 0, 2.5, options);
-            demo.start();
+        $window.on('scroll', function() {
+            var top = $window.scrollTop();
+            var height = $window.height();
+            if (top + height > blockTop + scrollOffset && CountUpFlag == 0) {
+                var amount_adv1 = new CountUp("amount_adv1", 0, 98, 0, 3, options);
+                amount_adv1.start();
+                var amount_adv2 = new CountUp("amount_adv2", 0, 117, 0, 3.5, options);
+                amount_adv2.start();
+                var amount_adv3 = new CountUp("amount_adv3", 0, 185, 0, 4, options);
+                amount_adv3.start();
+                CountUpFlag = 1;
+            }
+        });
+    }
 
-        }
-    };
 });
+
+$(window).on('scroll', function() {
+    var top = $(window).scrollTop();
+
+    if (top >= 0 && top <= 100 || top >= 900 ) {
+
+            $(".types__svg").removeClass("orangeBig");
+
+
+    }
+});
+
+// Animation
+$(document).ready(function() {
+
+    $(".title").animated("fadeInRight");
+    $(".content").animated("fadeIn");
+
+    $("#types").waypoint(function () {
+
+        $(".types__svg").addClass("orangeBig");
+
+    }, {
+        offset: "60%"
+    });
+
+
+    // Single page nav
+    if($(window).width() <= 1139) {
+        $('.sidebar__list').singlePageNav({
+            'currentClass' : "active",
+            offset : 100
+        });
+    } else {
+        $('.sidebar__list').singlePageNav({
+            'currentClass' : "active",
+            offset : 80
+        });
+    }
+
+});
+
+
+//Переключение по разделам и пунктам меню в Программах/ ТАБЫ
+// $(function () {
+//     $('.sidebar_prog__main-link').on('click', function(e) {
+//         e.preventDefault();
+//
+//         var
+//             $this = $(this),
+//             sidebarItem = $this.closest('.sidebar_prog__main-item'),
+//             contentItem = $('.content_prog__list'),
+//             sidebarList = $('.sidebar__list'),
+//             itemPosition = sidebarItem.index();
+//
+//         contentItem.eq(itemPosition)
+//             .add(sidebarItem)
+//             .addClass('active')
+//             .siblings()
+//             .removeClass('active');
+//         sidebarList.eq(itemPosition)
+//             .addClass('active')
+//             .siblings()
+//             .removeClass('active');
+//
+//
+//     });
+//
+// });

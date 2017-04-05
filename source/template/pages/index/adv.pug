@@ -20,11 +20,11 @@
 section.section.section_advs
 	.container
 		.advs
-			ul.advs__list
+			ul.advs__list.content
 				each adv, key in advs
 					li.advs__item(id=`${key}`)
 						.advs__title-wrap
 							span.advs__title= adv.title
-						.advs__amount= adv.amount
+						.advs__amount(id=`amount_${key}` data-count=`${adv.amount}`)
 						.advs__desc= adv.desc
 

@@ -1,0 +1,105 @@
+.content_prog
+	flex: 1
+	font-size: $f-m
+	&__list
+		display: none
+		opacity: 0
+		transition: $transition
+		&.active
+			display: block
+			opacity: 1
+	&__item
+		//display: none
+		//opacity: 0
+		transition: $transition
+		&.active
+			display: block
+			opacity: 1
+
+.slider_prog
+	&__wrap
+		margin-bottom: 30px
+		position: relative
+	&__item
+		height: 350px
+		overflow-y: hidden
+		position: relative
+	&__img
+		width: 100%
+		height: auto
+		min-height: 100%
+	&__mask
+		+mask
+	&__text
+		position: absolute
+		top: 25px
+		left: 30px
+		z-index: 3
+		color: #FFFFFF
+		display: flex
+		flex-direction: column
+
+	&__title
+		font-family: $roboto-b
+		font-size: $f-l
+		margin-bottom: $m-section
+		+laptop
+			margin-bottom: $m-item
+	&__desc
+		margin-bottom: $m-section
+		+laptop
+			margin-bottom: $m-item
+	&__desc-item
+		margin-bottom: $m-p
+
+	&__dur
+		+txt-icon()
+		&:after
+			background: url('../img/sprite/time-white.svg') no-repeat
+	&__amount
+		+txt-icon('number')
+		&:after
+			background: url('../img/sprite/user-white.svg') no-repeat
+	&__cost
+		+txt-icon('cost')
+		&:after
+			background: url('../img/sprite/ruble-white.svg') no-repeat
+	&__btn
+		background: $c-blue
+		padding: 15px
+		text-align: center
+		color: #000
+		font-family: $roboto-m
+		transition: $transition
+		cursor: pointer
+		width: 320px
+		&:hover
+			background: $c-dark-blue
+
+.text_prog
+	margin-bottom: $m-medium
+	&__title
+		font-family: $roboto-b
+		font-size: 24px
+		position: relative
+		margin: $m-p
+		h3
+			background: $c-or
+			display: inline-block
+			margin: 0
+			padding: 7px 30px
+			width: 250px
+			text-align: right
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 100%
+				width: 1000px
+				background: $c-or
+
+
+
+

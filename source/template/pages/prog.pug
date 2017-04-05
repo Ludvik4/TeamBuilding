@@ -1,0 +1,25 @@
+extends ../layout
+
+block variables
+	-var title ='Программы | Тимбилдинг'
+	-var yaCount ='Счетчик_Яндекс_Метрики'
+	-var phone = '+7 (111) 111-11-11'
+	-var phoneLink = '+711111111'
+	-var pageName = 'prog'
+
+block title
+	title #{title} || Главная
+
+block content
+	.wrapper
+		.maincontent
+
+			include ../sections/header
+			.container
+				.prog
+					include ./prog/sidebar
+					include ./prog/content
+
+
+
+		include ../sections/footer

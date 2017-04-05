@@ -53,6 +53,12 @@ a
 	display: block
 	text-decoration: none
 	color: $c-main
+	&:hover
+		color: $c-main
+		text-decoration: none
+	&:visited, a:active
+		color: $c-main
+		text-decoration: none
 a:-webkit-any-link
 	text-decoration: none
 input:focus, button:focus
@@ -60,5 +66,20 @@ input:focus, button:focus
 
 .hidden
 	display: none
+.wrapper
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+
 .maincontent
 	overflow-x: hidden
+	flex: 1
+	padding-top: 130px
+	+laptop
+		padding-top: 85px
+
+.content
+	animation-delay: .3s
+
+#map
+	height: 70vh

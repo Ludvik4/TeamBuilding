@@ -1,6 +1,7 @@
 .footer_main
-	padding-top: 50px
+	padding-top: 40px
 	background: $c-or
+	overflow-x: hidden
 	&__wrap
 		display: flex
 		flex-flow: column wrap
@@ -11,6 +12,8 @@
 		flex-flow: row wrap
 		justify-content: space-between
 		align-items: center
+		+laptop
+			margin-bottom: $m-item
 	&__contacts
 		font-size: $f-m
 		display: flex
@@ -18,23 +21,23 @@
 		justify-content: center
 		align-items: center
 		text-align: center
-		margin-bottom: $m-item
+		margin-bottom: $m-p
 	&__address
 		margin-right: $m-section
-		margin-bottom: $m-item
+		margin-bottom: $m-p
 		display: inline-block
 		+txt-icon
 		&:after
 			background-image: url('../img/sprite/location.svg')
 	&__email
 		margin-right: $m-section
-		margin-bottom: $m-item
+		margin-bottom: $m-p
 		display: inline-block
 		+txt-icon
 		&:after
 			background-image: url('../img/sprite/close-envelope.svg')
 	&__phone
-		margin-bottom: $m-item
+		margin-bottom: $m-p
 		display: inline-block
 		+txt-icon
 		&:after
@@ -42,7 +45,7 @@
 	&__copyright
 		font-size: $f-m
 		text-align: center
-		margin-bottom: 70px
+		margin-bottom: 50px
 
 .footer_main__logo
 	flex: 1

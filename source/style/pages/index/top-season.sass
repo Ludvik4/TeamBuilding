@@ -82,16 +82,11 @@
 		font-family: $roboto
 	&__dur
 		flex: 1 1 80px
-		+txt-icon
-		&:after
-			background: url('../img/sprite/time.svg') no-repeat
+		+txt-icon()
 	&__number
 		flex: 1 1 80px
-		+txt-icon
-		&:after
-			background: url('../img/sprite/user.svg') no-repeat
+		+txt-icon('number')
 	&__cost
 		flex: 2 1 80px
-		+txt-icon
-		&:after
-			background: url('../img/sprite/ruble-currency-sign.svg') no-repeat
+		+txt-icon(cost)
+

@@ -1,18 +1,24 @@
-.header_main
+.header
 	position: fixed
 	padding: 10px 0
 	top: 0px
 	left: 0
 	right: 0
 	z-index: 50
-	background: #FFF
+	&_main
+		background: #FFF
+	&_prog
+		background: $c-blue
 .header_main__wrap
-
+	align-items: center
 	display: flex
 	flex-direction: row
 	justify-content: space-between
 .header_main__logo
-	flex: 2
+	flex: .5
+	+laptop
+		position: relative
+		z-index: 12
 .logo
 	font-family: $sans-b
 	&:hover
@@ -25,16 +31,20 @@
 		transition: $transition
 
 .nav-main
-	flex: 8
+	flex: 3
 	font-size: $f-m
 	padding-top: 10px
 .phone_header
-	flex: 2
 	text-align: right
 	padding-top: 10px
 	font-family: $sans-semib
 	font-size: $f-m
+	+laptop
+		position: relative
+		z-index: 12
+		text-align: center
 .phone__link
 	+txt-icon
 	&:after
 		background-image: url('../img/sprite/old-handphone.svg')
+	display: inline

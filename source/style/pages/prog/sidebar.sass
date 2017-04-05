@@ -1,0 +1,81 @@
+.sidebar
+	&_prog
+		width: 300px
+		+tablet
+			width: 0
+	&_prog__wrap
+		position: fixed
+		width: 300px
+		padding: 20px
+		+tablet
+			left: 100%
+	&__list
+		margin-left: 20px
+		text-align: left
+		display: none
+		font-size: $f-m
+		opacity: 0
+		transition: $transition
+		&.active
+			display: block
+			opacity: 1
+	&__item
+		margin-bottom: $m-p
+	&__link
+		padding-left: 25px
+		&:hover
+			color: $c-dark-or
+		&.active
+			font-family: $roboto-b
+			font-size: 24px
+			height: 40px
+			position: relative
+			width: 500px
+			+bigline
+			position: relative
+			padding: 5px
+			padding-left: 25px
+			color: $c-main
+			transition: .5s
+			&:hover
+				color: #000
+				cursor: default
+
+.sidebar_prog__main-list
+	text-align: right
+	position: fixed
+	top: 66%
+	width: 300px
+
+.sidebar_prog__main-icon
+	width: 20px
+	height: 20px
+	fill: #000
+	margin-right: $m-p
+
+.sidebar_prog__main-link
+	width: 0
+	display: none
+	transition: .7s
+	font-family: $roboto-b
+	font-size: $f-sm
+	cursor: pointer
+	transition: .7s
+.sidebar_prog__main-item
+	transition: .7s
+	margin-bottom: $m-item
+	&.active
+		transition: .7s
+		.sidebar_prog__main-link
+			width: 100%
+			display: inline
+			cursor: pointer
+			transition: .7s
+	&:hover
+		transition: .7s
+		.sidebar_prog__main-link
+			width: 100%
+			display: inline
+			cursor: pointer
+			transition: .7s
+

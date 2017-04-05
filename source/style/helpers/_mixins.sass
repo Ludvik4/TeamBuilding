@@ -55,7 +55,7 @@
 	display: block
 	text-align: center
 
-=txt-icon
+=txt-icon($type: 'dur')
 	position: relative
 	padding-left: 25px
 	&:after
@@ -68,3 +68,39 @@
 		height: 16px
 		background-size: contain
 		background-repeat: no-repeat
+	@if $type == 'dur'
+		&:after
+			background: url('../img/sprite/time.svg') no-repeat
+	@if $type == 'number'
+		&:after
+			background: url('../img/sprite/user.svg') no-repeat
+	@if $type == 'cost'
+		&:after
+			background: url('../img/sprite/ruble.svg') no-repeat
+
+
+
+=bigline
+	position: absolute
+	top: 0
+	right: 0
+	background: $c-or
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 100%
+		width: 1000px
+		background: $c-or
+
+=mask
+	position: absolute
+	top: 0px
+	left: 0px
+	bottom: 0
+	right: 0px
+	z-index: 2
+	background: -webkit-linear-gradient( left, (rgba(0,0,0,0.9) 0%), (rgba(0,0,0,0.6) 50%),(rgba(0,0,0,0.1) 100%) )
+

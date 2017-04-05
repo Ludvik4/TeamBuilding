@@ -1,0 +1,56 @@
+.content_prog
+	each prog, key in progs
+		-
+			var listClassName = ''
+			if (key == 'creatives')
+			listClassName='content_prog__list active'
+			else
+			listClassName='content_prog__list'
+
+		div(class = listClassName, id=`${key}`)
+			each item, key in prog
+				-
+					var listClassName = ''
+					if (key == 'instaq')
+					listClassName='content_prog__item active'
+					else
+					listClassName='content_prog__item'
+
+				article(class = listClassName, data-section=`${key}` id=`${key}`)
+					.slider_prog__wrap
+						.slider_prog.carousel.slide(data-ride="carousel")
+							ul.slider_prog__list.carousel-inner(role="listbox")
+								each slider, ndx in item.slider
+									-
+										var sliderClassName = ''
+										if (slider == '1')
+										sliderClassName='slider_prog__item active'
+										else
+										sliderClassName='slider_prog__item'
+									li(class = 'item ' + sliderClassName)
+										img(class="slider_prog__img" src=`assets/img/slider-prog/${key}/${slider}.jpg`)
+										.slider_prog__mask
+						.slider_prog__text
+							.slider_prog__title= item.title
+							.slider_prog__desc
+								.slider_prog__desc-item.slider_prog__dur= item.desc.dur
+								.slider_prog__desc-item.slider_prog__amount= item.desc.amount
+								.slider_prog__desc-item.slider_prog__cost= item.desc.cost
+							.slider_prog__btn Оставить заявку
+					.text_prog
+						.text_prog__title
+							h3 Этапы квеста
+						.text_prog__steps!= item.text.steps
+						.text_prog__title
+							h3 Место
+						.text_prog__place!= item.text.place
+						- var feature = item.text.features
+						if feature !== ""
+							.text_prog__title
+								h3 Особенности
+							.text_prog__features= feature
+						else
+						div
+
+
+

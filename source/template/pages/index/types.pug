@@ -3,12 +3,12 @@
 		type1:{
 		href: '#',
 		img: 'brain',
-		desc: "Корпоративные квесты"
+		desc: "Интеллектуальные	игры"
 		},
 		type2: {
 		href: '#',
 		img: 'route',
-		desc: "Интеллектуальные	игры"
+		desc: "Корпоративные квесты"
 		},
 		type3: {
 		href: '#',
@@ -22,14 +22,14 @@
 		}
 	}
 
-section.section.section_types
+section.section.section_types#types
 	.container
 		.types
-			.types__title А какой тимбилдинг подойдет именно Вам?
+			h2.title.types__title А какой тимбилдинг подойдет именно Вам?
 			ul.types__list
 				each type, key in types
-					li.types__item(id=`${key}`)
+					li.types__item
 						a.types__link(href=`${type.href}`)
-							svg.types__svg
+							svg.types__svg.animate(data-animate='orangeBig' id=`${key}`)
 								use(xlink:href=`assets/img/sprite.svg#${type.img}`)
 							.types__desc= type.desc

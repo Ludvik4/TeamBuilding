@@ -1,9 +1,15 @@
-header.header_main
+header(class='header ' + `header_${pageName}`)
 	.container
 		.header_main__wrap
 			a.logo.header_main__logo(href="#")
 				.logo-name maot.ru
 				.logo-desc МАГАЗИН ОТДЫХА
-			+nav('nav-main', ['Главная', ' О нас', 'ПРОГРАММЫ', 'ГАЛЛЕРЕЯ', 'КОНТАКТЫ'], ['#', '#', '#', '#', '#'])
+			include ./nav
 			.phone.phone_header
 				a.phone__link(href=`tel:${phoneLink }`) #{phone}
+
+			a(class='touch-menu ' + `touch-menu_${pageName}`)
+				#nav-icon
+					span
+					span
+					span
