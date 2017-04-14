@@ -1,0 +1,73 @@
+.contacts
+	&__title
+		+title('big')
+		margin-bottom: $m-medium
+	&__list
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-width: 720px
+		margin: 0 auto
+		align-items: flex-start
+		margin-bottom: $m-medium
+	&__item
+		margin: $m-p
+		display: flex
+		flex-direction: row-reverse
+		align-items: center
+		justify-content: center
+	&__text
+		font-size: $f-m
+	&__svg
+		max-height: 20px
+		max-width: 20px
+		margin-right: $m-item
+	&__subtitle
+		+title('medium')
+		margin-bottom: $m-section
+	&__paths-wrap
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		min-height: 50px
+		margin-bottom: $m-p
+	&__path
+		transition: $transition
+		position: relative
+		&:after
+			position: absolute
+			display: block
+			content: ""
+			top: 105%
+			left: 5%
+			right: 5%
+			height: 5px
+			background-color: $c-blueblue
+			opacity: 0
+			transition: $transition
+		&:hover, &.active
+			&:after
+				opacity: 1
+			.contacts__path-link
+				color: $c-blueblue
+				font-family: $roboto-b
+	&__path-link
+		padding: 10px 0px
+		padding-left: 30px
+		transition: $transition
+		font-size: $f-m
+		+txt-icon()
+		&:after
+			height: 28px
+			top: 5px
+	&__path-link_metro
+		margin-right: $m-item
+		&:after
+			background: url('../img/metro.png') no-repeat
+	&__path-link_parking
+		&:after
+			background: url('../img/parking.png') no-repeat
+
+
+

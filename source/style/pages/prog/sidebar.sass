@@ -1,6 +1,7 @@
 .sidebar
 	&_prog
 		width: 300px
+		padding-top: 80px
 		+tablet
 			width: 0
 	&_prog__wrap
@@ -28,7 +29,7 @@
 		&.active
 			font-family: $roboto-b
 			font-size: 24px
-			height: 40px
+			min-height: 40px
 			position: relative
 			width: 500px
 			+bigline
@@ -41,41 +42,60 @@
 				color: #000
 				cursor: default
 
-.sidebar_prog__main-list
-	text-align: right
+.sidebar_prog__main-wrap
 	position: fixed
-	top: 66%
+	top: 7rem
 	width: 300px
 
+.sidebar_prog__main-list
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	text-align: center
+	position: relative
+
 .sidebar_prog__main-icon
-	width: 20px
-	height: 20px
+	width: 30px
+	height: 35px
 	fill: #000
 	margin-right: $m-p
-
-.sidebar_prog__main-link
-	width: 0
-	display: none
-	transition: .7s
-	font-family: $roboto-b
-	font-size: $f-sm
-	cursor: pointer
-	transition: .7s
-.sidebar_prog__main-item
-	transition: .7s
-	margin-bottom: $m-item
-	&.active
-		transition: .7s
-		.sidebar_prog__main-link
-			width: 100%
-			display: inline
-			cursor: pointer
-			transition: .7s
+	display: block
+	margin-bottom: 5pxКороткое замыкание
+	padding-bottom: 5px
 	&:hover
-		transition: .7s
-		.sidebar_prog__main-link
-			width: 100%
-			display: inline
+		fill: $c-or
+.sidebar_prog__main-link
+	display: block
+.sidebar_prog__main-link-name
+	display: none
+	opacity: 0
+	transition: .3s
+	font-family: $roboto-b
+	font-size: $f-norm
+	cursor: pointer
+	position: absolute
+	background: #FFFFFF
+	padding: 7px
+	top: 100%
+	width: 100%
+	+centered('x')
+
+.sidebar_prog__main-item
+	&.active
+		.sidebar_prog__main-link-name
+			display: block
+			opacity: 1
 			cursor: pointer
-			transition: .7s
+
+		.sidebar_prog__main-icon
+			border-bottom: 3px solid $c-or
+	&:hover
+		.sidebar_prog__main-link-name
+			display: block
+			opacity: 1
+			cursor: pointer
+			z-index: 10
+
+
 

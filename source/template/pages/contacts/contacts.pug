@@ -1,0 +1,32 @@
+-
+	var contacts= [
+	{svg : "time",
+	text : "С 9:30 до 20:00 по субботам c 11:00 до 16:00"},
+
+	{svg : "old-handphone",
+	text : "+7 111 11 11"},
+
+	{svg : "close-envelope",
+	text : "info@info.ru"},
+
+	{svg : "location",
+	text : "г. Москва, ул. Бауманская д.6. Бизнес-центр Виктория Плаза. 3 этаж. 309 офис"}
+	]
+
+section.section.section-contacts
+	.contacts
+		h1.contacts__title Контакты
+		ul.contacts__list
+			each contact in contacts
+				li.contacts__item
+					.contacts__text= contact.text
+					svg.contacts__svg
+						use(xlink:href=`assets/img/sprite.svg#${contact.svg}`)
+		h2.contacts__subtitle Как добраться
+		.contacts__paths-wrap
+			.contacts__path.active#baumanskaya
+				a.contacts__path-link.contacts__path-link_metro(href="#") Бауманская
+			.contacts__path#krasniselskaya
+				a.contacts__path-link.contacts__path-link_metro(href="#") Красносельская
+			.contacts__path#parking
+				a.contacts__path-link.contacts__path-link_parking(href="#") Парковка

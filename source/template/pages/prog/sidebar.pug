@@ -13,32 +13,35 @@ aside(class='sidebar ' + `sidebar_${pageName}`)
 
 			ul(class=sidebarListClassName)
 				each item, key in prog
-					-
-						var sidebarItemClassName = ''
-						if (key == 'instaq')
-						sidebarItemClassName='sidebar__item active'
-						else
-						sidebarItemClassName='sidebar__item'
+					li.sidebar__item
+						-
+							var sidebarLinkClassName = ''
+							if (key == 'baraban' || key == 'TVformat' || key == 'rope' || key == 'InstaQuest')
+							sidebarLinkClassName='sidebar__link active'
+							else
+							sidebarLinkClassName='sidebar__link'
+						a(href=`#${key}` class=sidebarLinkClassName)= item.title
 
-					li(class = sidebarItemClassName)
-						a.sidebar__link(href=`#${key}`)= item.title
-
-
-		ul.sidebar_prog__main-list
-			li.sidebar_prog__main-item.active
-				svg.sidebar_prog__main-icon
-					use(xlink:href="assets/img/sprite.svg#paper-plane")
-				a.sidebar_prog__main-link(href="#") Творческий тимбилдинг
-			li.sidebar_prog__main-item
-				svg.sidebar_prog__main-icon
-					use(xlink:href="assets/img/sprite.svg#brain")
-				a.sidebar_prog__main-link(href="#") Интеллектуальный тимбилдинг
-			//li.sidebar_prog__main-item
-				svg.sidebar_prog__main-icon
-					use(xlink:href="assets/img/sprite.svg#trophy")
-				a.sidebar_prog__main-link(href="#") Спортивный тимбилдинг
-			//li.sidebar_prog__main-item
-				svg.sidebar_prog__main-icon
-					use(xlink:href="assets/img/sprite.svg#route")
-				a.sidebar_prog__main-link(href="#") Другой тимбилдинг
+		.sidebar_prog__main-wrap
+			ul.sidebar_prog__main-list
+				li.sidebar_prog__main-item.active
+					a.sidebar_prog__main-link(href="#")
+						svg.sidebar_prog__main-icon
+							use(xlink:href="assets/img/sprite.svg#paper-plane")
+						h2.sidebar_prog__main-link-name Творческий тимбилдинг
+				li.sidebar_prog__main-item
+					a.sidebar_prog__main-link(href="#")
+						svg.sidebar_prog__main-icon
+							use(xlink:href="assets/img/sprite.svg#brain")
+						h2.sidebar_prog__main-link-name Интеллектуальный тимбилдинг
+				li.sidebar_prog__main-item
+					a.sidebar_prog__main-link(href="#")
+						svg.sidebar_prog__main-icon
+							use(xlink:href="assets/img/sprite.svg#trophy")
+						h2.sidebar_prog__main-link-name Активный тимбилдинг
+				li.sidebar_prog__main-item
+					a.sidebar_prog__main-link(href="#")
+						svg.sidebar_prog__main-icon
+							use(xlink:href="assets/img/sprite.svg#route")
+						h2.sidebar_prog__main-link-name Корпоративные квесты
 

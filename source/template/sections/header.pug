@@ -1,12 +1,13 @@
 header(class='header ' + `header_${pageName}`)
 	.container
 		.header_main__wrap
-			a.logo.header_main__logo(href="#")
-				.logo-name maot.ru
-				.logo-desc МАГАЗИН ОТДЫХА
+			a.logo.header_main__logo(href="/corp_lands/teambuilding/")
+				img.logo__img(src="assets/img/logo.png")
+				//svg.logo__svg
+					use(xlink:href="assets/img/srpite.svg#logo")
 			include ./nav
 			.phone.phone_header
-				a.phone__link(href=`tel:${phoneLink }`) #{phone}
+				a.phone__link.t-corp(data-where="corp" href=`tel:${phoneLink }`)= phone
 
 			a(class='touch-menu ' + `touch-menu_${pageName}`)
 				#nav-icon

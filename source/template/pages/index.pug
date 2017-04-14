@@ -1,18 +1,16 @@
 extends ../layout
 
-block variables
-	-var title ='Магазин отдыха | Тимбилдинг'
-	-var yaCount ='Счетчик_Яндекс_Метрики'
-	-var phone = '+7 (111) 111-11-11'
-	-var phoneLink = '+711111111'
-	-var pageName = 'main'
-
 block title
-	title #{title} || Главная
+	title #{title} | Тимбилдинг
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ4H8srItPhvk_P5EubMv1-NmPYQ1d5VI	")
 
 block content
 	.wrapper
 		.maincontent
+
+			-var pageName = 'main'
+			- var path = '/corp_lands/teambuilding/'
+			//- var path = '/'
 
 			include ../sections/header
 
@@ -21,12 +19,11 @@ block content
 			include ./index/types
 			include ./index/top-season
 			include ./index/adv
-			include ./index/reviews
+			//include ./index/reviews
 			include ./index/form-main
 
-			#map
+			#map.main-map
 
 
 
 		include ../sections/footer
-		script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDZ4H8srItPhvk_P5EubMv1-NmPYQ1d5VI	&callback=initMap")

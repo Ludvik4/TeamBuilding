@@ -7,23 +7,16 @@
 			else
 			listClassName='content_prog__list'
 
-		div(class = listClassName, id=`${key}`)
+		div(class = listClassName, id=`${key}`, data-section=`${key}` )
 			each item, key in prog
-				-
-					var listClassName = ''
-					if (key == 'instaq')
-					listClassName='content_prog__item active'
-					else
-					listClassName='content_prog__item'
-
-				article(class = listClassName, data-section=`${key}` id=`${key}`)
+				article(class="content_prog__item" id=`${key}`)
 					.slider_prog__wrap
 						.slider_prog.carousel.slide(data-ride="carousel")
 							ul.slider_prog__list.carousel-inner(role="listbox")
 								each slider, ndx in item.slider
 									-
 										var sliderClassName = ''
-										if (slider == '1')
+										if (slider == '01')
 										sliderClassName='slider_prog__item active'
 										else
 										sliderClassName='slider_prog__item'
@@ -31,7 +24,7 @@
 										img(class="slider_prog__img" src=`assets/img/slider-prog/${key}/${slider}.jpg`)
 										.slider_prog__mask
 						.slider_prog__text
-							.slider_prog__title= item.title
+							h3.slider_prog__title= item.title
 							.slider_prog__desc
 								.slider_prog__desc-item.slider_prog__dur= item.desc.dur
 								.slider_prog__desc-item.slider_prog__amount= item.desc.amount
@@ -41,9 +34,11 @@
 						.text_prog__title
 							h3 Этапы квеста
 						.text_prog__steps!= item.text.steps
-						.text_prog__title
-							h3 Место
-						.text_prog__place!= item.text.place
+						- var place = item.text.place
+						if place !== ""
+							.text_prog__title
+								h3 Место
+							.text_prog__place!= place
 						- var feature = item.text.features
 						if feature !== ""
 							.text_prog__title

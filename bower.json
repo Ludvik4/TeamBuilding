@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.1",
+    "jquery": "3.2.1",
     "bootstrap": "^3.3.7",
     "magnific-popup": "^1.1.0",
     "jquery-single-page-nav": "*",
@@ -23,7 +23,5 @@
     "singularity": "^1.7.1",
     "countUp.js": "^1.8.3"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }

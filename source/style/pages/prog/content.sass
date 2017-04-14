@@ -9,8 +9,8 @@
 			display: block
 			opacity: 1
 	&__item
-		//display: none
-		//opacity: 0
+		margin-bottom: $m-large
+		border-bottom: 3px solid $c-or
 		transition: $transition
 		&.active
 			display: block
@@ -79,26 +79,12 @@
 .text_prog
 	margin-bottom: $m-medium
 	&__title
-		font-family: $roboto-b
-		font-size: 24px
-		position: relative
-		margin: $m-p
-		h3
-			background: $c-or
-			display: inline-block
-			margin: 0
-			padding: 7px 30px
-			width: 250px
-			text-align: right
-			&:after
-				content: ''
-				display: block
-				position: absolute
-				top: 0
-				bottom: 0
-				right: 100%
-				width: 1000px
-				background: $c-or
+		+titleOrange
+	&__steps
+		font-size: $f-m
+		margin-bottom: $m-item
+		p
+			margin-bottom: $m-p
 
 
 

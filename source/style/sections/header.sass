@@ -5,17 +5,15 @@
 	left: 0
 	right: 0
 	z-index: 50
+	background: $c-blue
 	&_main
 		background: #FFF
-	&_prog
-		background: $c-blue
 .header_main__wrap
 	align-items: center
 	display: flex
 	flex-direction: row
 	justify-content: space-between
 .header_main__logo
-	flex: .5
 	+laptop
 		position: relative
 		z-index: 12
@@ -29,9 +27,11 @@
 	&-desc
 		font-size: 10px
 		transition: $transition
+	&__img
+		height: 30px
+		width: auto
 
 .nav-main
-	flex: 3
 	font-size: $f-m
 	padding-top: 10px
 .phone_header
@@ -47,4 +47,5 @@
 	+txt-icon
 	&:after
 		background-image: url('../img/sprite/old-handphone.svg')
+		height: 18px
 	display: inline

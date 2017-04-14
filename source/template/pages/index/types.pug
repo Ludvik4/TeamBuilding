@@ -1,22 +1,22 @@
 -
 	var types= {
 		type1:{
-		href: '#',
+		href: '#intelligents',
 		img: 'brain',
 		desc: "Интеллектуальные	игры"
 		},
 		type2: {
-		href: '#',
+		href: '#corporative',
 		img: 'route',
 		desc: "Корпоративные квесты"
 		},
 		type3: {
-		href: '#',
+		href: '#activity',
 		img: 'trophy',
 		desc: "Активные	тимбилдинги"
 		},
 		type4: {
-		href: '#',
+		href: '#creatives',
 		img: 'paper-plane',
 		desc: "Творческие тимбилдинги"
 		}
@@ -29,7 +29,7 @@ section.section.section_types#types
 			ul.types__list
 				each type, key in types
 					li.types__item
-						a.types__link(href=`${type.href}`)
+						a.types__link(href=`${path}prog.html${type.href}`)
 							svg.types__svg.animate(data-animate='orangeBig' id=`${key}`)
 								use(xlink:href=`assets/img/sprite.svg#${type.img}`)
 							.types__desc= type.desc

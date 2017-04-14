@@ -1,0 +1,16 @@
+-
+	var gratitudes = [
+	{	imgs : ['01', '02'] }
+	]
+
+section.section.section_gratitude
+	.container
+		.gratitude
+			h2.gratitude__title Сертификаты и награды
+			.gratitude__wrap
+				ul.gratitude__list.popup-container
+					each gratitude, ndx in gratitudes
+						li.gratitude__item
+							each item, ndx in gratitude.imgs
+								a.gratitude__img-link(href=`assets/img/gratitude/${item}.jpg`)
+									img.gratitude__img(src=`assets/img/gratitude/${item}.jpg`)

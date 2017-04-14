@@ -1,0 +1,19 @@
+extends ../layout
+
+block title
+	title #{title} | Тимбилдинг
+
+
+block content
+	.wrapper
+		.maincontent
+
+			-var pageName = 'about'
+
+			include ../sections/header
+
+			include ./about/about
+			include ./about/gratitude
+
+
+		include ../sections/footer

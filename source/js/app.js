@@ -1,4 +1,41 @@
 
+// Magnific Popup - контейнеру с фотками добавить класс  .popup-container_img
+
+$('.popup__img-link').magnificPopup({
+    type: 'image',
+    closeOnContentClick : true,
+    zoom: {
+        enabled: true,
+        duration: 300 // продолжительность анимации. Не меняйте данный параметр также и в CSS
+    }
+});
+
+$('.popup-container').magnificPopup({
+    delegate: 'a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    closeOnContentClick : true,
+    mainClass: 'mfp-fade'
+    // other options
+});
+
+
+$(document).ready(function() {
+    $('.image-link').magnificPopup({type:'image'});
+});
+
+// Гугл карты
+$(function () {
+    initMap();
+    $('.contacts__path-link').on('click', function(e) {
+        e.preventDefault();
+
+        $(this).closest('.contacts__path').addClass('active').siblings().removeClass('active');
+        initMap();
+    });
+
+});
+
+
 // Мобильное меню (гамбургер)
 
 $(function () {
@@ -38,6 +75,8 @@ $(function () {
 });
 
 //слайдер для главной страницы=================================
+
+
 $(function () {
     $(".top-season__list").slick({
         // normal options...
@@ -82,6 +121,8 @@ $(function () {
         }]
     });
 });
+
+
 
 //счетчик при доскролливании до элемента=======================
 
@@ -134,6 +175,7 @@ $(document).ready(function() {
     $(".title").animated("fadeInRight");
     $(".content").animated("fadeIn");
 
+
     $("#types").waypoint(function () {
 
         $(".types__svg").addClass("orangeBig");
@@ -141,47 +183,99 @@ $(document).ready(function() {
     }, {
         offset: "60%"
     });
+    $(".advs__desc").animated("fadeIn");
 
+});
 
-    // Single page nav
+//Переключение по разделам и пунктам меню в Программах/ ТАБЫ
+$(function () {
+// Single page nav
     if($(window).width() <= 1139) {
         $('.sidebar__list').singlePageNav({
             'currentClass' : "active",
-            offset : 100
+            offset : 100,
+            updateHash : true
         });
     } else {
         $('.sidebar__list').singlePageNav({
             'currentClass' : "active",
             offset : 80
         });
+
     }
 
+    $('.sidebar_prog__main-link').on('click', function(e) {
+        e.preventDefault();
+
+
+        var
+            $this = $(this),
+            sidebarItem = $this.closest('.sidebar_prog__main-item'),
+            contentItem = $('.content_prog__list'),
+            sidebarList = $('.sidebar__list'),
+            itemPosition = sidebarItem.index();
+
+        contentItem.eq(itemPosition)
+            .add(sidebarItem)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+
+        var currentId = contentItem.eq(itemPosition).data('section');
+        window.location.hash = currentId;
+
+        sidebarList.eq(itemPosition)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+
+        $(window).scrollTop(0);
+
+// Повторное подключение SinglePage, т.к. при смене табов не срабатывает автоматически
+        if($(window).width() <= 1139) {
+            $('.sidebar__list').singlePageNav({
+                'currentClass' : "active",
+                offset : 100,
+                updateHash : true
+            });
+        } else {
+            $('.sidebar__list').singlePageNav({
+                'currentClass' : "active",
+                offset : 80
+            });
+        }
+
+    });
+
+
+     var   articleAll =  $('.content_prog__list');
+
+    articleAll.each(function (i, item) {
+        var article = $(item),
+            itemPosition = article.index(),
+            sidebarMainList = $('.sidebar_prog__main-item'),
+            articleId = article.data('section'),
+            sidebarList = $('.sidebar__list'),
+            winHash = window.location.hash.replace('#', '');
+
+        if (winHash == articleId ) {
+
+            article.addClass('active')
+                .siblings()
+                .removeClass('active');
+            sidebarMainList.eq(itemPosition)
+                .addClass('active')
+                .siblings()
+                .removeClass('active');
+            sidebarList.eq(itemPosition)
+                .addClass('active')
+                .siblings()
+                .removeClass('active');
+
+            $(window).scrollTop(0);
+
+        }
+
+    });
+
 });
-
-
-//Переключение по разделам и пунктам меню в Программах/ ТАБЫ
-// $(function () {
-//     $('.sidebar_prog__main-link').on('click', function(e) {
-//         e.preventDefault();
-//
-//         var
-//             $this = $(this),
-//             sidebarItem = $this.closest('.sidebar_prog__main-item'),
-//             contentItem = $('.content_prog__list'),
-//             sidebarList = $('.sidebar__list'),
-//             itemPosition = sidebarItem.index();
-//
-//         contentItem.eq(itemPosition)
-//             .add(sidebarItem)
-//             .addClass('active')
-//             .siblings()
-//             .removeClass('active');
-//         sidebarList.eq(itemPosition)
-//             .addClass('active')
-//             .siblings()
-//             .removeClass('active');
-//
-//
-//     });
-//
-// });

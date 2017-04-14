@@ -1,0 +1,23 @@
+extends ../layout
+
+block title
+	title #{title} | Контакты
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ4H8srItPhvk_P5EubMv1-NmPYQ1d5VI	")
+
+block content
+	.wrapper
+		.maincontent
+
+			-var pageName = 'contacts'
+
+			include ../sections/header
+
+			include ./contacts/contacts
+
+
+
+			#map
+
+
+
+		include ../sections/footer
