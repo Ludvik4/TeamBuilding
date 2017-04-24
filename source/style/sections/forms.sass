@@ -1,6 +1,8 @@
-.section_form-main
+.section_form-main, .section_form-popup
 	background: $c-blue
 	padding-top: 70px
+	+tablet
+		padding-top: 30px
 
 .form-main
 	display: flex
@@ -10,11 +12,24 @@
 	&__title
 		+section-title
 		margin-bottom: $m-item
+		+tablet
+			display: none
+		&-min
+			+section-title
+			margin-bottom: $m-item
+			display: none
+			+tablet
+				display: block
+
+
+			display: none
 	&__form
 		display: flex
 		flex-flow: row wrap
 		justify-content: space-between
 		padding: 50px 0
+		+tablet
+			padding: 20px 5px
 	&__inp
 		display: block
 		background: #fff
