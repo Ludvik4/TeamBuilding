@@ -42,23 +42,29 @@
 		+txt-icon
 		&:after
 			background-image: url('../img/sprite/old-handphone.svg')
+			height: 25px
+			+phone
 	&__copyright
 		font-size: $f-m
 		text-align: center
 		margin-bottom: 50px
-
-.footer_main__logo
+	.logo__svg
+		fill: #000
+		max-height: 35px
+		transition: $transition
+		&:hover
+			fill:  $c-grey3
+.logo.footer_main__logo
 	flex: 1
-	&:hover
-		.logo-name, .logo-desc
-			color: #FFFFFF
-	.logo-name
-		font-family: $sans-b
+	text-align: center
+	+phone
+		width: 100%
+		max-width: 100%
+
 .nav_footer
 	flex: 3
 .socials_footer
 	justify-content: center
-	flex: 1
 	+phone
 		width: 100%
 .socials__item_footer

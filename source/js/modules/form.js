@@ -21,8 +21,6 @@ $(function(){
 
             var form_data = form.serialize(); //собираем все данные из формы
 
-            console.log(form_data);
-
             $.ajax({
                 type: "POST", //Метод отправки
                 url: "http://maot.ru/podmsk/tilda/les_landing.php", //путь до php фаила отправителя

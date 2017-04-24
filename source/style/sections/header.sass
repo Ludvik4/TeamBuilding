@@ -6,6 +6,25 @@
 	right: 0
 	z-index: 50
 	background: $c-blue
+	.logo__svg
+		height: 30px
+		width: auto
+		fill: $c-grey3
+		transition: $transition
+		&:hover
+			fill: #000
+		+laptop
+			display: none
+		&-min
+			display: none
+			fill: $c-grey3
+			max-height: 35px
+			max-width: 50px
+			+laptop
+				display: block
+			+phone
+				max-height: 25px
+
 	&_main
 		background: #FFF
 .header_main__wrap
@@ -13,12 +32,16 @@
 	display: flex
 	flex-direction: row
 	justify-content: space-between
+	+laptop
+		align-items: inherit
+		padding-top: 10px
 .header_main__logo
 	+laptop
 		position: relative
 		z-index: 12
 .logo
 	font-family: $sans-b
+	max-width: 300px
 	&:hover
 		color: #000
 	&-name
@@ -27,25 +50,113 @@
 	&-desc
 		font-size: 10px
 		transition: $transition
-	&__img
-		height: 30px
-		width: auto
+
 
 .nav-main
 	font-size: $f-m
 	padding-top: 10px
 .phone_header
 	text-align: right
-	padding-top: 10px
 	font-family: $sans-semib
-	font-size: $f-m
+	font-size: $f-m + 2px
 	+laptop
 		position: relative
 		z-index: 12
 		text-align: center
 .phone__link
 	+txt-icon
+	display: inline
 	&:after
 		background-image: url('../img/sprite/old-handphone.svg')
-		height: 18px
-	display: inline
+		height: 22px
+		top: 5px
+		+phone
+			height: 25px
+
+.nav
+	+laptop
+		display: none
+		position: fixed
+		width: 100%
+		background: $c-blue
+		top: 60px
+		left: 0
+		right: 0
+		padding: 10px 0
+		+laptop
+			padding-bottom: 20px
+		+phone
+			top: 45px
+	.nav__item
+		display: block
+		padding: 10px
+		text-align: center
+		+laptop
+			padding: 15px 10px
+	&_main
+		+laptop
+			background-color: #fff
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: center
+		+laptop
+			flex-direction: column
+
+	&__item
+		padding: 0 12px
+	&__link
+		text-transform: uppercase
+		transition: $transition
+		+laptop
+			font-size: $f-m
+			font-family: $roboto-b
+		&:hover
+			font-weight: bold
+
+.touch-menu
+	display: none
+	z-index: 10
+	text-align: right
+	+laptop
+		display: block
+	&_prog
+		background: $c-blue
+
+#nav-icon
+	width: 50px
+	position: relative
+	float: right
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+	span
+		display: block
+		position: absolute
+		height: 5px
+		width: 83%
+		background: #000
+		opacity: 1
+		left: 0
+		transform: rotate(0deg)
+		transition: .25s ease-in-out
+		&:nth-child(1)
+			top: 0px
+		&:nth-child(2)
+			top: 10px
+		&:nth-child(3)
+			top: 20px
+#nav-icon.open
+	span
+		&:nth-child(2)
+			top: 18px
+			width: 0%
+			left: 50%
+		&:nth-child(1)
+			transform: rotate(45deg)
+			top: 1rem
+		&:nth-child(3)
+			transform: rotate(-45deg)
+			top: 1rem
+
+

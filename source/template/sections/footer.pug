@@ -3,15 +3,14 @@ footer.footer_main#contacts
         .footer_main__wrap
             .footer_main__nav
                 a.logo.footer_main__logo(href="#")
-                    //.logo-name maot.ru
-                    //.logo-desc МАГАЗИН ОТДЫХА
-                    img.logo__img(src="assets/img/logo.png")
+                    svg.logo__svg
+                        use(xlink:href="assets/img/sprite.svg#logo")
                 include ./nav
                 +socials('footer', ['facebook-logo-button', 'instagram-logo', 'vk-social-logotype'], ['#', '#', '#'])
             .footer_main__contacts
                 .footer_main__address г. Москва, ул. Бауманская дом 6, офис 309, 3-й этаж.
-                .footer_main__email info@info.ru
-                a.footer_main__phone(href=`tel:${phoneLink }`) #{phone}
+                .footer_main__email info@systemice.ru
+                a.footer_main__phone.t-corp(data-where="corp" href=`tel:${phoneLink }`)= phone
             .footer_main__copyright © 2005 - 2017. Все права защищены.
 
 

@@ -1,10 +1,13 @@
 header(class='header ' + `header_${pageName}`)
 	.container
 		.header_main__wrap
-			a.logo.header_main__logo(href="/corp_lands/teambuilding/")
-				img.logo__img(src="assets/img/logo.png")
-				//svg.logo__svg
-					use(xlink:href="assets/img/srpite.svg#logo")
+			a.logo.header_main__logo(href="/")
+				//img.logo__img(src="assets/img/logo.png")
+				//img.logo__img-min(src="assets/img/logo-min.png")
+				svg.logo__svg
+					use(xlink:href="assets/img/sprite.svg#logo")
+				svg.logo__svg-min
+					use(xlink:href="assets/img/sprite.svg#logo-min")
 			include ./nav
 			.phone.phone_header
 				a.phone__link.t-corp(data-where="corp" href=`tel:${phoneLink }`)= phone

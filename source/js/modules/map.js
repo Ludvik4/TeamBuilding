@@ -1,13 +1,17 @@
 
 
 function initMap() {
- 
-    if ($('#baumanskaya').hasClass('active')) {
+    var myZoom = 16;
+    if ($(window).width() <= 500)
+    {
+        myZoom = 15
+    }
+        if ($('#baumanskaya').hasClass('active')) {
 
         var myLatLng = {lat: 55.776237, lng: 37.675454};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
+            zoom: myZoom,
             scrollwheel: false,
             center: myLatLng
         });
@@ -56,7 +60,7 @@ function initMap() {
         var myLatLng = {lat: 55.776237, lng: 37.675454};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
+            zoom: myZoom,
             scrollwheel: false,
             center: {lat: 55.777480, lng: 37.670800}
         });
@@ -111,7 +115,7 @@ function initMap() {
         var myLatLng = {lat: 55.776237, lng: 37.675454};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
+            zoom: myZoom,
             scrollwheel: false,
             center: {lat: 55.777480, lng: 37.670800}
         });

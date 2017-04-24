@@ -29,7 +29,7 @@
 								.slider_prog__desc-item.slider_prog__dur= item.desc.dur
 								.slider_prog__desc-item.slider_prog__amount= item.desc.amount
 								.slider_prog__desc-item.slider_prog__cost= item.desc.cost
-							.slider_prog__btn Оставить заявку
+							a.slider_prog__btn.open-popup-link(href="#form-popup" onclick=`yaCounter${yaCount}.reachGoal('programm_0'); return true`, type="submit") Оставить заявку
 					.text_prog
 						.text_prog__title
 							h3 Этапы квеста

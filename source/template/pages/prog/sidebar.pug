@@ -2,6 +2,8 @@
 include ./_articles
 
 aside(class='sidebar ' + `sidebar_${pageName}`)
+	svg.sidebar__button
+		use(xlink:href="assets/img/sprite.svg#point")
 	.sidebar_prog__wrap
 		each prog, key in progs
 			-
@@ -16,7 +18,7 @@ aside(class='sidebar ' + `sidebar_${pageName}`)
 					li.sidebar__item
 						-
 							var sidebarLinkClassName = ''
-							if (key == 'baraban' || key == 'TVformat' || key == 'rope' || key == 'InstaQuest')
+							if (key == 'baraban')
 							sidebarLinkClassName='sidebar__link active'
 							else
 							sidebarLinkClassName='sidebar__link'

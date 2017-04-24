@@ -4,10 +4,10 @@
 	text : "С 9:30 до 20:00 по субботам c 11:00 до 16:00"},
 
 	{svg : "old-handphone",
-	text : "+7 111 11 11"},
+	text : "8(499) 110-64-17"},
 
 	{svg : "close-envelope",
-	text : "info@info.ru"},
+	text : "info@systemice.ru"},
 
 	{svg : "location",
 	text : "г. Москва, ул. Бауманская д.6. Бизнес-центр Виктория Плаза. 3 этаж. 309 офис"}
@@ -18,8 +18,13 @@ section.section.section-contacts
 		h1.contacts__title Контакты
 		ul.contacts__list
 			each contact in contacts
+				-
+					if (contact.text == '8(499) 110-64-17')
+					telLink = 't-corp'
+					else
+					telLink = ''
 				li.contacts__item
-					.contacts__text= contact.text
+					div(class="contacts__text " + telLink)= contact.text
 					svg.contacts__svg
 						use(xlink:href=`assets/img/sprite.svg#${contact.svg}`)
 		h2.contacts__subtitle Как добраться

@@ -1,15 +1,49 @@
+.sidebar__button
+	display: none
+	position: absolute
+	top: 60%
+	right: 100%
+	width: 60px
+	fill: $c-blue-transp
+	z-index: 50
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		background: #FFFFFF
+		width: 30px
+		height: 60px
+		+centered('y')
+		left: 0
+	+tablet
+		display: block
 .sidebar
 	&_prog
 		width: 300px
 		padding-top: 80px
+		transition: $transition
 		+tablet
-			width: 0
+			margin-right: -310px
+			height: 100%
+			position: fixed
+			top: 0
+			right: 0
+			padding-top: 11rem
+			z-index: 20
+			background: $c-blue-transp
+			//opacity: 0
+			&.active
+				margin-right: 0rem
+				//opacity: 1
+				width: 70%
+				max-width: 400px
+				.sidebar_prog__wrap
+					position: relative
 	&_prog__wrap
 		position: fixed
-		width: 300px
+		width: 330px
 		padding: 20px
-		+tablet
-			left: 100%
+
 	&__list
 		margin-left: 20px
 		text-align: left
@@ -20,10 +54,15 @@
 		&.active
 			display: block
 			opacity: 1
+		+tablet
+			padding: 0
 	&__item
 		margin-bottom: $m-p
+		+tablet
+			padding: 3px 0
 	&__link
 		padding-left: 25px
+		font-size: $f-m
 		&:hover
 			color: $c-dark-or
 		&.active
@@ -31,13 +70,14 @@
 			font-size: 24px
 			min-height: 40px
 			position: relative
-			width: 500px
+			//width: 500px
 			+bigline
 			position: relative
 			padding: 5px
 			padding-left: 25px
 			color: $c-main
-			transition: .5s
+			transition-duration: .5s
+			transition-property: font-size
 			&:hover
 				color: #000
 				cursor: default
@@ -56,8 +96,8 @@
 	position: relative
 
 .sidebar_prog__main-icon
-	width: 30px
-	height: 35px
+	width: 43px
+	height: 43px
 	fill: #000
 	margin-right: $m-p
 	display: block
@@ -80,6 +120,9 @@
 	top: 100%
 	width: 100%
 	+centered('x')
+	+tablet
+		background: transparent
+
 
 .sidebar_prog__main-item
 	&.active
@@ -96,6 +139,10 @@
 			opacity: 1
 			cursor: pointer
 			z-index: 10
+			+tablet
+				background: transparent
+		.sidebar_prog__main-link-name.active
+			opacity: 0
 
 
 

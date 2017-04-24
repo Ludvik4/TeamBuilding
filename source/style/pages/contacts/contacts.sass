@@ -28,6 +28,7 @@
 	&__paths-wrap
 		display: flex
 		flex-direction: row
+		flex-wrap: wrap
 		justify-content: center
 		align-items: center
 		min-height: 50px
@@ -35,6 +36,8 @@
 	&__path
 		transition: $transition
 		position: relative
+		+phone
+			margin-bottom: $m-item
 		&:after
 			position: absolute
 			display: block

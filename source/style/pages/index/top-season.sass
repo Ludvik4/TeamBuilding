@@ -1,27 +1,12 @@
 .section_top-season
-	margin-bottom: $m-large
-
-.arrows
-	+centered(x)
-	width: 250px
-	//height: 30px
-	top: 102%
-	display: flex
-	flex-direction: row-reverse
-	justify-content: space-between
-.arrow
-	background: transparent
-	border: 1px solid $c-or
-	padding: 5px 10px
-	transition: $transition
-	&:hover
-		background-color: $c-or
-.arrow__svg
-	width: 40px
-	height: 20px
+	margin: 0 auto
+	width: 100%
+	max-width: 2200px
 
 .top-season__carusel
-	position: relative
+	display: none
+	+tablet
+		display: block
 
 .top-season
 	&__title
@@ -36,57 +21,216 @@
 	&__link
 		display: block
 		position: relative
-		transition: $transition
-		z-index: 5
+		transition: $transition all
+		z-index: 35
 		&:hover
-			.top-season__desc
-				opacity: 1
-			.top-season__text
-				background: $c-dark-blue
 			.top-season__img
-				filter: blur(1px)
-	&__img-wrap
-		position: relative
+				filter: blur(2px)
+			.top-season__text
+				width: 100%
+				background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7) )
+			.top-season__item-title
+				width: 50%
+			.text-more
+				opacity: 1
+				z-index: 36
 	&__img
 		width: 100%
 		height: auto
-	&__desc
-		opacity: 0
-		position: absolute
-		top: 0px
-		left: 0px
-		bottom: 0px
-		right: 0
-		z-index: 2
-		padding: 16px
-		background: rgba(0, 0, 0, .7)
-		color: #fff
-		transition: .5s
-		&-title
-			font-size: 24px
-			font-family: $roboto
-			margin-bottom: 60px
+		min-height: 300px
 
 	&__text
-		padding: 20px 15px 13px
-		background: $c-blue
-		transition: .5s
+		position: absolute
+		padding: 7% 5%
+		top: 0px
+		left: 0px
+		color: #fff
+		width: 50%
+		bottom: 0px
+		z-index: 10
+		background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0) )
+		+tablet
+			background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0) )
+			width: 90%
+
 	&__info
-		display: flex
-		flex-flow: row wrap
+		position: absolute
+		color: #fff
+		z-index: 10
+		bottom: 7%
+		left: 5%
 		font-size: $f-sm
 		font-family: $roboto
 	&__item-title
-		font-size: 24px
+		font-size: 40px
 		margin-bottom: $m-p
-		font-family: $roboto
+		font-family: $roboto-b
 	&__dur
-		flex: 1 1 80px
+		margin-bottom: $m-item
 		+txt-icon()
+		font-size: $f-m
 	&__number
-		flex: 1 1 80px
+		margin-bottom: $m-item
 		+txt-icon('number')
+		font-size: $f-m
 	&__cost
-		flex: 2 1 80px
+		font-size: $f-mm
+		font-family: $roboto-m
 		+txt-icon(cost)
+		padding-left: 35px
+		&:after
+			width: 35px
+			height: 23px
+			top: 7px
+
+.text-more
+	position: absolute
+	right: 30%
+	top: 73%
+	color: #FFF
+	font-size: 18px
+	opacity: 0
+	transition: $transition
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 110%
+		width: 85px
+		height: 125px
+		background: url('../img/mouse.png') no-repeat
+		background-size: contain
+
+.block_letters
+	width: 100%
+	margin: 0 auto
+	position: relative
+	height: 800px
+	overflow: hidden
+	+desktop
+		height: 600px
+	+laptop
+		height: 500px
+	+tablet
+		display: none
+
+
+=prog-arrow
+	position: absolute
+	cursor: pointer
+	top: 20%
+	bottom: 20%
+	z-index: 10
+	width: 18%
+	&:after
+		content: ""
+		display: block
+		+centered('y')
+		right: 60%
+		width: 50px
+		height: 100px
+		opacity: .6
+		transition: $transition
+		background: url('../img/sprite/left-chevron-white.svg') center center no-repeat
+		background-size: cover
+	&:hover
+		&:after
+			opacity: 1
+			width: 60px
+			height: 120px
+
+#programs_left_arrow
+	+prog-arrow
+	left: 0px
+#programs_right_arrow
+	+prog-arrow
+	right: 0px
+	&:after
+		left: 60%
+		transform: translateY(-50%) rotate(180deg)
+
+
+.programs_card
+	z-index: 1
+	+centered('y')
+
+=programs
+	z-index: 5
+	width: 18%
+	opacity: 0.6
+	transition-duration: $transition5
+	transition-property: right, left, width, opacity
+	filter: blur(1px)
+	overflow: hidden
+	.top-season__img
+		height: 500px
+		width: auto
+		@media (max-width: 1600px)
+			height: 400px
+		+desktop
+			height: 350px
+		+laptop
+			height: 300px
+		+tablet
+			height: 200px
+	.top-season__text, .top-season__info
+		display: none
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: -10px
+		bottom: -10px
+		width: 50%
+		background: #FFFFFF
+		z-index: 46
+
+.programs_left
+	+programs
+	left: 0
+	&:after
+		left: 70%
+
+.programs_right
+	+programs
+	right: 0px
+	transition-duration: $transition5
+	transition-property: right, left, width, opacity
+	&:after
+		right: 70%
+
+.programs_card__img
+	width: 100%
+	height: auto
+
+.programs_central
+	z-index: 20
+	+centered('both')
+	width: 65%
+	opacity: 1.0
+	transition-duration: $transition5
+	transition-property:  left, right, width
+	+large
+		width: 57%
+
+
+.programs_hidden_right
+	left: 100%
+	width: 0px
+	opacity: 0.0
+	transition-duration: $transition5
+	transition-property: right, left, width, opacity
+
+.programs_hidden_left
+	+centered('y')
+	left: 0
+	width: 0px
+	opacity: 0.0
+	transition-duration: $transition5
+	transition-property: left, width, right, opacity
+
+.programs_card a:hover, .programs_card a:focus
+	color: transparent
+	text-decoration: none
+	outline: none
 

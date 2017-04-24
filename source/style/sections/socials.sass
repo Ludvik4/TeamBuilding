@@ -6,6 +6,8 @@
 	&_main
 		justify-content: flex-start
 		background: $c-or
+		+tablet
+			padding: 12px 10px 10px
 
 	&__wrap
 		+bigline
@@ -16,18 +18,21 @@
 	&__pic
 		width: 50px
 		height: 50px
+		+tablet
+			width: 30px
+			height: 30px
 		&_main
 			fill: #fff
 			transition: $transition
 			&:hover
-				fill: #000
+				fill:  $c-grey3
 		&_footer
 			fill: #000
 			width: 30px
 			height: 30px
 			transition: $transition
 			&:hover
-				fill: #fff
+				fill: $c-grey3
 	&__item_main
 		padding-right: 20px
 

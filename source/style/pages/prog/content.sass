@@ -22,11 +22,17 @@
 		position: relative
 	&__item
 		height: 350px
-		overflow-y: hidden
+		overflow: hidden
 		position: relative
-	&__img
 		width: 100%
-		height: auto
+	&__img
+		position: absolute
+		top: 0px
+		bottom: 0
+		left: 0px
+		max-width: 300%!important
+		height: auto!important
+		min-width: 100%
 		min-height: 100%
 	&__mask
 		+mask

@@ -2,10 +2,10 @@ include ./common/_mixins
 
 block variables
 	-var title ='Systemice Event'
-	-var yaCount ='Счетчик_Яндекс_Метрики'
-	-var phone = '+7 (111) 111-11-11'
-	-var phoneLink = '+711111111'
-
+	-var yaCount ='44346397'
+	-var phone = '8 (499) 110-64-17'
+	-var phoneLink = '+74991106417'
+	- var path = '/'
 
 doctype html
 html(lang='ru')
@@ -13,7 +13,7 @@ html(lang='ru')
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content="width=device-width, initial-scale=1" )
-		link(rel="shortcut icon", href="/public/favicon/favicon.ico", type="image/x-icon")
+		link(rel="shortcut icon", href="assets/img/favicon.ico", type="image/x-icon")
 
 		link(href='assets/libs/bootstrap.min.css', rel='stylesheet')
 		link(href='assets/libs/slick.css', rel='stylesheet')
@@ -29,10 +29,12 @@ html(lang='ru')
 		block content
 
 
-		//include ./common/metrica
+		include ./common/metrica
 
 
 		script(src='assets/libs/jquery.js', type="text/javascript")
+		script(src="/public/js/jquery.cookie.js")
+		script(src="/public/js/front/u2.js")
 		script(src='assets/libs/bootstrap.min.js', type="text/javascript")
 		script(src='assets/libs/jquery.touchSwipe.js', type="text/javascript")
 		script(src='assets/libs/slick.min.js', type="text/javascript")

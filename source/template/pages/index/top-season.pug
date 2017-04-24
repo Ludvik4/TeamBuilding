@@ -1,82 +1,149 @@
 -
-	var topSeason= {
-		item1:{
-		href: "#",
-		imag: "topseason1.jpg",
-		title: "Развлекательных программ1",
+
+	var topSeason= [
+		{
+		href: path + "prog.html#InstaQuest",
+		imag: "slider-main/insta.jpg",
+		title: "Инста квест",
 		info: {
-			dur: "3 часа1",
-			number: "15-200 чел.",
-			cost: "от 1700 на чел."
-			},
-		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+			dur: "1,5 - 2 часа",
+			number: "20 – 120 чел",
+			cost: "от 2700 на чел"
+			}
 		},
-		item2:{
-		href: "#",
-		imag: "topseason2.jpg",
-		title: "Развлекательных программ2",
+		{
+		href:path + "prog.html#questioncost",
+		imag: "slider-main/question.jpg",
+		title: "Цена вопроса",
 		info: {
-			dur: "3 часа2",
-			number: "15-200 чел.",
-			cost: "от 1700 на чел."
-			},
-		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+			dur: "1 - 2 часа",
+			number: "20 – 400 чел.",
+			cost: "от 1900 на чел."
+			}
 		},
-		item3:{
-		href: "#",
-		imag: "topseason3.jpg",
-		title: "Развлекательных программ3",
+		{
+		href: path + "prog.html#bigrace",
+		imag: "/slider-main/bigrace.jpg",
+		title: "Большие гонки",
 		info: {
-			dur: "3 часа",
-			number: "15-200 чел.",
-			cost: "от 1700 на чел."
-			},
-		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+			dur: "3 – 6 часов",
+			number: "10 – 1 000 чел.",
+			cost: "от 3600  на чел."
+			}
 		},
-		item4:{
-		href: "#",
-		imag: "topseason2.jpg",
-		title: "Развлекательных программ4",
+		{
+		href: path + "prog.html#fordBoyard",
+		imag: "/slider-main/fordBoyard.jpg",
+		title: "Форт Боярд",
 		info: {
-			dur: "3 часа4",
-			number: "15-200 чел.",
-			cost: "от 1700 на чел."
-			},
-		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+			dur: "2 - 4 часа",
+			number: "15 – 200 чел.",
+			cost: "от 2700 на чел."
+			}
 		},
-		item5:{
-		href: "#",
-		imag: "topseason1.jpg",
-		title: "Развлекательных программ5",
+		{
+		href: path + "prog.html#reaction",
+		imag: "slider-main/reaction.jpg",
+		title: "Цепная реакция",
 		info: {
-			dur: "3 часа5",
-			number: "15-200 чел.",
-			cost: "от 1700 на чел."
-			},
-		desc: "Азартная и веселая интеллектуальная викторина в оригинальном формате, который взял лучшее от популярных шоу. Проводится с помощью планшетов iPad "
+			dur: "2 - 4 часа (оптимально от 3-х часов)",
+			number: "30 – 200 чел",
+			cost: "от 3200 на чел."
+			}
 		}
-	}
+	]
 
 
-section.section_top-season
-	.top-season
-		h2.title.top-season__title Наш Топ-предложений этого сезона!
-		.carusel.top-season__carusel.content
-			.arrows
-			.top-season__list.clearfix.carusel__list
-				each item, key in topSeason
-					.top-season__item.carusel__item(id=`${key}`)
-						a.top-season__link(href=`${item.href}`)
-							.top-season__img-wrap
-								img.top-season__img(src=`assets/img/${item.imag}`)
-								.top-season__desc
-									.top-season__desc-title= item.title
-									.top-season__desc-text= item.desc
-							.top-season__text
-								.top-season__item-title= item.title
-								.top-season__info
-									.top-season__dur= item.info.dur
-									.top-season__number= item.info.number
-									.top-season__cost= item.info.cost
+section.section.section_top-season
+	h2.title.top-season__title Наш Топ-предложений этого сезона!
+	.block_letters
+		#programs_cards
+			.programs_card.programs_left
+				a.top-season__link(href=`${topSeason[0].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[0].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[0].title
+						.top-season__cost= topSeason[0].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[0].info.dur
+						.top-season__number= topSeason[0].info.number
 
+			.programs_card.programs_central
+				a.top-season__link(href=`${topSeason[1].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[1].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[1].title
+						.top-season__cost= topSeason[1].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[1].info.dur
+						.top-season__number= topSeason[1].info.number
 
+			.programs_card.programs_left
+				a.top-season__link(href=`${topSeason[0].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[0].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[0].title
+						.top-season__cost= topSeason[0].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[0].info.dur
+						.top-season__number= topSeason[0].info.number
+			.programs_card.programs_central
+				a.top-season__link(href=`${topSeason[1].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[1].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[1].title
+						.top-season__cost= topSeason[1].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[1].info.dur
+						.top-season__number= topSeason[1].info.number
+			.programs_card.programs_right
+				a.top-season__link(href=`${topSeason[2].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[2].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[2].title
+						.top-season__cost= topSeason[2].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[2].info.dur
+						.top-season__number= topSeason[2].info.number
+			.programs_card.programs_hidden_right
+				a.top-season__link(href=`${topSeason[3].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[3].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[3].title
+						.top-season__cost= topSeason[3].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[3].info.dur
+						.top-season__number= topSeason[3].info.number
+			.programs_card.programs_hidden_right
+				a.top-season__link(href=`${topSeason[4].href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${topSeason[4].imag}`)
+					.top-season__text
+						.top-season__item-title= topSeason[4].title
+						.top-season__cost= topSeason[4].info.cost
+					.top-season__info
+						.top-season__dur= topSeason[4].info.dur
+						.top-season__number= topSeason[4].info.number
+		#programs_left_over
+		#programs_right_over
+		#programs_left_arrow
+		#programs_right_arrow
+	.carusel.top-season__carusel.content
+		.arrows
+		.top-season__list.clearfix.carusel__list
+			each item in topSeason
+				a.top-season__link(href=`${item.href}`)
+					.text-more Подробнее
+					img.top-season__img(src=`assets/img/${item.imag}`)
+					.top-season__text
+						.top-season__item-title= item.title
+						.top-season__cost= item.info.cost
+					.top-season__info
+						.top-season__dur= item.info.dur
+						.top-season__number= item.info.number
